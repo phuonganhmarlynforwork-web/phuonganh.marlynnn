@@ -5,15 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>phuonganh.marlyn | Huỳnh Lương Phương Anh</title>
   
-  <!-- Google Fonts: Bricolage Grotesque & Be Vietnam Pro -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
   
-  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -47,7 +44,6 @@
   </script>
 
   <style>
-    /* Custom Scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
     }
@@ -59,33 +55,31 @@
       border-radius: 4px;
     }
     .glass-nav {
-      background: rgba(244, 249, 245, 0.85);
+      background: rgba(244, 249, 245, 0.9);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
     }
     .dark .glass-nav {
-      background: rgba(15, 23, 42, 0.85);
+      background: rgba(15, 23, 42, 0.9);
     }
   </style>
 </head>
 
 <body class="bg-brand-cream text-brand-charcoal font-sans transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100 selection:bg-brand-mint selection:text-brand-accentDark">
 
-  <!-- TOAST NOTIFICATION -->
   <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none bg-brand-charcoal text-white px-5 py-3 rounded-2xl shadow-xl flex items-center space-x-3 dark:bg-brand-accent">
     <i class="fa-solid fa-circle-check text-green-400 dark:text-white text-lg"></i>
     <span id="toast-message" class="text-sm font-medium">Copied to clipboard!</span>
   </div>
 
-  <!-- NAVIGATION BAR -->
   <header class="fixed top-0 left-0 w-full z-40 glass-nav border-b border-brand-sand dark:border-slate-800 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- Brand Domain -->
       <a href="#hero" class="flex items-center space-x-2 group">
         <div class="flex flex-col">
-          <span class="font-grotesk font-bold text-lg tracking-tight group-hover:text-brand-accent transition-colors">phuonganh.marlyn</span>
-          <span class="text-[11px] font-semibold tracking-wider uppercase text-brand-muted dark:text-slate-400">Huỳnh Lương Phương Anh</span>
+          <span class="font-grotesk font-bold text-base sm:text-lg tracking-tight group-hover:text-brand-accent transition-colors">phuonganh.marlyn</span>
+          <span class="text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase text-brand-muted dark:text-slate-400">Huỳnh Lương Phương Anh</span>
         </div>
       </a>
 
@@ -148,14 +142,14 @@
   <main class="pt-24 overflow-hidden">
     
     <!-- ==================== HERO SECTION ==================== -->
-    <section id="hero" class="relative py-16 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section id="hero" class="relative py-12 sm:py-16 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       
-      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-mint/60 dark:bg-brand-accent/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-72 h-72 sm:w-96 sm:h-96 bg-brand-mint/60 dark:bg-brand-accent/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
         <!-- Text Column -->
-        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        <div class="lg:col-span-7 space-y-5 sm:space-y-6 text-center lg:text-left">
           
           <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-brand-sand dark:bg-slate-800/80 border border-brand-mint dark:border-slate-700 text-xs font-semibold text-brand-accentDark dark:text-brand-mint tracking-wide">
             <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
@@ -163,16 +157,16 @@
           </div>
 
           <!-- Headline -->
-          <h1 class="text-2xl sm:text-2.5xl lg:text-[2rem] font-grotesk font-bold text-brand-charcoal dark:text-white leading-[1.3] tracking-tight">
-            <span data-en="I’m a " data-vi="Là một ">I’m a </span><span class="italic font-normal text-brand-accent" data-en="visual storyteller" data-vi="người kể chuyện bằng hình ảnh">visual storyteller</span><span data-en=", who is " data-vi=" – "></span><span class="underline decoration-brand-accent decoration-2 underline-offset-4" data-en="curious" data-vi="tò mò">curious</span><span data-en=", loves to " data-vi=", thích "></span><span class="underline decoration-brand-accent decoration-2 underline-offset-4" data-en="experience" data-vi="trải nghiệm">experience</span><span data-en=", and always looks for a " data-vi=" và luôn tìm một "></span><span class="underline decoration-brand-accent decoration-2 underline-offset-4" data-en="different way" data-vi="cách khác">different way</span><span data-en=" to tell a story." data-vi=" để kể chuyện."> to tell a story.</span>
+          <h1 class="text-xl sm:text-2xl lg:text-[2.1rem] font-grotesk font-bold text-brand-charcoal dark:text-white leading-[1.35] tracking-tight">
+            <span data-en="I’m a " data-vi="Mình là ">I’m a </span><span class="italic font-normal text-brand-accent" data-en="visual storyteller" data-vi="người kể chuyện bằng hình ảnh">visual storyteller</span><span data-en=", who is " data-vi=", luôn "></span><span class="underline decoration-brand-accent decoration-2 underline-offset-4" data-en="curious" data-vi="tò mò">curious</span><span data-en=", loves to " data-vi=", thích "></span><span class="underline decoration-brand-accent decoration-2 underline-offset-4" data-en="experience" data-vi="trải nghiệm">experience</span><span data-en=", and always looks for a " data-vi=" và tìm kiếm một "></span><span class="underline decoration-brand-accent decoration-2 underline-offset-4" data-en="different way" data-vi="cách khác biệt">different way</span><span data-en=" to tell a story." data-vi=" để kể câu chuyện."> to tell a story.</span>
           </h1>
 
-          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0" data-en="Multimedia Communication student passionate about marketing, brand communication, and campaign planning. Experienced in leading media projects and creative production." data-vi="Sinh viên ngành Truyền thông Đa phương tiện đam mê marketing, truyền thông thương hiệu và hoạch định chiến dịch. Có kinh nghiệm dẫn dắt các dự án truyền thông và sản xuất sáng tạo.">
+          <p class="text-xs sm:text-base text-slate-600 dark:text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0" data-en="Multimedia Communication student passionate about marketing, brand communication, and campaign planning. Experienced in leading media projects and creative production." data-vi="Sinh viên ngành Truyền thông Đa phương tiện đam mê marketing, truyền thông thương hiệu và hoạch định chiến dịch. Có kinh nghiệm dẫn dắt các dự án truyền thông và sản xuất sáng tạo.">
             Multimedia Communication student passionate about marketing, brand communication, and campaign planning. Experienced in leading media projects and creative production.
           </p>
 
           <!-- Core Values -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-1">
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1">
             <span class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-brand-sand dark:border-slate-800 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-card flex items-center space-x-1.5">
               <i class="fa-solid fa-shield-heart text-brand-accent"></i>
               <span data-en="Responsible" data-vi="Trách nhiệm">Responsible</span>
@@ -188,31 +182,31 @@
           </div>
 
           <!-- CTAs -->
-          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-            <a href="#designs" class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-brand-accent hover:bg-brand-accentDark text-white font-semibold text-sm tracking-wide shadow-hover transition-all text-center flex items-center justify-center space-x-2">
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-2">
+            <a href="#designs" class="w-full sm:w-auto px-6 py-3 rounded-full bg-brand-accent hover:bg-brand-accentDark text-white font-semibold text-xs sm:text-sm tracking-wide shadow-hover transition-all text-center flex items-center justify-center space-x-2">
               <span data-en="Explore Design Gallery" data-vi="Khám phá bộ sưu tập thiết kế">Explore Design Gallery</span>
               <i class="fa-solid fa-arrow-down-long text-xs"></i>
             </a>
 
-            <button onclick="copyToClipboard('phuonganhmarlyn.forwork@gmail.com', currentLang === 'vi' ? 'Đã sao chép email: phuonganhmarlyn.forwork@gmail.com' : 'Copied email: phuonganhmarlyn.forwork@gmail.com')" class="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white dark:bg-slate-900 border border-brand-sand dark:border-slate-800 hover:border-brand-accent text-brand-charcoal dark:text-white font-semibold text-sm shadow-card transition-all flex items-center justify-center space-x-2 group">
+            <button onclick="copyToClipboard('phuonganhmarlyn.forwork@gmail.com', currentLang === 'vi' ? 'Đã sao chép email: phuonganhmarlyn.forwork@gmail.com' : 'Copied email: phuonganhmarlyn.forwork@gmail.com')" class="w-full sm:w-auto px-6 py-3 rounded-full bg-white dark:bg-slate-900 border border-brand-sand dark:border-slate-800 hover:border-brand-accent text-brand-charcoal dark:text-white font-semibold text-xs sm:text-sm shadow-card transition-all flex items-center justify-center space-x-2 group">
               <i class="fa-regular fa-copy text-brand-accent group-hover:scale-110 transition-transform"></i>
               <span data-en="Copy Email" data-vi="Sao chép Email">Copy Email</span>
             </button>
           </div>
 
           <!-- Quick Stats -->
-          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-brand-sand dark:border-slate-800 text-center lg:text-left">
+          <div class="grid grid-cols-3 gap-3 pt-5 border-t border-brand-sand dark:border-slate-800 text-center lg:text-left">
             <div>
-              <div class="text-2xl sm:text-3xl font-grotesk font-bold text-brand-charcoal dark:text-white">Top 5</div>
-              <div class="text-xs text-brand-muted dark:text-slate-400" data-en="FPTU Outstanding Student" data-vi="Sinh viên xuất sắc FPTU">FPTU Outstanding Student</div>
+              <div class="text-xl sm:text-3xl font-grotesk font-bold text-brand-charcoal dark:text-white">Top 5</div>
+              <div class="text-[11px] text-brand-muted dark:text-slate-400" data-en="FPTU Outstanding Student" data-vi="Sinh viên xuất sắc FPTU">FPTU Outstanding Student</div>
             </div>
             <div>
-              <div class="text-2xl sm:text-3xl font-grotesk font-bold text-brand-accent">2026</div>
-              <div class="text-xs text-brand-muted dark:text-slate-400" data-en="Google Ambassador" data-vi="Đại sứ Google">Google Ambassador</div>
+              <div class="text-xl sm:text-3xl font-grotesk font-bold text-brand-accent">2026</div>
+              <div class="text-[11px] text-brand-muted dark:text-slate-400" data-en="Google Ambassador" data-vi="Đại sứ Google">Google Ambassador</div>
             </div>
             <div>
-              <div class="text-2xl sm:text-3xl font-grotesk font-bold text-brand-charcoal dark:text-white">16+</div>
-              <div class="text-xs text-brand-muted dark:text-slate-400" data-en="Media Assets" data-vi="Ấn phẩm truyền thông">Media Assets</div>
+              <div class="text-xl sm:text-3xl font-grotesk font-bold text-brand-charcoal dark:text-white">16+</div>
+              <div class="text-[11px] text-brand-muted dark:text-slate-400" data-en="Media Assets" data-vi="Ấn phẩm truyền thông">Media Assets</div>
             </div>
           </div>
 
@@ -220,46 +214,44 @@
 
         <!-- Avatar Card Column -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="relative w-full max-w-md">
+          <div class="relative w-full max-w-xs sm:max-w-sm">
             
-            <div class="absolute -top-4 -left-4 w-full h-full rounded-3xl border-2 border-dashed border-brand-accent/40 -z-10 transform -rotate-2"></div>
-            <div class="absolute -bottom-4 -right-4 w-full h-full rounded-3xl bg-brand-mint/60 dark:bg-slate-800 -z-10 transform rotate-2"></div>
+            <div class="absolute -top-3 -left-3 w-full h-full rounded-3xl border-2 border-dashed border-brand-accent/40 -z-10 transform -rotate-2"></div>
+            <div class="absolute -bottom-3 -right-3 w-full h-full rounded-3xl bg-brand-mint/60 dark:bg-slate-800 -z-10 transform rotate-2"></div>
 
-            <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 shadow-hover border border-brand-sand dark:border-slate-800 space-y-6">
+            <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 sm:p-6 shadow-hover border border-brand-sand dark:border-slate-800 space-y-5">
               
               <div class="relative w-full aspect-square rounded-2xl overflow-hidden bg-gradient-to-tr from-brand-mint via-brand-sand to-emerald-50 dark:from-slate-800 dark:to-slate-900 flex flex-col items-center justify-center p-2 text-center border border-brand-mint/50 dark:border-slate-700 shadow-inner">
                 <img src="https://lh3.googleusercontent.com/d/1xEU6uUCbfJk3VhOdwIRFZAWe56wzFZCH" alt="Huỳnh Lương Phương Anh" class="w-full h-full object-cover rounded-xl pointer-events-none select-none" />
                 
-                <div class="absolute bottom-3 bg-white/95 dark:bg-slate-800/95 backdrop-blur-md px-4 py-1.5 rounded-full border border-brand-sand dark:border-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-sm flex items-center space-x-1.5">
+                <div class="absolute bottom-3 bg-white/95 dark:bg-slate-800/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-brand-sand dark:border-slate-700 text-[11px] font-semibold text-slate-700 dark:text-slate-200 shadow-sm flex items-center space-x-1.5">
                   <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                   <span>Marlyn • Da Nang</span>
                 </div>
               </div>
 
-              <div class="space-y-3 text-xs sm:text-sm">
-                <div class="flex items-center justify-between py-2 border-b border-brand-sand dark:border-slate-800">
-                  <span class="text-brand-muted dark:text-slate-400"><i class="fa-solid fa-graduation-cap mr-2 text-brand-accent"></i><span data-en="University:" data-vi="Trường:">University:</span></span>
-                  <span class="font-semibold text-right">FPT University Da Nang</span>
+              <div class="space-y-2.5 text-xs sm:text-sm">
+                <div class="flex items-center justify-between py-1.5 border-b border-brand-sand dark:border-slate-800">
+                  <span class="text-brand-muted dark:text-slate-400"><i class="fa-solid fa-graduation-cap mr-1.5 text-brand-accent"></i><span data-en="University:" data-vi="Trường:">University:</span></span>
+                  <span class="font-semibold text-right text-xs">FPT University Da Nang</span>
                 </div>
-                <div class="flex items-center justify-between py-2 border-b border-brand-sand dark:border-slate-800">
-                  <span class="text-brand-muted dark:text-slate-400"><i class="fa-solid fa-bullhorn mr-2 text-brand-accent"></i><span data-en="Major:" data-vi="Chuyên ngành:">Major:</span></span>
-                  <span class="font-semibold text-right" data-en="Multimedia Communication" data-vi="Truyền thông Đa phương tiện">Multimedia Communication</span>
+                <div class="flex items-center justify-between py-1.5 border-b border-brand-sand dark:border-slate-800">
+                  <span class="text-brand-muted dark:text-slate-400"><i class="fa-solid fa-bullhorn mr-1.5 text-brand-accent"></i><span data-en="Major:" data-vi="Chuyên ngành:">Major:</span></span>
+                  <span class="font-semibold text-right text-xs" data-en="Multimedia Communication" data-vi="Truyền thông Đa phương tiện">Multimedia Communication</span>
                 </div>
-                <div class="flex items-center justify-between py-2 border-b border-brand-sand dark:border-slate-800">
-                  <span class="text-brand-muted dark:text-slate-400"><i class="fa-solid fa-location-dot mr-2 text-brand-accent"></i><span data-en="Location:" data-vi="Địa điểm:">Location:</span></span>
-                  <span class="font-semibold text-right" data-en="Da Nang, Vietnam" data-vi="Đà Nẵng, Việt Nam">Da Nang, Vietnam</span>
+                <div class="flex items-center justify-between py-1.5 border-b border-brand-sand dark:border-slate-800">
+                  <span class="text-brand-muted dark:text-slate-400"><i class="fa-solid fa-location-dot mr-1.5 text-brand-accent"></i><span data-en="Location:" data-vi="Địa điểm:">Location:</span></span>
+                  <span class="font-semibold text-right text-xs" data-en="Da Nang, Vietnam" data-vi="Đà Nẵng, Việt Nam">Da Nang, Vietnam</span>
                 </div>
               </div>
 
+              <!-- Only 2 interactive icons: Facebook Link & Copy Phone -->
               <div class="flex items-center justify-center space-x-4 pt-1">
-                <a href="mailto:phuonganhmarlyn.forwork@gmail.com" class="w-10 h-10 rounded-full bg-brand-sand dark:bg-slate-800 hover:bg-brand-accent hover:text-white flex items-center justify-center text-slate-700 dark:text-slate-300 transition" title="Send Email">
-                  <i class="fa-solid fa-envelope"></i>
+                <a href="https://www.facebook.com/phuonganh.marlynnn" target="_blank" class="w-10 h-10 rounded-full bg-brand-sand dark:bg-slate-800 hover:bg-blue-600 hover:text-white flex items-center justify-center text-slate-700 dark:text-slate-300 transition text-sm shadow-sm" title="Facebook">
+                  <i class="fa-brands fa-facebook-f"></i>
                 </a>
-                <a href="tel:+84915764739" class="w-10 h-10 rounded-full bg-brand-sand dark:bg-slate-800 hover:bg-brand-accent hover:text-white flex items-center justify-center text-slate-700 dark:text-slate-300 transition" title="Call Phone">
+                <button onclick="copyToClipboard('+84915764739', currentLang === 'vi' ? 'Đã chép SĐT: +84 915 764 739' : 'Copied phone number: +84 915 764 739')" class="w-10 h-10 rounded-full bg-brand-sand dark:bg-slate-800 hover:bg-brand-accent hover:text-white flex items-center justify-center text-slate-700 dark:text-slate-300 transition text-sm shadow-sm" title="Copy Phone Number (+84 915 764 739)">
                   <i class="fa-solid fa-phone"></i>
-                </a>
-                <button onclick="copyToClipboard('+84915764739', currentLang === 'vi' ? 'Đã chép SĐT: +84 915 764 739' : 'Copied phone number: +84 915 764 739')" class="w-10 h-10 rounded-full bg-brand-sand dark:bg-slate-800 hover:bg-brand-accent hover:text-white flex items-center justify-center text-slate-700 dark:text-slate-300 transition" title="Copy Phone">
-                  <i class="fa-solid fa-comment-dots"></i>
                 </button>
               </div>
 
@@ -272,43 +264,41 @@
 
     </section>
 
-
     <!-- ==================== EXPERIENCE SECTION ==================== -->
-    <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-24">
+    <section id="experience" class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16 sm:space-y-24">
       
-      <div class="text-center max-w-3xl mx-auto space-y-4">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
         <span class="text-xs font-bold uppercase tracking-widest text-brand-accent" data-en="Experience & Leadership" data-vi="Kinh nghiệm & Lãnh đạo">Experience & Leadership</span>
-        <h2 class="text-3xl sm:text-4xl font-grotesk font-bold text-brand-charcoal dark:text-white" data-en="Key Projects & Roles" data-vi="Dự án & Vai trò chủ chốt">
+        <h2 class="text-2xl sm:text-4xl font-grotesk font-bold text-brand-charcoal dark:text-white" data-en="Key Projects & Roles" data-vi="Dự án & Vai trò chủ chốt">
           Key Projects & Roles
         </h2>
         <div class="w-12 h-1 bg-brand-accent mx-auto rounded-full"></div>
       </div>
 
-      <!-- KINH NGHIỆM 1: FUDA'S CREATIVE SPACE -->
-      <div class="rounded-3xl bg-[#365314] text-white p-6 sm:p-10 shadow-2xl relative overflow-hidden border border-lime-800 space-y-8">
+      <!-- FUDA'S CREATIVE SPACE -->
+      <div class="rounded-3xl bg-[#365314] text-white p-5 sm:p-10 shadow-2xl relative overflow-hidden border border-lime-800 space-y-6 sm:space-y-8">
         <div class="absolute -right-10 -bottom-10 w-80 h-80 bg-lime-500/10 rounded-full blur-3xl pointer-events-none"></div>
         
-        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-lime-700/60 pb-6">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-lime-700/60 pb-5">
           <div>
-            <span class="px-3.5 py-1 rounded-full bg-lime-500 text-slate-950 text-xs font-bold uppercase tracking-wider" data-en="Vice President (12/2025 - Present)" data-vi="Phó Chủ nhiệm (12/2025 - Hiện tại)">Vice President (12/2025 - Present)</span>
-            <h3 class="text-3xl sm:text-4xl font-grotesk font-bold mt-2 text-lime-100">FUDA's Creative Space</h3>
-            <p class="text-xs text-lime-200 mt-1" data-en="FPT University Da Nang" data-vi="Đại học FPT Đà Nẵng">FPT University Da Nang</p>
+            <span class="px-3 py-1 rounded-full bg-lime-500 text-slate-950 text-[11px] font-bold uppercase tracking-wider" data-en="Vice President (12/2025 - Present)" data-vi="Phó Chủ nhiệm (12/2025 - Hiện tại)">Vice President (12/2025 - Present)</span>
+            <h3 class="text-2xl sm:text-4xl font-grotesk font-bold mt-2 text-lime-100">FUDA's Creative Space</h3>
+            <p class="text-xs text-lime-200 mt-0.5" data-en="FPT University Da Nang" data-vi="Đại học FPT Đà Nẵng">FPT University Da Nang</p>
           </div>
-          <a href="https://www.facebook.com/fudacreativespace" target="_blank" class="px-5 py-2.5 rounded-full bg-white text-slate-900 font-semibold text-xs tracking-wide hover:bg-lime-200 transition flex items-center space-x-2">
+          <a href="https://www.facebook.com/fudacreativespace" target="_blank" class="px-4 py-2 rounded-full bg-white text-slate-900 font-semibold text-xs tracking-wide hover:bg-lime-200 transition flex items-center space-x-2">
             <i class="fa-brands fa-facebook text-blue-600"></i>
             <span>Facebook Fanpage</span>
           </a>
         </div>
 
-        <div class="space-y-6">
-          <div class="bg-[#283e0e] p-6 rounded-2xl border border-lime-700/50 shadow-inner">
-            <p class="text-sm sm:text-base text-lime-100 leading-relaxed font-medium" data-en="A student organization at FPT University that has been active for over three years, organizing a wide range of cultural, creative, and community events while providing students with opportunities to develop and showcase their ideas." data-vi="CLB của sinh viên ĐH FPT Đà Nẵng, hoạt động hơn 3 năm, tổ chức nhiều sự kiện văn hóa, sáng tạo và cộng đồng, đồng thời tạo cơ hội cho sinh viên phát triển và thể hiện ý tưởng của mình.">
+        <div class="space-y-5">
+          <div class="bg-[#283e0e] p-4 sm:p-6 rounded-2xl border border-lime-700/50 shadow-inner">
+            <p class="text-xs sm:text-base text-lime-100 leading-relaxed font-medium" data-en="A student organization at FPT University that has been active for over three years, organizing a wide range of cultural, creative, and community events while providing students with opportunities to develop and showcase their ideas." data-vi="CLB của sinh viên ĐH FPT Đà Nẵng, hoạt động hơn 3 năm, tổ chức nhiều sự kiện văn hóa, sáng tạo và cộng đồng, đồng thời tạo cơ hội cho sinh viên phát triển và thể hiện ý tưởng của mình.">
               A student organization at FPT University that has been active for over three years, organizing a wide range of cultural, creative, and community events while providing students with opportunities to develop and showcase their ideas.
             </p>
           </div>
 
-          <!-- 6 photos grid -->
-          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
+          <div class="grid grid-cols-3 sm:grid-cols-6 gap-2">
             <div class="bg-[#283e0e] rounded-xl overflow-hidden aspect-[4/3] flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1NJoBmzMS0k-JiuOPuqqwRRzei6PZQbrL" class="w-full h-full object-cover rounded-lg pointer-events-none select-none" alt="Fuda 1" />
             </div>
@@ -329,32 +319,31 @@
             </div>
           </div>
 
-          <div class="bg-[#283e0e] p-6 rounded-2xl border border-lime-700/50 shadow-inner">
-            <p class="text-sm sm:text-base text-lime-100 leading-relaxed font-medium" data-en="From January to April 2026, I was responsible for managing the club's communication content on its official fanpage, ensuring a consistent brand identity and communication direction while driving strong audience engagement and interaction across campaign activities." data-vi="Từ tháng 1 đến tháng 4 năm 2026, chịu trách nhiệm quản lý nội dung truyền thông trên trang fanpage chính thức của câu lạc bộ, đảm bảo tính nhất quán về nhận diện thương hiệu và định hướng truyền thông, đồng thời thúc đẩy lượng tương tác mạnh mẽ từ người xem qua các hoạt động chiến dịch.">
+          <div class="bg-[#283e0e] p-4 sm:p-6 rounded-2xl border border-lime-700/50 shadow-inner">
+            <p class="text-xs sm:text-base text-lime-100 leading-relaxed font-medium" data-en="From January to April 2026, I was responsible for managing the club's communication content on its official fanpage, ensuring a consistent brand identity and communication direction while driving strong audience engagement and interaction across campaign activities." data-vi="Từ tháng 1 đến tháng 4 năm 2026, chịu trách nhiệm quản lý nội dung truyền thông trên trang fanpage chính thức của câu lạc bộ, đảm bảo tính nhất quán về nhận diện thương hiệu và định hướng truyền thông, đồng thời thúc đẩy lượng tương tác mạnh mẽ từ người xem qua các hoạt động chiến dịch.">
               From January to April 2026, I was responsible for managing the club's communication content on its official fanpage, ensuring a consistent brand identity and communication direction while driving strong audience engagement and interaction across campaign activities.
             </p>
           </div>
         </div>
       </div>
 
-
-      <!-- KINH NGHIỆM 2: ĐÈN LỒNG DU KÝ -->
-      <div class="rounded-3xl bg-[#365314] text-white p-6 sm:p-10 shadow-2xl relative overflow-hidden border border-lime-800 space-y-8">
+      <!-- ĐÈN LỒNG DU KÝ -->
+      <div class="rounded-3xl bg-[#365314] text-white p-5 sm:p-10 shadow-2xl relative overflow-hidden border border-lime-800 space-y-6 sm:space-y-8">
         <div class="absolute -left-10 -top-10 w-80 h-80 bg-lime-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-lime-700/60 pb-6">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-lime-700/60 pb-5">
           <div>
-            <span class="px-3.5 py-1 rounded-full bg-lime-500 text-slate-950 text-xs font-bold uppercase tracking-wider" data-en="Main Coordinator & Concept Developer (12/2025 - 02/2026)" data-vi="Điều phối chính & Phát triển Ý tưởng (12/2025 - 02/2026)">Main Coordinator & Concept Developer (12/2025 - 02/2026)</span>
-            <h3 class="text-3xl sm:text-4xl font-grotesk font-bold mt-2 text-lime-100">Đèn Lồng Du Ký</h3>
-            <p class="text-xs text-lime-200 mt-1" data-en="Traditional Cultural Campaign" data-vi="Chiến dịch Văn hóa Truyền thống">Traditional Cultural Campaign</p>
+            <span class="px-3 py-1 rounded-full bg-lime-500 text-slate-950 text-[11px] font-bold uppercase tracking-wider" data-en="Main Coordinator & Concept Developer (12/2025 - 02/2026)" data-vi="Điều phối chính & Phát triển Ý tưởng (12/2025 - 02/2026)">Main Coordinator & Concept Developer (12/2025 - 02/2026)</span>
+            <h3 class="text-2xl sm:text-4xl font-grotesk font-bold mt-2 text-lime-100">Đèn Lồng Du Ký</h3>
+            <p class="text-xs text-lime-200 mt-0.5" data-en="Traditional Cultural Campaign" data-vi="Chiến dịch Văn hóa Truyền thống">Traditional Cultural Campaign</p>
           </div>
-          <a href="https://www.facebook.com/denlongduky.1010" target="_blank" class="px-5 py-2.5 rounded-full bg-white text-slate-900 font-semibold text-xs tracking-wide hover:bg-lime-200 transition flex items-center space-x-2">
+          <a href="https://www.facebook.com/denlongduky.1010" target="_blank" class="px-4 py-2 rounded-full bg-white text-slate-900 font-semibold text-xs tracking-wide hover:bg-lime-200 transition flex items-center space-x-2">
             <i class="fa-brands fa-facebook text-blue-600"></i>
             <span>Facebook Fanpage</span>
           </a>
         </div>
 
-        <div class="space-y-6">
+        <div class="space-y-5">
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
             <div class="bg-[#283e0e] rounded-xl overflow-hidden aspect-[4/3] flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/17qE6wTqjzXv-Vn3BkfKSbGdn-a_HvA2B" class="w-full h-full object-cover rounded-lg pointer-events-none select-none" alt="Lantern 1" />
@@ -370,40 +359,39 @@
             </div>
           </div>
 
-          <div class="bg-[#283e0e] p-6 rounded-2xl border border-lime-700/50 shadow-inner">
-            <p class="text-sm sm:text-base text-lime-100 leading-relaxed font-medium" data-en="A student-led communication campaign, aiming to promote traditional Vietnamese lantern culture through creative storytelling and experiential activities. I developed creative concepts for the campaign's communication materials and served as the main coordinator for the 'Lung Linh Phố Hội' lantern workshop, which attracted 100+ FPT University students and received positive feedback for both its communication and event experience (December 2025 - February 2026)." data-vi="Chiến dịch truyền thông do sinh viên tổ chức nhằm quảng bá văn hóa lồng đèn truyền thống Việt Nam thông qua cách kể chuyện sáng tạo và các hoạt động trải nghiệm. Đã phát triển ý tưởng sáng tạo cho các ấn phẩm truyền thông và đóng vai trò điều phối chính cho workshop làm lồng đèn 'Lung Linh Phố Hội', thu hút hơn 100 sinh viên Đại học FPT tham gia và nhận được phản hồi tích cực từ truyền thông đến trải nghiệm sự kiện (Tháng 12/2025 - Tháng 2/2026).">
+          <div class="bg-[#283e0e] p-4 sm:p-6 rounded-2xl border border-lime-700/50 shadow-inner">
+            <p class="text-xs sm:text-base text-lime-100 leading-relaxed font-medium" data-en="A student-led communication campaign, aiming to promote traditional Vietnamese lantern culture through creative storytelling and experiential activities. I developed creative concepts for the campaign's communication materials and served as the main coordinator for the 'Lung Linh Phố Hội' lantern workshop, which attracted 100+ FPT University students and received positive feedback for both its communication and event experience (December 2025 - February 2026)." data-vi="Chiến dịch truyền thông do sinh viên tổ chức nhằm quảng bá văn hóa lồng đèn truyền thống Việt Nam thông qua cách kể chuyện sáng tạo và các hoạt động trải nghiệm. Đã phát triển ý tưởng sáng tạo cho các ấn phẩm truyền thông và đóng vai trò điều phối chính cho workshop làm lồng đèn 'Lung Linh Phố Hội', thu hút hơn 100 sinh viên Đại học FPT tham gia và nhận được phản hồi tích cực từ truyền thông đến trải nghiệm sự kiện (Tháng 12/2025 - Tháng 2/2026).">
               A student-led communication campaign, aiming to promote traditional Vietnamese lantern culture through creative storytelling and experiential activities. I developed creative concepts for the campaign's communication materials and served as the main coordinator for the "Lung Linh Phố Hội" lantern workshop, which attracted 100+ FPT University students and received positive feedback for both its communication and event experience (December 2025 - February 2026).
             </p>
           </div>
         </div>
       </div>
 
-
-      <!-- KINH NGHIỆM 3: GOOGLE STUDENT AMBASSADOR -->
-      <div class="rounded-3xl bg-[#365314] text-white p-6 sm:p-10 shadow-2xl relative overflow-hidden border border-lime-800 space-y-8">
+      <!-- GOOGLE STUDENT AMBASSADOR -->
+      <div class="rounded-3xl bg-[#365314] text-white p-5 sm:p-10 shadow-2xl relative overflow-hidden border border-lime-800 space-y-6 sm:space-y-8">
         <div class="absolute right-0 top-0 w-80 h-80 bg-lime-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div class="border-b border-lime-700/60 pb-6">
-          <span class="px-3.5 py-1 rounded-full bg-lime-500 text-slate-950 text-xs font-bold uppercase tracking-wider" data-en="Top 200 GSA (01/2026 - 07/2026)" data-vi="Top 200 GSA (01/2026 - 07/2026)">Top 200 GSA (01/2026 - 07/2026)</span>
-          <h3 class="text-3xl sm:text-4xl font-grotesk font-bold mt-2 text-lime-100">Google Student Ambassador (GSA)</h3>
-          <p class="text-xs text-lime-200 mt-1" data-en="Google Global Student Program" data-vi="Chương trình đại sứ sinh viên Google">Google Global Student Program</p>
+        <div class="border-b border-lime-700/60 pb-5">
+          <span class="px-3.5 py-1 rounded-full bg-lime-500 text-slate-950 text-[11px] font-bold uppercase tracking-wider" data-en="Top 200 GSA (01/2026 - 07/2026)" data-vi="Top 200 GSA (01/2026 - 07/2026)">Top 200 GSA (01/2026 - 07/2026)</span>
+          <h3 class="text-2xl sm:text-4xl font-grotesk font-bold mt-2 text-lime-100">Google Student Ambassador (GSA)</h3>
+          <p class="text-xs text-lime-200 mt-0.5" data-en="Google Global Student Program" data-vi="Chương trình đại sứ sinh viên Google">Google Global Student Program</p>
         </div>
 
-        <div class="space-y-6">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-[#283e0e] p-5 rounded-2xl border border-lime-700/50 shadow-inner">
-              <p class="text-sm sm:text-base text-lime-100 leading-relaxed font-medium" data-en="Google Student Ambassador (GSA) is a global student program by Google that empowers students to promote technology and build campus communities. I was recognized as a Top 200 GSA for outstanding performance." data-vi="Google Student Ambassador (GSA) là chương trình đại sứ sinh viên toàn cầu của Google nhằm trao quyền cho sinh viên thúc đẩy công nghệ và xây dựng cộng đồng trường học. Được vinh danh trong Top 200 GSA nhờ thành tích xuất sắc.">
+        <div class="space-y-5">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+            <div class="bg-[#283e0e] p-4 sm:p-5 rounded-2xl border border-lime-700/50 shadow-inner">
+              <p class="text-xs sm:text-base text-lime-100 leading-relaxed font-medium" data-en="Google Student Ambassador (GSA) is a global student program by Google that empowers students to promote technology and build campus communities. I was recognized as a Top 200 GSA for outstanding performance." data-vi="Google Student Ambassador (GSA) là chương trình đại sứ sinh viên toàn cầu của Google nhằm trao quyền cho sinh viên thúc đẩy công nghệ và xây dựng cộng đồng trường học. Được vinh danh trong Top 200 GSA nhờ thành tích xuất sắc.">
                 Google Student Ambassador (GSA) is a global student program by Google that empowers students to promote technology and build campus communities. I was recognized as a Top 200 GSA for outstanding performance.
               </p>
             </div>
-            <div class="bg-[#283e0e] p-5 rounded-2xl border border-lime-700/50 shadow-inner">
-              <p class="text-sm sm:text-base text-lime-100 leading-relaxed font-medium" data-en="Spearheaded marketing campaigns for AI workshops that grew the fanpage to 200+ followers and successfully organized an AI workshop using Google Gemini and NotebookLM, attended by 80+ students." data-vi="Tổ chức các chiến dịch marketing cho các buổi workshop về AI, giúp phát triển fanpage lên hơn 200 người theo dõi và tổ chức thành công workshop AI sử dụng Google Gemini và NotebookLM với sự tham gia của hơn 80 sinh viên.">
+            <div class="bg-[#283e0e] p-4 sm:p-5 rounded-2xl border border-lime-700/50 shadow-inner">
+              <p class="text-xs sm:text-base text-lime-100 leading-relaxed font-medium" data-en="Spearheaded marketing campaigns for AI workshops that grew the fanpage to 200+ followers and successfully organized an AI workshop using Google Gemini and NotebookLM, attended by 80+ students." data-vi="Tổ chức các chiến dịch marketing cho các buổi workshop về AI, giúp phát triển fanpage lên hơn 200 người theo dõi và tổ chức thành công workshop AI sử dụng Google Gemini và NotebookLM với sự tham gia của hơn 80 sinh viên.">
                 Spearheaded marketing campaigns for AI workshops that grew the fanpage to 200+ followers and successfully organized an AI workshop using Google Gemini and NotebookLM, attended by 80+ students.
               </p>
             </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          <div class="grid grid-cols-3 gap-2">
             <div class="bg-[#283e0e] rounded-2xl overflow-hidden aspect-[4/3] flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/14q2bbplkDJqMD9_7dAYdsezWwvBuG08J" class="w-full h-full object-cover rounded-xl pointer-events-none select-none" alt="GSA 1" />
             </div>
@@ -419,211 +407,194 @@
 
     </section>
 
-
     <!-- ==================== DESIGNS & POSTERS GALLERY ==================== -->
-    <section id="designs" class="py-20 bg-white dark:bg-slate-900 border-t border-brand-sand dark:border-slate-800">
+    <section id="designs" class="py-16 sm:py-20 bg-white dark:bg-slate-900 border-t border-brand-sand dark:border-slate-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-12 sm:mb-16">
           <span class="text-xs font-bold uppercase tracking-widest text-brand-accent" data-en="Creative & Visual Production" data-vi="Sản xuất Sáng tạo & Visual">Creative & Visual Production</span>
-          <h2 class="text-3xl sm:text-4xl font-grotesk font-bold text-brand-charcoal dark:text-white" data-en="Designs & Posters Gallery" data-vi="Bộ sưu tập Thiết kế & Poster">
+          <h2 class="text-2xl sm:text-4xl font-grotesk font-bold text-brand-charcoal dark:text-white" data-en="Designs & Posters Gallery" data-vi="Bộ sưu tập Thiết kế & Poster">
             Designs & Posters Gallery
           </h2>
-          <p class="text-slate-600 dark:text-slate-400 text-sm" data-en="Media assets, event posters, and campaign visuals personally designed and produced." data-vi="Các ấn phẩm truyền thông, poster sự kiện và hình ảnh chiến dịch do chính tay tôi thiết kế và sản xuất.">Media assets, event posters, and campaign visuals personally designed and produced.</p>
+          <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm" data-en="Media assets, event posters, and campaign visuals personally designed and produced." data-vi="Các ấn phẩm truyền thông, poster sự kiện và hình ảnh chiến dịch do chính tay tôi thiết kế và sản xuất.">Media assets, event posters, and campaign visuals personally designed and produced.</p>
           <div class="w-12 h-1 bg-brand-accent mx-auto rounded-full"></div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           
-          <!-- 1. Cóc Phiêu Lưu 3 (2026) -->
           <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 shadow-card transition-all duration-300 flex flex-col">
             <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1H0U5bDt7fHq2Bg9RTaAcWhv5Wx7Kychn" alt="Cóc Phiêu Lưu 3" class="w-full h-full object-cover rounded-xl pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2026</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2026</span>
             </div>
-            <div class="p-4 flex flex-col justify-between flex-grow">
-              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white">Cóc Phiêu Lưu 3</h4>
-              <p class="text-[11px] text-slate-500 mt-1" data-en="Key Visual & Campaign Poster" data-vi="Key Visual & Poster chiến dịch">Key Visual & Campaign Poster</p>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white">Cóc Phiêu Lưu 3</h4>
+              <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5" data-en="Key Visual & Campaign Poster" data-vi="Key Visual & Poster chiến dịch">Key Visual & Campaign Poster</p>
             </div>
           </div>
 
-          <!-- 2. Lễ hội Việt Nhật CIFA 2026 -->
           <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 shadow-card transition-all duration-300 flex flex-col">
             <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1XPbUTHnyr-sqeGAJoSnuITvdoUgI85IP" alt="Lễ hội Việt Nhật CIFA 2026" class="w-full h-full object-cover rounded-xl pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2026</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2026</span>
             </div>
-            <div class="p-4 flex flex-col justify-between flex-grow">
-              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white" data-en="CIFA Vietnam - Japan Festival" data-vi="Lễ hội Việt - Nhật CIFA">CIFA Vietnam - Japan Festival</h4>
-              <p class="text-[11px] text-slate-500 mt-1" data-en="Line-up Announcement Poster" data-vi="Poster công bố dàn Line-up">Line-up Announcement Poster</p>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white" data-en="CIFA Vietnam - Japan Festival" data-vi="Lễ hội Việt - Nhật CIFA">CIFA Vietnam - Japan Festival</h4>
+              <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5" data-en="Line-up Announcement Poster" data-vi="Poster công bố dàn Line-up">Line-up Announcement Poster</p>
             </div>
           </div>
 
-          <!-- 3. Poster khuyến mãi CYA Boardgame (2026) -->
           <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 shadow-card transition-all duration-300 flex flex-col">
             <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1olWl2R473_RO67nuJiK5xn6eim2Ip7-Z" alt="CYA Boardgame" class="w-full h-full object-cover rounded-xl pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2026</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2026</span>
             </div>
-            <div class="p-4 flex flex-col justify-between flex-grow">
-              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white" data-en="CYA Boardgame Promotion" data-vi="Quảng cáo CYA Boardgame">CYA Boardgame Promotion</h4>
-              <p class="text-[11px] text-slate-500 mt-1" data-en="Promotional Poster" data-vi="Poster quảng cáo">Promotional Poster</p>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white" data-en="CYA Boardgame Promotion" data-vi="Quảng cáo CYA Boardgame">CYA Boardgame Promotion</h4>
+              <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5" data-en="Promotional Poster" data-vi="Poster quảng cáo">Promotional Poster</p>
             </div>
           </div>
 
-          <!-- 4. DYMUN MUN Camp 2025 -->
           <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 shadow-card transition-all duration-300 flex flex-col">
             <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1kucdQxX0-sK5-oCVneVz4ql8JPdWZRnF" alt="DYMUN MUN Camp 2025" class="w-full h-full object-cover rounded-xl pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2025</span>
             </div>
-            <div class="p-4 flex flex-col justify-between flex-grow">
-              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white">DYMUN MUN Camp</h4>
-              <p class="text-[11px] text-slate-500 mt-1" data-en="Event Visual Design" data-vi="Thiết kế visual sự kiện">Event Visual Design</p>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white">DYMUN MUN Camp</h4>
+              <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5" data-en="Event Visual Design" data-vi="Thiết kế visual sự kiện">Event Visual Design</p>
             </div>
           </div>
 
-          <!-- 5. Seminar Luật Sở hữu trí tuệ (2025) -->
           <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 shadow-card transition-all duration-300 flex flex-col">
             <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1q6J9EhrEPXT6FVCQrDp8A0jG7DC7RxJT" alt="Seminar Luật SHTT" class="w-full h-full object-cover rounded-xl pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2025</span>
             </div>
-            <div class="p-4 flex flex-col justify-between flex-grow">
-              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white" data-en="IP Law in AI Era Seminar" data-vi="Seminar Luật SHTT trong kỷ nguyên AI">IP Law in AI Era Seminar</h4>
-              <p class="text-[11px] text-slate-500 mt-1" data-en="Academic Poster" data-vi="Poster học thuật">Academic Poster</p>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white" data-en="IP Law in AI Era Seminar" data-vi="Seminar Luật SHTT trong kỷ nguyên AI">IP Law in AI Era Seminar</h4>
+              <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5" data-en="Academic Poster" data-vi="Poster học thuật">Academic Poster</p>
             </div>
           </div>
 
-          <!-- 6. Workshop thư pháp Nét mực giao hòa (2025) -->
           <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 shadow-card transition-all duration-300 flex flex-col">
             <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1lnEjVYIZmOqfWvIg5nC1x8zgjFrLVsFz" alt="Nét mực giao hòa" class="w-full h-full object-cover rounded-xl pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2025</span>
             </div>
-            <div class="p-4 flex flex-col justify-between flex-grow">
-              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white" data-en="Calligraphy Workshop" data-vi="Workshop thư pháp Nét mực giao hòa">Calligraphy Workshop</h4>
-              <p class="text-[11px] text-slate-500 mt-1" data-en="Cultural Workshop Poster" data-vi="Poster workshop văn hóa">Cultural Workshop Poster</p>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white" data-en="Calligraphy Workshop" data-vi="Workshop thư pháp Nét mực giao hòa">Calligraphy Workshop</h4>
+              <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5" data-en="Cultural Workshop Poster" data-vi="Poster workshop văn hóa">Cultural Workshop Poster</p>
             </div>
           </div>
 
-          <!-- 7. Cóc yêu thương (2025) -->
           <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 shadow-card transition-all duration-300 flex flex-col">
             <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1AaZyVTZJy1FssXzdA6d0ugM4PXv8_Nnk" alt="Cóc yêu thương" class="w-full h-full object-cover rounded-xl pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2025</span>
             </div>
-            <div class="p-4 flex flex-col justify-between flex-grow">
-              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white" data-en="Coc Yeu Thuong" data-vi="Cóc Yêu Thương">Coc Yeu Thuong</h4>
-              <p class="text-[11px] text-slate-500 mt-1" data-en="CSR Campaign Key Visual" data-vi="Key Visual chiến dịch CSR">CSR Campaign Key Visual</p>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white" data-en="Coc Yeu Thuong" data-vi="Cóc Yêu Thương">Coc Yeu Thuong</h4>
+              <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5" data-en="CSR Campaign Key Visual" data-vi="Key Visual chiến dịch CSR">CSR Campaign Key Visual</p>
             </div>
           </div>
 
-          <!-- 8. CLB Truyền thông FUM tuyển thành viên kỳ Fall 2025 -->
           <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 shadow-card transition-all duration-300 flex flex-col">
             <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1bjAtRsthFjZAtk1SRVZmsCBstxXxGjGV" alt="FUM Tuyển thành viên" class="w-full h-full object-cover rounded-xl pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2025</span>
             </div>
-            <div class="p-4 flex flex-col justify-between flex-grow">
-              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white" data-en="FUM Media Club Recruitment" data-vi="Tuyển thành viên CLB Truyền thông FUM">FUM Media Club Recruitment</h4>
-              <p class="text-[11px] text-slate-500 mt-1" data-en="Fall 2025 Recruitment Poster" data-vi="Poster tuyển thành viên Fall 2025">Fall 2025 Recruitment Poster</p>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white" data-en="FUM Media Club Recruitment" data-vi="Tuyển thành viên CLB Truyền thông FUM">FUM Media Club Recruitment</h4>
+              <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5" data-en="Fall 2025 Recruitment Poster" data-vi="Poster tuyển thành viên Fall 2025">Fall 2025 Recruitment Poster</p>
             </div>
           </div>
 
-          <!-- 9. CLB Sáng tạo FCS tuyển thành viên kỳ Fall 2025 -->
           <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 shadow-card transition-all duration-300 flex flex-col">
             <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1xjNjXV7tUD-kt1Si9p7zPe5S8lXBcy78" alt="FCS Tuyển thành viên" class="w-full h-full object-cover rounded-xl pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2025</span>
             </div>
-            <div class="p-4 flex flex-col justify-between flex-grow">
-              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white" data-en="FCS Creative Club Recruitment" data-vi="Tuyển thành viên CLB Sáng tạo FCS">FCS Creative Club Recruitment</h4>
-              <p class="text-[11px] text-slate-500 mt-1" data-en="Recruitment Poster" data-vi="Poster tuyển thành viên">Recruitment Poster</p>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white" data-en="FCS Creative Club Recruitment" data-vi="Tuyển thành viên CLB Sáng tạo FCS">FCS Creative Club Recruitment</h4>
+              <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5" data-en="Recruitment Poster" data-vi="Poster tuyển thành viên">Recruitment Poster</p>
             </div>
           </div>
 
-          <!-- 10. Poster FUDA Light's on (2025) -->
           <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 shadow-card transition-all duration-300 flex flex-col">
             <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1e5EZqMO-3sVX2YNTb1n9bxfJIubdRYLs" alt="FUDA Light's on" class="w-full h-full object-cover rounded-xl pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2025</span>
             </div>
-            <div class="p-4 flex flex-col justify-between flex-grow">
-              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white">FUDA Light's On</h4>
-              <p class="text-[11px] text-slate-500 mt-1" data-en="Exhibition Key Visual" data-vi="Key Visual triển lãm">Exhibition Key Visual</p>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white">FUDA Light's On</h4>
+              <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5" data-en="Exhibition Key Visual" data-vi="Key Visual triển lãm">Exhibition Key Visual</p>
             </div>
           </div>
 
-          <!-- 11. Sự kiện Khóa đồng tâm (2025) -->
           <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 shadow-card transition-all duration-300 flex flex-col">
             <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/10VLpnp3PVdkx1RZ088Vgv0jvD4VYXSec" alt="Khóa đồng tâm" class="w-full h-full object-cover rounded-xl pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2025</span>
             </div>
-            <div class="p-4 flex flex-col justify-between flex-grow">
-              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white" data-en="Khoa Dong Tam Workshop" data-vi="Sự kiện Khóa Đồng Tâm">Khoa Dong Tam Workshop</h4>
-              <p class="text-[11px] text-slate-500 mt-1" data-en="Special Workshop Poster" data-vi="Poster workshop đặc biệt">Special Workshop Poster</p>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white" data-en="Khoa Dong Tam Workshop" data-vi="Sự kiện Khóa Đồng Tâm">Khoa Dong Tam Workshop</h4>
+              <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5" data-en="Special Workshop Poster" data-vi="Poster workshop đặc biệt">Special Workshop Poster</p>
             </div>
           </div>
 
-          <!-- 12. DYMUN 2025 Tuyển ban tổ chức -->
           <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 shadow-card transition-all duration-300 flex flex-col">
             <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1IpTwtCGu_vpfz_Bh_4TlCU400aGt6OjO" alt="DYMUN BTC" class="w-full h-full object-cover rounded-xl pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2025</span>
             </div>
-            <div class="p-4 flex flex-col justify-between flex-grow">
-              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white" data-en="DYMUN Organizing Team Recruitment" data-vi="Tuyển Ban tổ chức DYMUN">DYMUN Organizing Team Recruitment</h4>
-              <p class="text-[11px] text-slate-500 mt-1" data-en="Recruitment Poster" data-vi="Poster tuyển dụng">Recruitment Poster</p>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white" data-en="DYMUN Organizing Team Recruitment" data-vi="Tuyển Ban tổ chức DYMUN">DYMUN Organizing Team Recruitment</h4>
+              <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5" data-en="Recruitment Poster" data-vi="Poster tuyển dụng">Recruitment Poster</p>
             </div>
           </div>
 
-          <!-- 13. Triển lãm Sắc màu hy vọng (2025) -->
           <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 shadow-card transition-all duration-300 flex flex-col">
             <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/14GtuCZ36SOOfYRrlFpCnZt7-fmtQlzc0" alt="Sắc màu hy vọng" class="w-full h-full object-cover rounded-xl pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2025</span>
             </div>
-            <div class="p-4 flex flex-col justify-between flex-grow">
-              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white" data-en="Colors of Hope Exhibition" data-vi="Triển lãm Sắc Màu Hy Vọng">Colors of Hope Exhibition</h4>
-              <p class="text-[11px] text-slate-500 mt-1" data-en="Community Exhibition Poster" data-vi="Poster triển lãm cộng đồng">Community Exhibition Poster</p>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white" data-en="Colors of Hope Exhibition" data-vi="Triển lãm Sắc Màu Hy Vọng">Colors of Hope Exhibition</h4>
+              <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5" data-en="Community Exhibition Poster" data-vi="Poster triển lãm cộng đồng">Community Exhibition Poster</p>
             </div>
           </div>
 
-          <!-- 14. Poster tuyển dụng nhà hàng chay Shanti (2025) -->
           <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 shadow-card transition-all duration-300 flex flex-col">
             <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1gbMujg65bZ4DgcY2maze8vXuioS5OUW5" alt="Nhà hàng Shanti" class="w-full h-full object-cover rounded-xl pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2025</span>
             </div>
-            <div class="p-4 flex flex-col justify-between flex-grow">
-              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white" data-en="Shanti Vegan Restaurant Recruitment" data-vi="Tuyển dụng nhà hàng chay Shanti">Shanti Vegan Restaurant Recruitment</h4>
-              <p class="text-[11px] text-slate-500 mt-1" data-en="Staff Recruitment Poster" data-vi="Poster tuyển dụng nhân sự">Staff Recruitment Poster</p>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white" data-en="Shanti Vegan Restaurant Recruitment" data-vi="Tuyển dụng nhà hàng chay Shanti">Shanti Vegan Restaurant Recruitment</h4>
+              <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5" data-en="Staff Recruitment Poster" data-vi="Poster tuyển dụng nhân sự">Staff Recruitment Poster</p>
             </div>
           </div>
 
-          <!-- 15. Sự kiện trải nghiệm chụp ảnh Việt phục (2025) -->
           <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 shadow-card transition-all duration-300 flex flex-col">
             <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1FKprFldGWNbVN17W3koorq_s7pkm-jtd" alt="Chụp ảnh Việt phục" class="w-full h-full object-cover rounded-xl pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2025</span>
             </div>
-            <div class="p-4 flex flex-col justify-between flex-grow">
-              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white" data-en="Vietphuc Photoshoot Experience" data-vi="Trải nghiệm chụp ảnh Việt phục">Vietphuc Photoshoot Experience</h4>
-              <p class="text-[11px] text-slate-500 mt-1" data-en="Cultural Event Poster" data-vi="Poster sự kiện văn hóa">Cultural Event Poster</p>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white" data-en="Vietphuc Photoshoot Experience" data-vi="Trải nghiệm chụp ảnh Việt phục">Vietphuc Photoshoot Experience</h4>
+              <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5" data-en="Cultural Event Poster" data-vi="Poster sự kiện văn hóa">Cultural Event Poster</p>
             </div>
           </div>
 
-          <!-- 16. Poster Thời báo FUM mờ (2025) -->
           <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 shadow-card transition-all duration-300 flex flex-col">
             <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1CrjVcAk6VxtlAO9UHrg1dSzc1NxFsQ4e" alt="Thời báo FUM" class="w-full h-full object-cover rounded-xl pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2025</span>
             </div>
-            <div class="p-4 flex flex-col justify-between flex-grow">
-              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white" data-en="FUM Special Times Newsletter" data-vi="Thời báo FUM Special Times">FUM Special Times Newsletter</h4>
-              <p class="text-[11px] text-slate-500 mt-1" data-en="Periodical Publication Design" data-vi="Thiết kế ấn phẩm định kỳ">Periodical Publication Design</p>
+            <div class="p-3 sm:p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white" data-en="FUM Special Times Newsletter" data-vi="Thời báo FUM Special Times">FUM Special Times Newsletter</h4>
+              <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5" data-en="Periodical Publication Design" data-vi="Thiết kế ấn phẩm định kỳ">Periodical Publication Design</p>
             </div>
           </div>
 
@@ -632,153 +603,144 @@
       </div>
     </section>
 
-
     <!-- ==================== AWARDS & CERTIFICATIONS ==================== -->
-    <section id="awards" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section id="awards" class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       
-      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-12 sm:mb-16">
         <span class="text-xs font-bold uppercase tracking-widest text-brand-accent" data-en="Honors & Certifications" data-vi="Danh hiệu & Chứng nhận">Honors & Certifications</span>
-        <h2 class="text-3xl sm:text-4xl font-grotesk font-bold text-brand-charcoal dark:text-white" data-en="Awards, Competitions & Professional Certifications" data-vi="Giải thưởng, Cuộc thi & Chứng nhận Chuyên nghiệp">
+        <h2 class="text-2xl sm:text-4xl font-grotesk font-bold text-brand-charcoal dark:text-white" data-en="Awards, Competitions & Professional Certifications" data-vi="Giải thưởng, Cuộc thi & Chứng nhận Chuyên nghiệp">
           Awards, Competitions & Professional Certifications
         </h2>
-        <p class="text-slate-600 dark:text-slate-400 text-sm" data-en="Recognizing academic excellence, research contributions, business competitions, and professional certifications" data-vi="Ghi nhận thành tích học tập xuất sắc, nghiên cứu khoa học, các cuộc thi kinh doanh và chứng nhận chuyên nghiệp">Recognizing academic excellence, research contributions, business competitions, and professional certifications</p>
+        <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm" data-en="Recognizing academic excellence, research contributions, business competitions, and professional certifications" data-vi="Ghi nhận thành tích học tập xuất sắc, nghiên cứu khoa học, các cuộc thi kinh doanh và chứng nhận chuyên nghiệp">Recognizing academic excellence, research contributions, business competitions, and professional certifications</p>
         <div class="w-12 h-1 bg-brand-accent mx-auto rounded-full"></div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <!-- 1. Top 5 Outstanding Student (Spring 2026) -->
         <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="relative aspect-[4/3] bg-slate-100 dark:bg-slate-950 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/15iwZ-rpnKNQlmdby6IZsovYev8Xsr4MR" alt="Top 5 Outstanding Student" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">Spring 2026</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">Spring 2026</span>
             </div>
-            <div class="p-5 space-y-2">
-              <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider" data-en="Academic Excellence" data-vi="Thành tích học tập">Academic Excellence</span>
-              <h3 class="font-grotesk font-bold text-base text-brand-charcoal dark:text-white" data-en="Top 5 Outstanding Students in Economics" data-vi="Top 5 Sinh viên Xuất sắc Khối ngành Kinh tế">
+            <div class="p-4 sm:p-5 space-y-1.5 sm:space-y-2">
+              <span class="text-[10px] sm:text-[11px] font-bold text-brand-accent uppercase tracking-wider" data-en="Academic Excellence" data-vi="Thành tích học tập">Academic Excellence</span>
+              <h3 class="font-grotesk font-bold text-sm sm:text-base text-brand-charcoal dark:text-white" data-en="Top 5 Outstanding Students in Economics" data-vi="Top 5 Sinh viên Xuất sắc Khối ngành Kinh tế">
                 Top 5 Outstanding Students in Economics
               </h3>
-              <p class="text-xs text-brand-muted dark:text-slate-400" data-en="FPT University Da Nang • GPA SP26: 9.7/10 (4.0/4.0)" data-vi="Đại học FPT Đà Nẵng • GPA SP26: 9.7/10 (4.0/4.0)">FPT University Da Nang • GPA SP26: 9.7/10 (4.0/4.0)</p>
+              <p class="text-[11px] sm:text-xs text-brand-muted dark:text-slate-400" data-en="FPT University Da Nang • GPA SP26: 9.7/10 (4.0/4.0)" data-vi="Đại học FPT Đà Nẵng • GPA SP26: 9.7/10 (4.0/4.0)">FPT University Da Nang • GPA SP26: 9.7/10 (4.0/4.0)</p>
             </div>
           </div>
         </div>
 
-        <!-- 2. ResConnect 2026 -->
         <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="relative aspect-[4/3] bg-slate-100 dark:bg-slate-950 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1hdJ8sjDh1IH-7TSdrTndA8tCnXLIK2od" alt="ResConnect 2026" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2026</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2026</span>
             </div>
-            <div class="p-5 space-y-2">
-              <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider" data-en="Scientific Research" data-vi="Nghiên cứu khoa học">Scientific Research</span>
-              <h3 class="font-grotesk font-bold text-base text-brand-charcoal dark:text-white" data-en="Third Prize, Multimedia Communication Sub-Committee" data-vi="Giải Ba, Tiểu ban Truyền thông Đa phương tiện">
+            <div class="p-4 sm:p-5 space-y-1.5 sm:space-y-2">
+              <span class="text-[10px] sm:text-[11px] font-bold text-brand-accent uppercase tracking-wider" data-en="Scientific Research" data-vi="Nghiên cứu khoa học">Scientific Research</span>
+              <h3 class="font-grotesk font-bold text-sm sm:text-base text-brand-charcoal dark:text-white" data-en="Third Prize, Multimedia Communication Sub-Committee" data-vi="Giải Ba, Tiểu ban Truyền thông Đa phương tiện">
                 Third Prize, Multimedia Communication Sub-Committee
               </h3>
-              <p class="text-xs text-brand-muted dark:text-slate-400" data-en="ResConnect Science Research Competition 2026" data-vi="Cuộc thi Nghiên cứu Khoa học ResConnect 2026">ResConnect Science Research Competition 2026</p>
+              <p class="text-[11px] sm:text-xs text-brand-muted dark:text-slate-400" data-en="ResConnect Science Research Competition 2026" data-vi="Cuộc thi Nghiên cứu Khoa học ResConnect 2026">ResConnect Science Research Competition 2026</p>
             </div>
           </div>
         </div>
 
-        <!-- 3. Da Nang Startup Award (2026) -->
         <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="relative aspect-[4/3] bg-slate-100 dark:bg-slate-950 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1zDVXj5W2WPCChIp4d86nmisJRUeuW7V4" alt="Da Nang Startup Award 2026" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2026</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2026</span>
             </div>
-            <div class="p-5 space-y-2">
-              <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider" data-en="Da Nang Innovation" data-vi="Đổi mới sáng tạo Đà Nẵng">Da Nang Innovation</span>
-              <h3 class="font-grotesk font-bold text-base text-brand-charcoal dark:text-white" data-en="Third Prize - Student Category Startup Competition" data-vi="Giải Ba - Bảng Sinh viên Cuộc thi Khởi nghiệp Đổi mới Sáng tạo Đà Nẵng">
+            <div class="p-4 sm:p-5 space-y-1.5 sm:space-y-2">
+              <span class="text-[10px] sm:text-[11px] font-bold text-brand-accent uppercase tracking-wider" data-en="Da Nang Innovation" data-vi="Đổi mới sáng tạo Đà Nẵng">Da Nang Innovation</span>
+              <h3 class="font-grotesk font-bold text-sm sm:text-base text-brand-charcoal dark:text-white" data-en="Third Prize - Student Category Startup Competition" data-vi="Giải Ba - Bảng Sinh viên Cuộc thi Khởi nghiệp Đổi mới Sáng tạo Đà Nẵng">
                 Third Prize - Student Category Startup Competition
               </h3>
-              <p class="text-xs text-brand-muted dark:text-slate-400" data-en="Da Nang Innovation & Startup Competition 2026" data-vi="Cuộc thi Khởi nghiệp Đổi mới Sáng tạo TP. Đà Nẵng 2026">Da Nang Innovation & Startup Competition 2026</p>
+              <p class="text-[11px] sm:text-xs text-brand-muted dark:text-slate-400" data-en="Da Nang Innovation & Startup Competition 2026" data-vi="Cuộc thi Khởi nghiệp Đổi mới Sáng tạo TP. Đà Nẵng 2026">Da Nang Innovation & Startup Competition 2026</p>
             </div>
           </div>
         </div>
 
-        <!-- 4. VinFast Challenge (2025) -->
         <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="relative aspect-[4/3] bg-slate-100 dark:bg-slate-950 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1U4hNsGCW9Q2uQNh8KjBRAElxKjtHnoFK" alt="VinFast x HubNetwork" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2025</span>
             </div>
-            <div class="p-5 space-y-2">
-              <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider" data-en="Business Challenge" data-vi="Thử thách kinh doanh">Business Challenge</span>
-              <h3 class="font-grotesk font-bold text-base text-brand-charcoal dark:text-white" data-en="Top 6 National Teams - VinFast x HubNetwork" data-vi="Top 6 Đội thi Toàn quốc - VinFast x HubNetwork">
+            <div class="p-4 sm:p-5 space-y-1.5 sm:space-y-2">
+              <span class="text-[10px] sm:text-[11px] font-bold text-brand-accent uppercase tracking-wider" data-en="Business Challenge" data-vi="Thử thách kinh doanh">Business Challenge</span>
+              <h3 class="font-grotesk font-bold text-sm sm:text-base text-brand-charcoal dark:text-white" data-en="Top 6 National Teams - VinFast x HubNetwork" data-vi="Top 6 Đội thi Toàn quốc - VinFast x HubNetwork">
                 Top 6 National Teams - VinFast x HubNetwork
               </h3>
-              <p class="text-xs text-brand-muted dark:text-slate-400" data-en="Business Challenge 2025 • Team Tinh Lộ" data-vi="Business Challenge 2025 • Đội Tinh Lộ">Business Challenge 2025 • Team Tinh Lộ</p>
+              <p class="text-[11px] sm:text-xs text-brand-muted dark:text-slate-400" data-en="Business Challenge 2025 • Team Tinh Lộ" data-vi="Business Challenge 2025 • Đội Tinh Lộ">Business Challenge 2025 • Team Tinh Lộ</p>
             </div>
           </div>
         </div>
 
-        <!-- 5. Res-Start 2025 -->
         <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="relative aspect-[4/3] bg-slate-100 dark:bg-slate-950 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/14W9upubk1WDn7EGK_UHNUeyjFXzOeex_" alt="Res-Start 2025" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2025</span>
             </div>
-            <div class="p-5 space-y-2">
-              <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider" data-en="Startup Innovation" data-vi="Khởi nghiệp đổi mới">Startup Innovation</span>
-              <h3 class="font-grotesk font-bold text-base text-brand-charcoal dark:text-white" data-en="Best Presentation Award & Top 4 Finalist" data-vi="Giải Thuyết trình Hay nhất & Top 4 Chung kết">
+            <div class="p-4 sm:p-5 space-y-1.5 sm:space-y-2">
+              <span class="text-[10px] sm:text-[11px] font-bold text-brand-accent uppercase tracking-wider" data-en="Startup Innovation" data-vi="Khởi nghiệp đổi mới">Startup Innovation</span>
+              <h3 class="font-grotesk font-bold text-sm sm:text-base text-brand-charcoal dark:text-white" data-en="Best Presentation Award & Top 4 Finalist" data-vi="Giải Thuyết trình Hay nhất & Top 4 Chung kết">
                 Best Presentation Award & Top 4 Finalist
               </h3>
-              <p class="text-xs text-brand-muted dark:text-slate-400" data-en="Res-Start Startup Idea Competition 2025" data-vi="Cuộc thi Ý tưởng Khởi nghiệp Res-Start 2025">Res-Start Startup Idea Competition 2025</p>
+              <p class="text-[11px] sm:text-xs text-brand-muted dark:text-slate-400" data-en="Res-Start Startup Idea Competition 2025" data-vi="Cuộc thi Ý tưởng Khởi nghiệp Res-Start 2025">Res-Start Startup Idea Competition 2025</p>
             </div>
           </div>
         </div>
 
-        <!-- 6. IC Master 2025 -->
         <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="relative aspect-[4/3] bg-slate-100 dark:bg-slate-950 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1f_fHZcBtp8KcuX-bYKTj7pqQNIk6q9xu" alt="IC Master 2025" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2025</span>
             </div>
-            <div class="p-5 space-y-2">
-              <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider" data-en="Practical Communication" data-vi="Truyền thông thực chiến">Practical Communication</span>
-              <h3 class="font-grotesk font-bold text-base text-brand-charcoal dark:text-white" data-en="Top 8 Excellent Team - IC Master" data-vi="Top 8 Đội thi Xuất sắc - IC Master">
+            <div class="p-4 sm:p-5 space-y-1.5 sm:space-y-2">
+              <span class="text-[10px] sm:text-[11px] font-bold text-brand-accent uppercase tracking-wider" data-en="Practical Communication" data-vi="Truyền thông thực chiến">Practical Communication</span>
+              <h3 class="font-grotesk font-bold text-sm sm:text-base text-brand-charcoal dark:text-white" data-en="Top 8 Excellent Team - IC Master" data-vi="Top 8 Đội thi Xuất sắc - IC Master">
                 Top 8 Excellent Team - IC Master
               </h3>
-              <p class="text-xs text-brand-muted dark:text-slate-400" data-en="Outstanding Communicator Contest 2025 • Team Trinity Spark" data-vi="Cuộc thi Nhà Truyền thông Tài ba 2025 • Đội Trinity Spark">Outstanding Communicator Contest 2025 • Team Trinity Spark</p>
+              <p class="text-[11px] sm:text-xs text-brand-muted dark:text-slate-400" data-en="Outstanding Communicator Contest 2025 • Team Trinity Spark" data-vi="Cuộc thi Nhà Truyền thông Tài ba 2025 • Đội Trinity Spark">Outstanding Communicator Contest 2025 • Team Trinity Spark</p>
             </div>
           </div>
         </div>
 
-        <!-- 7. NEO-UP 2025 -->
         <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="relative aspect-[4/3] bg-slate-100 dark:bg-slate-950 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1N74EuT2cKfmC7t_FidfhX4WcIDL0Z_qe" alt="NEO-UP 2025" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2025</span>
             </div>
-            <div class="p-5 space-y-2">
-              <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider" data-en="Economic Startup" data-vi="Khởi nghiệp kinh tế">Economic Startup</span>
-              <h3 class="font-grotesk font-bold text-base text-brand-charcoal dark:text-white" data-en="Top 6 Excellent Team - NEO-UP" data-vi="Top 6 Đội thi Xuất sắc - NEO-UP">
+            <div class="p-4 sm:p-5 space-y-1.5 sm:space-y-2">
+              <span class="text-[10px] sm:text-[11px] font-bold text-brand-accent uppercase tracking-wider" data-en="Economic Startup" data-vi="Khởi nghiệp kinh tế">Economic Startup</span>
+              <h3 class="font-grotesk font-bold text-sm sm:text-base text-brand-charcoal dark:text-white" data-en="Top 6 Excellent Team - NEO-UP" data-vi="Top 6 Đội thi Xuất sắc - NEO-UP">
                 Top 6 Excellent Team - NEO-UP
               </h3>
-              <p class="text-xs text-brand-muted dark:text-slate-400" data-en="Unfurl Your Wings 2025 • Team Tứ Trụ Core" data-vi="Unfurl Your Wings 2025 • Đội Tứ Trụ Core">Unfurl Your Wings 2025 • Team Tứ Trụ Core</p>
+              <p class="text-[11px] sm:text-xs text-brand-muted dark:text-slate-400" data-en="Unfurl Your Wings 2025 • Team Tứ Trụ Core" data-vi="Unfurl Your Wings 2025 • Đội Tứ Trụ Core">Unfurl Your Wings 2025 • Team Tứ Trụ Core</p>
             </div>
           </div>
         </div>
 
-        <!-- 8. FPT La'FEst 2025 -->
         <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="relative aspect-[4/3] bg-slate-100 dark:bg-slate-950 overflow-hidden flex items-center justify-center">
               <img src="https://lh3.googleusercontent.com/d/1CyAlbqmmSSDWNDLn0_KRCZBeuJ2ExbSc" alt="FPT La'FEst" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none select-none" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-white">2025</span>
             </div>
-            <div class="p-5 space-y-2">
-              <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider" data-en="Language & Culture" data-vi="Ngôn ngữ & Văn hóa">Language & Culture</span>
-              <h3 class="font-grotesk font-bold text-base text-brand-charcoal dark:text-white" data-en="Third Prize, Chinese Category - FPT La'FEst" data-vi="Giải Ba, Bảng Tiếng Trung - FPT La'FEst">
+            <div class="p-4 sm:p-5 space-y-1.5 sm:space-y-2">
+              <span class="text-[10px] sm:text-[11px] font-bold text-brand-accent uppercase tracking-wider" data-en="Language & Culture" data-vi="Ngôn ngữ & Văn hóa">Language & Culture</span>
+              <h3 class="font-grotesk font-bold text-sm sm:text-base text-brand-charcoal dark:text-white" data-en="Third Prize, Chinese Category - FPT La'FEst" data-vi="Giải Ba, Bảng Tiếng Trung - FPT La'FEst">
                 Third Prize, Chinese Category - FPT La'FEst
               </h3>
-              <p class="text-xs text-brand-muted dark:text-slate-400" data-en="FPT Language Festival • Debating & Speaking" data-vi="Ngày hội Ngôn ngữ FPT • Hùng biện & Tranh biện">FPT Language Festival • Debating & Speaking</p>
+              <p class="text-[11px] sm:text-xs text-brand-muted dark:text-slate-400" data-en="FPT Language Festival • Debating & Speaking" data-vi="Ngày hội Ngôn ngữ FPT • Hùng biện & Tranh biện">FPT Language Festival • Debating & Speaking</p>
             </div>
           </div>
         </div>
@@ -787,95 +749,83 @@
 
     </section>
 
-
     <!-- ==================== SKILLS, CERTIFICATIONS & TOOLS ==================== -->
-    <section id="skills" class="py-20 bg-white dark:bg-slate-900 border-y border-brand-sand dark:border-slate-800">
+    <section id="skills" class="py-16 sm:py-20 bg-white dark:bg-slate-900 border-y border-brand-sand dark:border-slate-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
-          <div class="lg:col-span-5 space-y-6">
+          <div class="lg:col-span-5 space-y-5">
             <span class="text-xs font-bold uppercase tracking-widest text-brand-accent" data-en="Professional Competency" data-vi="Năng lực chuyên môn">Professional Competency</span>
-            <h2 class="text-3xl sm:text-4xl font-grotesk font-bold text-brand-charcoal dark:text-white leading-tight" data-en="Skills, Certifications & Tools" data-vi="Kỹ năng, Chứng nhận & Công cụ">
+            <h2 class="text-2xl sm:text-4xl font-grotesk font-bold text-brand-charcoal dark:text-white leading-tight" data-en="Skills, Certifications & Tools" data-vi="Kỹ năng, Chứng nhận & Công cụ">
               Skills, Certifications & Tools
             </h2>
-            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed" data-en="Combining strategic thinking, AI & data research with creative design capabilities to optimize project execution efficiency." data-vi="Kết hợp tư duy chiến lược, nghiên cứu dữ liệu & AI cùng năng lực thiết kế sáng tạo để tối ưu hiệu suất thực thi dự án.">
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed" data-en="Combining strategic thinking, AI & data research with creative design capabilities to optimize project execution efficiency." data-vi="Kết hợp tư duy chiến lược, nghiên cứu dữ liệu & AI cùng năng lực thiết kế sáng tạo để tối ưu hiệu suất thực thi dự án.">
               Combining strategic thinking, AI & data research with creative design capabilities to optimize project execution efficiency.
             </p>
 
-            <!-- 10 Software Icons -->
             <div class="pt-2">
               <h4 class="text-xs font-bold text-brand-muted dark:text-slate-400 uppercase tracking-wider mb-3" data-en="Proficient Software & Platforms" data-vi="Phần mềm & Nền tảng thành thạo">Proficient Software & Platforms</h4>
-              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3">
                 
-                <!-- 1. Google Calendar -->
-                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
-                  <div class="w-7 h-7 rounded-lg bg-white flex items-center justify-center shadow p-1">
+                <div class="flex items-center space-x-2 p-2 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-[11px] sm:text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-white flex items-center justify-center shadow p-1">
                     <svg viewBox="0 0 24 24" class="w-full h-full"><path fill="#4285F4" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
                   </div>
                   <span>Calendar</span>
                 </div>
 
-                <!-- 2. Google Drive -->
-                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
-                  <div class="w-7 h-7 rounded-lg bg-white flex items-center justify-center shadow p-1">
+                <div class="flex items-center space-x-2 p-2 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-[11px] sm:text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-white flex items-center justify-center shadow p-1">
                     <svg viewBox="0 0 87.3 78" class="w-full h-full"><path fill="#0066da" d="M6.6 66.85l3.85 6.65c.8 1.4 1.95 2.5 3.35 3.3L31.5 47H1.5c0 1.55.4 3.1 1.2 4.5l3.9 15.35z"/><path fill="#00ac47" d="M43.65 25L28.5 50.35 13.35 76.8c1.4 1.4 3.15 2.35 5.15 2.35h60.3c2 0 3.75-.95 5.15-2.35L43.65 25z"/><path fill="#ea4335" d="M73.5 25H43.65L28.5 50.35l30.15 25.3c1.4-.8 2.55-1.9 3.35-3.3l14.5-25.1c.8-1.4 1.2-2.95 1.2-4.5 0-1.55-.4-3.1-1.2-4.5l-2.9-5.15z"/><path fill="#ffba00" d="M43.65 25L13.5 50.35c-.8 1.4-1.2 2.95-1.2 4.5 0 1.55.4 3.1 1.2 4.5l30.15-34.35z"/></svg>
                   </div>
                   <span>Drive</span>
                 </div>
 
-                <!-- 3. Google Docs -->
-                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
-                  <div class="w-7 h-7 rounded-lg bg-white flex items-center justify-center shadow p-1">
+                <div class="flex items-center space-x-2 p-2 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-[11px] sm:text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-white flex items-center justify-center shadow p-1">
                     <svg viewBox="0 0 24 24" class="w-full h-full"><path fill="#4285F4" d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
                   </div>
                   <span>Docs</span>
                 </div>
 
-                <!-- 4. Google Sheets -->
-                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
-                  <div class="w-7 h-7 rounded-lg bg-white flex items-center justify-center shadow p-1">
+                <div class="flex items-center space-x-2 p-2 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-[11px] sm:text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-white flex items-center justify-center shadow p-1">
                     <svg viewBox="0 0 24 24" class="w-full h-full"><path fill="#0F9D58" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-4h2v4zm4 0h-2V7h2v10zm4 0h-2v-6h2v6z"/></svg>
                   </div>
                   <span>Sheets</span>
                 </div>
 
-                <!-- 5. NotebookLM -->
-                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
-                  <div class="w-7 h-7 rounded-lg bg-white flex items-center justify-center shadow p-1">
+                <div class="flex items-center space-x-2 p-2 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-[11px] sm:text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-white flex items-center justify-center shadow p-1">
                     <svg viewBox="0 0 24 24" class="w-full h-full"><path fill="#1A73E8" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
                   </div>
                   <span>NotebookLM</span>
                 </div>
 
-                <!-- 6. Canva -->
-                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
-                  <div class="w-7 h-7 rounded-lg bg-cyan-500 text-white flex items-center justify-center text-xs font-serif italic shadow">C</div>
+                <div class="flex items-center space-x-2 p-2 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-[11px] sm:text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-cyan-500 text-white flex items-center justify-center text-[10px] sm:text-xs font-serif italic shadow">C</div>
                   <span>Canva</span>
                 </div>
 
-                <!-- 7. Photoshop -->
-                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
-                  <div class="w-7 h-7 rounded-lg bg-[#001E36] text-[#31A8FF] flex items-center justify-center font-bold text-xs shadow">Ps</div>
+                <div class="flex items-center space-x-2 p-2 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-[11px] sm:text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-[#001E36] text-[#31A8FF] flex items-center justify-center font-bold text-[10px] sm:text-xs shadow">Ps</div>
                   <span>Photoshop</span>
                 </div>
 
-                <!-- 8. Illustrator -->
-                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
-                  <div class="w-7 h-7 rounded-lg bg-[#330000] text-[#FF9A00] flex items-center justify-center font-bold text-xs shadow">Ai</div>
+                <div class="flex items-center space-x-2 p-2 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-[11px] sm:text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-[#330000] text-[#FF9A00] flex items-center justify-center font-bold text-[10px] sm:text-xs shadow">Ai</div>
                   <span>Illustrator</span>
                 </div>
 
-                <!-- 9. Premiere Pro -->
-                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
-                  <div class="w-7 h-7 rounded-lg bg-[#00005B] text-[#9999FF] flex items-center justify-center font-bold text-xs shadow">Pr</div>
+                <div class="flex items-center space-x-2 p-2 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-[11px] sm:text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-[#00005B] text-[#9999FF] flex items-center justify-center font-bold text-[10px] sm:text-xs shadow">Pr</div>
                   <span>Premiere</span>
                 </div>
 
-                <!-- 10. CapCut -->
-                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
-                  <div class="w-7 h-7 rounded-lg bg-slate-900 text-white flex items-center justify-center text-xs shadow">
-                    <i class="fa-solid fa-film text-xs"></i>
+                <div class="flex items-center space-x-2 p-2 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-[11px] sm:text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-slate-900 text-white flex items-center justify-center text-[10px] sm:text-xs shadow">
+                    <i class="fa-solid fa-film text-[10px]"></i>
                   </div>
                   <span>CapCut</span>
                 </div>
@@ -883,9 +833,8 @@
               </div>
             </div>
 
-            <!-- Professional Certifications & Education -->
-            <div class="pt-6">
-              <h4 class="text-xs font-bold text-brand-muted dark:text-slate-400 uppercase tracking-wider mb-3" data-en="Professional Certifications & Education" data-vi="Chứng chỉ chuyên nghiệp & Học vấn">Professional Certifications & Education</h4>
+            <div class="pt-5">
+              <h4 class="text-xs font-bold text-brand-muted dark:text-slate-400 uppercase tracking-wider mb-2.5" data-en="Professional Certifications & Education" data-vi="Chứng chỉ chuyên nghiệp & Học vấn">Professional Certifications & Education</h4>
               <ul class="space-y-2 text-xs text-slate-700 dark:text-slate-300">
                 <li class="flex items-start space-x-2">
                   <i class="fa-solid fa-certificate text-brand-accent mt-0.5"></i>
@@ -905,64 +854,64 @@
           </div>
 
           <!-- Skills Matrix -->
-          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
             
-            <div class="p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-2">
-              <div class="flex items-center space-x-3 text-brand-accent">
-                <i class="fa-solid fa-bullseye text-lg"></i>
-                <h4 class="font-bold text-sm text-brand-charcoal dark:text-white" data-en="Strategic Campaign Planning" data-vi="Hoạch định Chiến dịch Chiến lược">Strategic Campaign Planning</h4>
+            <div class="p-4 sm:p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-1.5 sm:space-y-2">
+              <div class="flex items-center space-x-2.5 sm:space-x-3 text-brand-accent">
+                <i class="fa-solid fa-bullseye text-base sm:text-lg"></i>
+                <h4 class="font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white" data-en="Strategic Campaign Planning" data-vi="Hoạch định Chiến dịch Chiến lược">Strategic Campaign Planning</h4>
               </div>
-              <p class="text-xs text-slate-600 dark:text-slate-400" data-en="Developing multi-channel communication roadmaps from background research and KPI setting to budget allocation and execution." data-vi="Xây dựng lộ trình truyền thông đa kênh từ nghiên cứu bối cảnh, thiết lập KPI đến phân bổ ngân sách và thực thi.">
+              <p class="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400" data-en="Developing multi-channel communication roadmaps from background research and KPI setting to budget allocation and execution." data-vi="Xây dựng lộ trình truyền thông đa kênh từ nghiên cứu bối cảnh, thiết lập KPI đến phân bổ ngân sách và thực thi.">
                 Developing multi-channel communication roadmaps from background research and KPI setting to budget allocation and execution.
               </p>
             </div>
 
-            <div class="p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-2">
-              <div class="flex items-center space-x-3 text-brand-accent">
-                <i class="fa-solid fa-magnifying-glass-chart text-lg"></i>
-                <h4 class="font-bold text-sm text-brand-charcoal dark:text-white" data-en="Market & Audience Research" data-vi="Nghiên cứu Thị trường & Khán giả">Market & Audience Research</h4>
+            <div class="p-4 sm:p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-1.5 sm:space-y-2">
+              <div class="flex items-center space-x-2.5 sm:space-x-3 text-brand-accent">
+                <i class="fa-solid fa-magnifying-glass-chart text-base sm:text-lg"></i>
+                <h4 class="font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white" data-en="Market & Audience Research" data-vi="Nghiên cứu Thị trường & Khán giả">Market & Audience Research</h4>
               </div>
-              <p class="text-xs text-slate-600 dark:text-slate-400" data-en="Analyzing audience behavior, competitors, and consumer psychology specifically tailored for Gen Z and youth demographics." data-vi="Phân tích hành vi công chúng, đối thủ cạnh tranh và tâm lý tiêu dùng thiết kế riêng cho Gen Z và giới trẻ.">
+              <p class="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400" data-en="Analyzing audience behavior, competitors, and consumer psychology specifically tailored for Gen Z and youth demographics." data-vi="Phân tích hành vi công chúng, đối thủ cạnh tranh và tâm lý tiêu dùng thiết kế riêng cho Gen Z và giới trẻ.">
                 Analyzing audience behavior, competitors, and consumer psychology specifically tailored for Gen Z and youth demographics.
               </p>
             </div>
 
-            <div class="p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-2">
-              <div class="flex items-center space-x-3 text-brand-accent">
-                <i class="fa-solid fa-comments text-lg"></i>
-                <h4 class="font-bold text-sm text-brand-charcoal dark:text-white" data-en="Brand Communication" data-vi="Truyền thông Thương hiệu">Brand Communication</h4>
+            <div class="p-4 sm:p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-1.5 sm:space-y-2">
+              <div class="flex items-center space-x-2.5 sm:space-x-3 text-brand-accent">
+                <i class="fa-solid fa-comments text-base sm:text-lg"></i>
+                <h4 class="font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white" data-en="Brand Communication" data-vi="Truyền thông Thương hiệu">Brand Communication</h4>
               </div>
-              <p class="text-xs text-slate-600 dark:text-slate-400" data-en="Building consistent brand messaging, visual identity management, and creating emotional content that resonates with audiences." data-vi="Xây dựng thông điệp thương hiệu nhất quán, quản trị nhận diện trực quan và tạo ra nội dung cảm xúc chạm đến người xem.">
+              <p class="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400" data-en="Building consistent brand messaging, visual identity management, and creating emotional content that resonates with audiences." data-vi="Xây dựng thông điệp thương hiệu nhất quán, quản trị nhận diện trực quan và tạo ra nội dung cảm xúc chạm đến người xem.">
                 Building consistent brand messaging, visual identity management, and creating emotional content that resonates with audiences.
               </p>
             </div>
 
-            <div class="p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-2">
-              <div class="flex items-center space-x-3 text-brand-accent">
-                <i class="fa-solid fa-pen-nib text-lg"></i>
-                <h4 class="font-bold text-sm text-brand-charcoal dark:text-white" data-en="Creative Production" data-vi="Sản xuất Sáng tạo">Creative Production</h4>
+            <div class="p-4 sm:p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-1.5 sm:space-y-2">
+              <div class="flex items-center space-x-2.5 sm:space-x-3 text-brand-accent">
+                <i class="fa-solid fa-pen-nib text-base sm:text-lg"></i>
+                <h4 class="font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white" data-en="Creative Production" data-vi="Sản xuất Sáng tạo">Creative Production</h4>
               </div>
-              <p class="text-xs text-slate-600 dark:text-slate-400" data-en="Designing Key Visuals, event posters, social media assets, and professional short-form video editing." data-vi="Thiết kế Key Visual, poster sự kiện, ấn phẩm mạng xã hội và biên tập video ngắn chuyên nghiệp.">
+              <p class="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400" data-en="Designing Key Visuals, event posters, social media assets, and professional short-form video editing." data-vi="Thiết kế Key Visual, poster sự kiện, ấn phẩm mạng xã hội và biên tập video ngắn chuyên nghiệp.">
                 Designing Key Visuals, event posters, social media assets, and professional short-form video editing.
               </p>
             </div>
 
-            <div class="p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-2">
-              <div class="flex items-center space-x-3 text-brand-accent">
-                <i class="fa-solid fa-users-gear text-lg"></i>
-                <h4 class="font-bold text-sm text-brand-charcoal dark:text-white" data-en="Project Coordination" data-vi="Điều phối Dự án">Project Coordination</h4>
+            <div class="p-4 sm:p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-1.5 sm:space-y-2">
+              <div class="flex items-center space-x-2.5 sm:space-x-3 text-brand-accent">
+                <i class="fa-solid fa-users-gear text-base sm:text-lg"></i>
+                <h4 class="font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white" data-en="Project Coordination" data-vi="Điều phối Dự án">Project Coordination</h4>
               </div>
-              <p class="text-xs text-slate-600 dark:text-slate-400" data-en="Managing timelines, personnel delegation, risk management, and event coordination based on professional operational standards." data-vi="Quản lý tiến độ, phân công nhân sự, quản lý rủi ro và điều phối sự kiện theo tiêu chuẩn vận hành chuyên nghiệp.">
+              <p class="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400" data-en="Managing timelines, personnel delegation, risk management, and event coordination based on professional operational standards." data-vi="Quản lý tiến độ, phân công nhân sự, quản lý rủi ro và điều phối sự kiện theo tiêu chuẩn vận hành chuyên nghiệp.">
                 Managing timelines, personnel delegation, risk management, and event coordination based on professional operational standards.
               </p>
             </div>
 
-            <div class="p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-2">
-              <div class="flex items-center space-x-3 text-brand-accent">
-                <i class="fa-solid fa-person-chalkboard text-lg"></i>
-                <h4 class="font-bold text-sm text-brand-charcoal dark:text-white" data-en="Pitching & Presentation" data-vi="Thuyết trình & Pitching">Pitching & Presentation</h4>
+            <div class="p-4 sm:p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-1.5 sm:space-y-2">
+              <div class="flex items-center space-x-2.5 sm:space-x-3 text-brand-accent">
+                <i class="fa-solid fa-person-chalkboard text-base sm:text-lg"></i>
+                <h4 class="font-bold text-xs sm:text-sm text-brand-charcoal dark:text-white" data-en="Pitching & Presentation" data-vi="Thuyết trình & Pitching">Pitching & Presentation</h4>
               </div>
-              <p class="text-xs text-slate-600 dark:text-slate-400" data-en="Defending business pitches, designing persuasive slides, and articulating sharp arguments before senior executive juries." data-vi="Bảo vệ các bài pitch kinh doanh, thiết kế slide thuyết phục và trình bày luận điểm sắc bén trước ban giám khảo.">
+              <p class="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400" data-en="Defending business pitches, designing persuasive slides, and articulating sharp arguments before senior executive juries." data-vi="Bảo vệ các bài pitch kinh doanh, thiết kế slide thuyết phục và trình bày luận điểm sắc bén trước ban giám khảo.">
                 Defending business pitches, designing persuasive slides, and articulating sharp arguments before senior executive juries.
               </p>
             </div>
@@ -974,60 +923,59 @@
       </div>
     </section>
 
-
     <!-- ==================== CONTACT SECTION ==================== -->
-    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section id="contact" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       
-      <div class="relative rounded-3xl bg-gradient-to-br from-brand-sand via-white to-brand-mint/50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950 border border-brand-mint/80 dark:border-slate-800 p-8 sm:p-12 lg:p-16 overflow-hidden shadow-hover">
+      <div class="relative rounded-3xl bg-gradient-to-br from-brand-sand via-white to-brand-mint/50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950 border border-brand-mint/80 dark:border-slate-800 p-6 sm:p-12 lg:p-16 overflow-hidden shadow-hover">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
-          <div class="lg:col-span-7 space-y-6">
+          <div class="lg:col-span-7 space-y-5">
             <span class="inline-block px-4 py-1.5 rounded-full bg-brand-accent/10 text-brand-accent text-xs font-bold uppercase tracking-wider" data-en="Connect & Collaborate" data-vi="Kết nối & Hợp tác">
               Connect & Collaborate
             </span>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-grotesk font-bold text-brand-charcoal dark:text-white leading-tight" data-en="Ready for new projects and challenges!" data-vi="Sẵn sàng cho các dự án và thử thách mới!">
+            <h2 class="text-2.5xl sm:text-4xl lg:text-5xl font-grotesk font-bold text-brand-charcoal dark:text-white leading-tight" data-en="Ready for new projects and challenges!" data-vi="Sẵn sàng cho các dự án và thử thách mới!">
               Ready for new projects and challenges!
             </h2>
-            <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed" data-en="Are you looking for an enthusiastic, disciplined, and creative team player for your upcoming media campaigns, events, or projects? Feel free to reach out!" data-vi="Bạn đang tìm kiếm một nhân sự nhiệt huyết, kỷ luật và sáng tạo cho các chiến dịch truyền thông, sự kiện hay dự án sắp tới? Đừng ngần ngại liên hệ nhé!">
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-base leading-relaxed" data-en="Are you looking for an enthusiastic, disciplined, and creative team player for your upcoming media campaigns, events, or projects? Feel free to reach out!" data-vi="Bạn đang tìm kiếm một nhân sự nhiệt huyết, kỷ luật và sáng tạo cho các chiến dịch truyền thông, sự kiện hay dự án sắp tới? Đừng ngần ngại liên hệ nhé!">
               Are you looking for an enthusiastic, disciplined, and creative team player for your upcoming media campaigns, events, or projects? Feel free to reach out!
             </p>
 
-            <div class="space-y-4 pt-2">
+            <div class="space-y-3.5 pt-1">
               
               <div class="flex items-center space-x-3 group cursor-pointer" onclick="copyToClipboard('phuonganhmarlyn.forwork@gmail.com', currentLang === 'vi' ? 'Đã chép email: phuonganhmarlyn.forwork@gmail.com' : 'Copied email: phuonganhmarlyn.forwork@gmail.com')">
-                <div class="w-12 h-12 rounded-2xl bg-brand-accent text-white flex items-center justify-center text-lg shadow-soft group-hover:scale-110 transition-transform">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-accent text-white flex items-center justify-center text-sm sm:text-lg shadow-soft group-hover:scale-110 transition-transform flex-shrink-0">
                   <i class="fa-solid fa-envelope"></i>
                 </div>
                 <div>
-                  <div class="text-xs text-brand-muted dark:text-slate-400 uppercase tracking-wider font-semibold" data-en="Official Email" data-vi="Email chính thức">Official Email</div>
-                  <div class="text-sm sm:text-base font-bold text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors flex items-center space-x-2">
-                    <span>phuonganhmarlyn.forwork@gmail.com</span>
-                    <i class="fa-regular fa-copy text-xs text-brand-muted"></i>
+                  <div class="text-[10px] sm:text-xs text-brand-muted dark:text-slate-400 uppercase tracking-wider font-semibold" data-en="Official Email" data-vi="Email chính thức">Official Email</div>
+                  <div class="text-xs sm:text-base font-bold text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors flex items-center space-x-2">
+                    <span class="break-all">phuonganhmarlyn.forwork@gmail.com</span>
+                    <i class="fa-regular fa-copy text-xs text-brand-muted flex-shrink-0"></i>
                   </div>
                 </div>
               </div>
 
               <div class="flex items-center space-x-3 group cursor-pointer" onclick="copyToClipboard('+84915764739', currentLang === 'vi' ? 'Đã chép SĐT: +84 915 764 739' : 'Copied phone number: +84 915 764 739')">
-                <div class="w-12 h-12 rounded-2xl bg-brand-lime text-slate-950 font-bold flex items-center justify-center text-lg shadow-soft group-hover:scale-110 transition-transform">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-lime text-slate-950 font-bold flex items-center justify-center text-sm sm:text-lg shadow-soft group-hover:scale-110 transition-transform flex-shrink-0">
                   <i class="fa-solid fa-phone"></i>
                 </div>
                 <div>
-                  <div class="text-xs text-brand-muted dark:text-slate-400 uppercase tracking-wider font-semibold" data-en="Phone / Zalo" data-vi="Điện thoại / Zalo">Phone / Zalo</div>
-                  <div class="text-sm sm:text-base font-bold text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors flex items-center space-x-2">
+                  <div class="text-[10px] sm:text-xs text-brand-muted dark:text-slate-400 uppercase tracking-wider font-semibold" data-en="Phone / Zalo" data-vi="Điện thoại / Zalo">Phone / Zalo</div>
+                  <div class="text-xs sm:text-base font-bold text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors flex items-center space-x-2">
                     <span>+84 915 764 739</span>
-                    <i class="fa-regular fa-copy text-xs text-brand-muted"></i>
+                    <i class="fa-regular fa-copy text-xs text-brand-muted flex-shrink-0"></i>
                   </div>
                 </div>
               </div>
 
               <div class="flex items-center space-x-3">
-                <div class="w-12 h-12 rounded-2xl bg-slate-800 text-white flex items-center justify-center text-lg shadow-soft">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-slate-800 text-white flex items-center justify-center text-sm sm:text-lg shadow-soft flex-shrink-0">
                   <i class="fa-solid fa-location-dot"></i>
                 </div>
                 <div>
-                  <div class="text-xs text-brand-muted dark:text-slate-400 uppercase tracking-wider font-semibold" data-en="Location" data-vi="Địa điểm">Location</div>
-                  <div class="text-sm sm:text-base font-bold text-brand-charcoal dark:text-white" data-en="Da Nang & Remote Nationwide" data-vi="Đà Nẵng & Remote toàn quốc">
+                  <div class="text-[10px] sm:text-xs text-brand-muted dark:text-slate-400 uppercase tracking-wider font-semibold" data-en="Location" data-vi="Địa điểm">Location</div>
+                  <div class="text-xs sm:text-base font-bold text-brand-charcoal dark:text-white" data-en="Da Nang & Remote Nationwide" data-vi="Đà Nẵng & Remote toàn quốc">
                     Da Nang & Remote Nationwide
                   </div>
                 </div>
@@ -1036,24 +984,25 @@
             </div>
           </div>
 
-          <div class="lg:col-span-5 bg-white dark:bg-slate-950 p-6 sm:p-8 rounded-3xl border border-brand-sand dark:border-slate-800 shadow-card">
-            <h3 class="font-grotesk font-bold text-xl text-brand-charcoal dark:text-white mb-2" data-en="Quick Message" data-vi="Gửi tin nhắn nhanh">Quick Message</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mb-6" data-en="I will get back to you as soon as possible!" data-vi="Tôi sẽ phản hồi lại bạn sớm nhất có thể!">I will get back to you as soon as possible!</p>
+          <div class="lg:col-span-5 bg-white dark:bg-slate-950 p-5 sm:p-8 rounded-3xl border border-brand-sand dark:border-slate-800 shadow-card">
+            <h3 class="font-grotesk font-bold text-lg sm:text-xl text-brand-charcoal dark:text-white mb-1" data-en="Quick Message" data-vi="Gửi tin nhắn nhanh">Quick Message</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-5" data-en="I will get back to you as soon as possible!" data-vi="Tôi sẽ phản hồi lại bạn sớm nhất có thể!">I will get back to you as soon as possible!</p>
             
-            <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+            <!-- AJAX Functional Contact Form connected to user's Formspree endpoint -->
+            <form id="contact-form" onsubmit="submitContactForm(event)" class="space-y-3.5">
               <div>
-                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-1.5" data-en="Full Name" data-vi="Họ và tên">Full Name</label>
-                <input type="text" required placeholder="e.g. John Doe" class="w-full px-4 py-3 rounded-xl bg-brand-sand/50 dark:bg-slate-900 border border-brand-sand dark:border-slate-800 text-sm focus:outline-none focus:border-brand-accent transition text-brand-charcoal dark:text-white" />
+                <label class="block text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-1" data-en="Full Name" data-vi="Họ và tên">Full Name</label>
+                <input type="text" name="name" required placeholder="e.g. John Doe" class="w-full px-3.5 py-2.5 sm:py-3 rounded-xl bg-brand-sand/50 dark:bg-slate-900 border border-brand-sand dark:border-slate-800 text-xs sm:text-sm focus:outline-none focus:border-brand-accent transition text-brand-charcoal dark:text-white" />
               </div>
               <div>
-                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-1.5" data-en="Email Address" data-vi="Địa chỉ Email">Email Address</label>
-                <input type="email" required placeholder="email@example.com" class="w-full px-4 py-3 rounded-xl bg-brand-sand/50 dark:bg-slate-900 border border-brand-sand dark:border-slate-800 text-sm focus:outline-none focus:border-brand-accent transition text-brand-charcoal dark:text-white" />
+                <label class="block text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-1" data-en="Email Address" data-vi="Địa chỉ Email">Email Address</label>
+                <input type="email" name="email" required placeholder="email@example.com" class="w-full px-3.5 py-2.5 sm:py-3 rounded-xl bg-brand-sand/50 dark:bg-slate-900 border border-brand-sand dark:border-slate-800 text-xs sm:text-sm focus:outline-none focus:border-brand-accent transition text-brand-charcoal dark:text-white" />
               </div>
               <div>
-                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-1.5" data-en="Message / Project Details" data-vi="Lời nhắn / Chi tiết dự án">Message / Project Details</label>
-                <textarea rows="3" required placeholder="Share details about your project or collaboration opportunity..." class="w-full px-4 py-3 rounded-xl bg-brand-sand/50 dark:bg-slate-900 border border-brand-sand dark:border-slate-800 text-sm focus:outline-none focus:border-brand-accent transition text-brand-charcoal dark:text-white resize-none"></textarea>
+                <label class="block text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-1" data-en="Message / Project Details" data-vi="Lời nhắn / Chi tiết dự án">Message / Project Details</label>
+                <textarea rows="3" name="message" required placeholder="Share details about your project or collaboration opportunity..." class="w-full px-3.5 py-2.5 sm:py-3 rounded-xl bg-brand-sand/50 dark:bg-slate-900 border border-brand-sand dark:border-slate-800 text-xs sm:text-sm focus:outline-none focus:border-brand-accent transition text-brand-charcoal dark:text-white resize-none"></textarea>
               </div>
-              <button type="submit" class="w-full py-3.5 rounded-xl bg-brand-accent hover:bg-brand-accentDark text-white font-semibold text-sm shadow-soft hover:shadow-hover transition duration-200" data-en="Send Message" data-vi="Gửi tin nhắn">
+              <button type="submit" id="submit-btn" class="w-full py-3 rounded-xl bg-brand-accent hover:bg-brand-accentDark text-white font-semibold text-xs sm:text-sm shadow-soft hover:shadow-hover transition duration-200" data-en="Send Message" data-vi="Gửi tin nhắn">
                 Send Message
               </button>
             </form>
@@ -1068,8 +1017,8 @@
   </main>
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="py-10 border-t border-brand-sand dark:border-slate-800 bg-white dark:bg-slate-950 transition-colors">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-muted dark:text-slate-400">
+  <footer class="py-8 sm:py-10 border-t border-brand-sand dark:border-slate-800 bg-white dark:bg-slate-950 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-brand-muted dark:text-slate-400 text-center sm:text-left">
       <div class="flex items-center space-x-2">
         <span class="font-grotesk font-bold text-brand-charcoal dark:text-white">phuonganh.marlyn</span>
         <span>•</span>
@@ -1081,10 +1030,8 @@
     </div>
   </footer>
 
-
   <!-- ==================== JAVASCRIPT LOGIC ==================== -->
   <script>
-    // --- Language State & Toggle ---
     let currentLang = 'en';
 
     function setLanguage(lang) {
@@ -1103,12 +1050,11 @@
       setLanguage(newLang);
     }
 
-    // Initialize English text explicitly on page load to prevent any mismatch
     document.addEventListener("DOMContentLoaded", () => {
       setLanguage('en');
     });
 
-    // --- Dark Mode ---
+    // Dark Mode Toggle
     const themeToggleBtn = document.getElementById('theme-toggle');
     const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
 
@@ -1119,7 +1065,7 @@
     if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleDarkMode);
     if (mobileThemeToggleBtn) mobileThemeToggleBtn.addEventListener('click', toggleDarkMode);
 
-    // --- Mobile Menu ---
+    // Mobile Menu
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -1135,7 +1081,7 @@
       });
     }
 
-    // --- Toast & Copy ---
+    // Toast Notification helper
     function showToast(message) {
       const toast = document.getElementById('toast');
       const toastMessage = document.getElementById('toast-message');
@@ -1165,12 +1111,39 @@
       document.body.removeChild(textarea);
     }
 
-    // --- Contact Form ---
-    function handleFormSubmit(e) {
-      e.preventDefault();
-      const msg = currentLang === 'vi' ? 'Cảm ơn bạn! Tin nhắn đã được gửi thành công. Tôi sẽ phản hồi sớm.' : 'Thank you! Message sent successfully. I will get back to you soon.';
-      showToast(msg);
-      e.target.reset();
+    // AJAX Form submission to user's Formspree endpoint
+    async function submitContactForm(event) {
+      event.preventDefault();
+      const form = event.target;
+      const submitBtn = document.getElementById('submit-btn');
+      const originalText = submitBtn.textContent;
+      
+      submitBtn.disabled = true;
+      submitBtn.textContent = currentLang === 'vi' ? 'Đang gửi...' : 'Sending...';
+
+      const data = new FormData(form);
+
+      try {
+        const response = await fetch("https://formspree.io/f/mnpqzgkb", {
+          method: "POST",
+          body: data,
+          headers: {
+            'Accept': 'json'
+          }
+        });
+
+        if (response.ok) {
+          showToast(currentLang === 'vi' ? 'Đã gửi lời nhắn về email của Phương Anh thành công!' : 'Message sent to Phuong Anh successfully!');
+          form.reset();
+        } else {
+          showToast(currentLang === 'vi' ? 'Gửi thất bại, vui lòng thử lại sau!' : 'Failed to send, please try again!');
+        }
+      } catch (error) {
+        showToast(currentLang === 'vi' ? 'Đã có lỗi xảy ra!' : 'An error occurred!');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
     }
   </script>
 
