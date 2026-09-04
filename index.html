@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Huỳnh Lương Phương Anh (Marlyn) | Portfolio</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#F4F9F5',      /* Nền sáng xanh lá nhạt tươi mát */
+              sand: '#E6F2EA',       /* Xanh nhạt bao bọc khung */
+              accent: '#10B981',     /* Xanh ngọc lục bảo (Emerald Green) tươi sáng */
+              accentDark: '#059669', /* Xanh đậm cho hover */
+              mint: '#D1FAE5',       /* Xanh mint phụ trợ */
+              lime: '#84CC16',       /* Xanh chanh điểm nhấn năng động */
+              charcoal: '#0F172A',   /* Chữ đậm sắc nét */
+              muted: '#64748B',      /* Chữ phụ */
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            grotesk: ['"Space Grotesk"', 'sans-serif'], /* Font Grotesk sáng tạo */
+          },
+          boxShadow: {
+            'soft': '0 10px 30px -10px rgba(16, 185, 129, 0.12)',
+            'card': '0 4px 20px -2px rgba(15, 23, 42, 0.05)',
+            'hover': '0 20px 35px -5px rgba(16, 185, 129, 0.2)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #E6F2EA;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #10B981;
+      border-radius: 4px;
+    }
+    .glass-nav {
+      background: rgba(244, 249, 245, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .dark .glass-nav {
+      background: rgba(15, 23, 42, 0.85);
+    }
+  </style>
+</head>
+
+<body class="bg-brand-cream text-brand-charcoal font-sans transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100 selection:bg-brand-mint selection:text-brand-accentDark">
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none bg-brand-charcoal text-white px-5 py-3 rounded-2xl shadow-xl flex items-center space-x-3 dark:bg-brand-accent">
+    <i class="fa-solid fa-circle-check text-green-400 dark:text-white text-lg"></i>
+    <span id="toast-message" class="text-sm font-medium">Đã sao chép vào bộ nhớ tạm!</span>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="fixed top-0 left-0 w-full z-40 glass-nav border-b border-brand-sand dark:border-slate-800 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo / Name -->
+      <a href="#hero" class="flex items-center space-x-2 group">
+        <span class="w-10 h-10 rounded-xl bg-brand-accent text-white flex items-center justify-center font-grotesk font-bold text-lg shadow-soft group-hover:scale-105 transition-transform">
+          PA
+        </span>
+        <div class="flex flex-col">
+          <span class="font-grotesk font-bold text-lg tracking-tight group-hover:text-brand-accent transition-colors">Phương Anh</span>
+          <span class="text-[11px] font-semibold tracking-wider uppercase text-brand-muted dark:text-slate-400">Marlyn • Portfolio</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-medium">
+        <a href="#about" class="px-3 py-2 rounded-xl text-slate-700 hover:text-brand-accent hover:bg-brand-mint/50 dark:text-slate-300 dark:hover:bg-slate-800 transition">Giới thiệu</a>
+        <a href="#experience" class="px-3 py-2 rounded-xl text-slate-700 hover:text-brand-accent hover:bg-brand-mint/50 dark:text-slate-300 dark:hover:bg-slate-800 transition">Kinh nghiệm</a>
+        <a href="#projects" class="px-3 py-2 rounded-xl text-slate-700 hover:text-brand-accent hover:bg-brand-mint/50 dark:text-slate-300 dark:hover:bg-slate-800 transition">Dự án</a>
+        <a href="#awards" class="px-3 py-2 rounded-xl text-slate-700 hover:text-brand-accent hover:bg-brand-mint/50 dark:text-slate-300 dark:hover:bg-slate-800 transition">Thành tích</a>
+        <a href="#skills" class="px-3 py-2 rounded-xl text-slate-700 hover:text-brand-accent hover:bg-brand-mint/50 dark:text-slate-300 dark:hover:bg-slate-800 transition">Kỹ năng</a>
+      </nav>
+
+      <!-- Actions (Contact Button & Dark Mode Toggle) -->
+      <div class="hidden sm:flex items-center space-x-3">
+        <!-- Dark Mode Toggle Button -->
+        <button id="theme-toggle" class="w-10 h-10 rounded-full bg-brand-sand dark:bg-slate-800 text-slate-600 dark:text-amber-400 hover:text-brand-accent flex items-center justify-center transition" title="Chuyển chế độ sáng/tối">
+          <i class="fa-solid fa-moon dark:hidden text-sm"></i>
+          <i class="fa-solid fa-sun hidden dark:inline text-sm"></i>
+        </button>
+
+        <a href="#contact" class="px-5 py-2.5 rounded-full bg-brand-accent hover:bg-brand-accentDark text-white text-sm font-semibold tracking-wide shadow-soft hover:shadow-hover transition duration-200 flex items-center space-x-2">
+          <span>Liên hệ ngay</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="flex items-center space-x-2 sm:hidden">
+        <button id="mobile-theme-toggle" class="p-2 text-slate-600 dark:text-amber-400">
+          <i class="fa-solid fa-moon dark:hidden"></i>
+          <i class="fa-solid fa-sun hidden dark:inline"></i>
+        </button>
+        <button id="mobile-menu-btn" class="p-2 text-brand-charcoal dark:text-white rounded-lg focus:outline-none" aria-label="Menu">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-brand-sand dark:border-slate-800 bg-brand-cream dark:bg-slate-950 px-6 py-4 space-y-3">
+      <a href="#about" class="block py-2 text-base font-medium text-slate-800 dark:text-slate-200 mobile-link">Giới thiệu</a>
+      <a href="#experience" class="block py-2 text-base font-medium text-slate-800 dark:text-slate-200 mobile-link">Kinh nghiệm</a>
+      <a href="#projects" class="block py-2 text-base font-medium text-slate-800 dark:text-slate-200 mobile-link">Dự án & Tác phẩm</a>
+      <a href="#awards" class="block py-2 text-base font-medium text-slate-800 dark:text-slate-200 mobile-link">Thành tích</a>
+      <a href="#skills" class="block py-2 text-base font-medium text-slate-800 dark:text-slate-200 mobile-link">Kỹ năng & Công cụ</a>
+      <a href="#contact" class="block py-2.5 text-center rounded-xl bg-brand-accent text-white font-semibold mobile-link">Liên hệ hợp tác</a>
+    </div>
+  </header>
+
+  <main class="pt-24 overflow-hidden">
+    
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="relative py-16 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      
+      <!-- Background Ambient Glow -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-mint/60 dark:bg-brand-accent/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text Column -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-brand-sand dark:bg-slate-800/80 border border-brand-mint dark:border-slate-700 text-xs font-semibold text-brand-accentDark dark:text-brand-mint tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+            <span>Hi! My name is Phuong Anh (Marlyn)</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-grotesk font-bold text-brand-charcoal dark:text-white leading-[1.15] tracking-tight">
+            Kể chuyện thương hiệu bằng <span class="text-brand-accent italic font-normal">chiến lược</span> & tư duy <span class="underline decoration-brand-lime decoration-wavy decoration-2">sáng tạo</span>.
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Sinh viên chuyên ngành <strong class="text-brand-charcoal dark:text-white font-semibold">Truyền thông Đa phương tiện</strong> với niềm đam mê sâu sắc dành cho Marketing, Truyền thông thương hiệu và Hoạch định chiến dịch (Campaign Planning).
+          </p>
+
+          <!-- Core Values Badges -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-2">
+            <span class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-brand-sand dark:border-slate-800 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-card flex items-center space-x-1.5">
+              <i class="fa-solid fa-shield-heart text-brand-accent"></i>
+              <span>Responsible</span>
+            </span>
+            <span class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-brand-sand dark:border-slate-800 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-card flex items-center space-x-1.5">
+              <i class="fa-solid fa-lightbulb text-amber-500"></i>
+              <span>Creative</span>
+            </span>
+            <span class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-brand-sand dark:border-slate-800 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-card flex items-center space-x-1.5">
+              <i class="fa-solid fa-bolt text-brand-lime"></i>
+              <span>Adaptable</span>
+            </span>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <a href="#projects" class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-brand-accent hover:bg-brand-accentDark text-white font-semibold text-sm tracking-wide shadow-hover transition-all text-center flex items-center justify-center space-x-2">
+              <span>Khám phá dự án của mình</span>
+              <i class="fa-solid fa-arrow-down-long text-xs"></i>
+            </a>
+
+            <button onclick="copyToClipboard('phuonganhmarlyn.forwork@gmail.com', 'Đã sao chép email: phuonganhmarlyn.forwork@gmail.com')" class="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white dark:bg-slate-900 border border-brand-sand dark:border-slate-800 hover:border-brand-accent text-brand-charcoal dark:text-white font-semibold text-sm shadow-card transition-all flex items-center justify-center space-x-2 group">
+              <i class="fa-regular fa-copy text-brand-accent group-hover:scale-110 transition-transform"></i>
+              <span>Sao chép Email</span>
+            </button>
+          </div>
+
+          <!-- Quick Micro Stats -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-brand-sand dark:border-slate-800 text-center lg:text-left">
+            <div>
+              <div class="text-2xl sm:text-3xl font-grotesk font-bold text-brand-charcoal dark:text-white">Top 5</div>
+              <div class="text-xs text-brand-muted dark:text-slate-400">Sinh viên xuất sắc FPTU</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-grotesk font-bold text-brand-accent">2026</div>
+              <div class="text-xs text-brand-muted dark:text-slate-400">Google Ambassador</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-grotesk font-bold text-brand-charcoal dark:text-white">5+</div>
+              <div class="text-xs text-brand-muted dark:text-slate-400">Giải thưởng lớn</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Card Column (Editorial Style) -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-md">
+            
+            <!-- Decorative Frames -->
+            <div class="absolute -top-4 -left-4 w-full h-full rounded-3xl border-2 border-dashed border-brand-accent/40 -z-10 transform -rotate-2"></div>
+            <div class="absolute -bottom-4 -right-4 w-full h-full rounded-3xl bg-brand-mint/60 dark:bg-slate-800 -z-10 transform rotate-2"></div>
+
+            <!-- Main Profile Card -->
+            <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 shadow-hover border border-brand-sand dark:border-slate-800 space-y-6">
+              
+              <!-- Avatar Placeholder with Creative Badge -->
+              <div class="relative w-full aspect-square rounded-2xl overflow-hidden bg-gradient-to-tr from-brand-mint via-brand-sand to-emerald-50 dark:from-slate-800 dark:to-slate-900 flex flex-col items-center justify-center p-6 text-center border border-brand-mint/50 dark:border-slate-700">
+                
+                <!-- HƯỚNG DẪN CHÈN ẢNH CÁ NHÂN: 
+                     Thay thế thẻ <svg> bên dưới bằng thẻ <img src="URL_ANH_CUA_BAN.jpg" alt="Phuong Anh" class="w-full h-full object-cover"> -->
+                <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-gradient-to-br from-brand-accent to-brand-lime p-1 shadow-lg mb-3">
+                  <div class="w-full h-full rounded-full bg-white dark:bg-slate-900 flex items-center justify-center overflow-hidden">
+                    <svg class="w-20 h-20 text-brand-accent" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-4.43-.82-6.14-2.88C7.55 15.8 9.68 15 12 15s4.45.8 6.14 2.12C16.43 19.18 14.03 20 12 20z"/>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="font-grotesk font-bold text-xl text-brand-charcoal dark:text-white">Huỳnh Lương Phương Anh</div>
+                <div class="text-xs font-semibold uppercase tracking-widest text-brand-accent mt-0.5">Marlyn • Da Nang</div>
+
+                <!-- Floating Role Tag -->
+                <div class="absolute bottom-3 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-brand-sand dark:border-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-sm flex items-center space-x-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                  <span>Open for Projects & Collaborations</span>
+                </div>
+              </div>
+
+              <!-- Quick Info List -->
+              <div class="space-y-3 text-xs sm:text-sm">
+                <div class="flex items-center justify-between py-2 border-b border-brand-sand dark:border-slate-800">
+                  <span class="text-brand-muted dark:text-slate-400"><i class="fa-solid fa-graduation-cap mr-2 text-brand-accent"></i>Trường:</span>
+                  <span class="font-semibold text-right">FPT University Da Nang</span>
+                </div>
+                <div class="flex items-center justify-between py-2 border-b border-brand-sand dark:border-slate-800">
+                  <span class="text-brand-muted dark:text-slate-400"><i class="fa-solid fa-bullhorn mr-2 text-brand-accent"></i>Chuyên ngành:</span>
+                  <span class="font-semibold text-right">Truyền thông Đa phương tiện</span>
+                </div>
+                <div class="flex items-center justify-between py-2 border-b border-brand-sand dark:border-slate-800">
+                  <span class="text-brand-muted dark:text-slate-400"><i class="fa-solid fa-location-dot mr-2 text-brand-accent"></i>Địa điểm:</span>
+                  <span class="font-semibold text-right">Đà Nẵng, Việt Nam</span>
+                </div>
+              </div>
+
+              <!-- Social Links Mini Bar -->
+              <div class="flex items-center justify-center space-x-4 pt-1">
+                <a href="mailto:phuonganhmarlyn.forwork@gmail.com" class="w-10 h-10 rounded-full bg-brand-sand dark:bg-slate-800 hover:bg-brand-accent hover:text-white flex items-center justify-center text-slate-700 dark:text-slate-300 transition" title="Gửi Email">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="tel:+84915764739" class="w-10 h-10 rounded-full bg-brand-sand dark:bg-slate-800 hover:bg-brand-accent hover:text-white flex items-center justify-center text-slate-700 dark:text-slate-300 transition" title="Gọi điện">
+                  <i class="fa-solid fa-phone"></i>
+                </a>
+                <button onclick="copyToClipboard('+84915764739', 'Đã chép số điện thoại: 0915 764 739')" class="w-10 h-10 rounded-full bg-brand-sand dark:bg-slate-800 hover:bg-brand-accent hover:text-white flex items-center justify-center text-slate-700 dark:text-slate-300 transition" title="Copy SĐT / Zalo">
+                  <i class="fa-solid fa-comment-dots"></i>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================== ABOUT ME SECTION ==================== -->
+    <section id="about" class="py-20 bg-white dark:bg-slate-900 border-y border-brand-sand dark:border-slate-800 transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">Giới thiệu bản thân</span>
+          <h2 class="text-3xl sm:text-4xl font-grotesk font-bold text-brand-charcoal dark:text-white">
+            Về Huỳnh Lương Phương Anh
+          </h2>
+          <div class="w-12 h-1 bg-brand-accent mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-14">
+          
+          <!-- Card 1: Responsible -->
+          <div class="p-8 rounded-3xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 hover:border-brand-accent dark:hover:border-brand-accent transition-all duration-300 hover:-translate-y-1.5 shadow-card group">
+            <div class="w-14 h-14 rounded-2xl bg-brand-mint text-brand-accent flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <h3 class="font-grotesk font-bold text-xl text-brand-charcoal dark:text-white mb-2">Responsible & Committed</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Kinh nghiệm điều phối dự án, tổ chức sự kiện quy mô và dẫn dắt các chiến dịch truyền thông của CLB và đối tác với sự kỷ luật, chuẩn xác và tinh thần trách nhiệm cao nhất.
+            </p>
+          </div>
+
+          <!-- Card 2: Creative -->
+          <div class="p-8 rounded-3xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 hover:border-brand-accent dark:hover:border-brand-accent transition-all duration-300 hover:-translate-y-1.5 shadow-card group">
+            <div class="w-14 h-14 rounded-2xl bg-lime-100 dark:bg-slate-800 text-lime-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3 class="font-grotesk font-bold text-xl text-brand-charcoal dark:text-white mb-2">Creative & Strategic</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Khả năng kết nối giữa cảm xúc nghệ thuật và hiệu quả truyền thông. Sản xuất key visual, video, content đa kênh đồng thời phân tích insight khách hàng và audience research.
+            </p>
+          </div>
+
+          <!-- Card 3: Adaptable -->
+          <div class="p-8 rounded-3xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 hover:border-brand-accent dark:hover:border-brand-accent transition-all duration-300 hover:-translate-y-1.5 shadow-card group">
+            <div class="w-14 h-14 rounded-2xl bg-emerald-100 dark:bg-slate-800 text-emerald-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-arrows-split-up-and-left"></i>
+            </div>
+            <h3 class="font-grotesk font-bold text-xl text-brand-charcoal dark:text-white mb-2">Adaptable & Growth</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Tư duy thích ứng linh hoạt trong môi trường đổi mới sáng tạo, làm việc nhóm ăn ý, không ngừng cập nhật các công nghệ, nền tảng số và phương pháp làm việc hiện đại.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== EXPERIENCE SECTION ==================== -->
+    <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">Hành trình & Kinh nghiệm</span>
+        <h2 class="text-3xl sm:text-4xl font-grotesk font-bold text-brand-charcoal dark:text-white">
+          Kinh Nghiệm Hoạt Động & Lãnh Đạo
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 text-sm">Các vai trò chủ chốt trong các tổ chức, dự án truyền thông và diễn đàn khởi nghiệp</p>
+        <div class="w-12 h-1 bg-brand-accent mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Timeline Container -->
+      <div class="relative max-w-4xl mx-auto">
+        <!-- Vertical Line -->
+        <div class="absolute top-0 bottom-0 left-4 md:left-1/2 w-0.5 bg-brand-mint dark:bg-slate-800 transform md:-translate-x-1/2"></div>
+
+        <div class="space-y-12">
+          
+          <!-- Item 1: Google Student Ambassador -->
+          <div class="relative flex flex-col md:flex-row items-start group">
+            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-accent text-white absolute left-0 md:left-1/2 transform -translate-x-1/2 z-10 shadow-soft">
+              <i class="fa-brands fa-google text-xs"></i>
+            </div>
+            <div class="ml-12 md:ml-0 md:w-1/2 md:pr-10 md:text-right">
+              <span class="inline-block px-3 py-1 rounded-full bg-brand-mint dark:bg-slate-800 text-brand-accentDark dark:text-brand-mint text-xs font-bold mb-2">2026 – Hiện tại</span>
+              <h3 class="font-grotesk font-bold text-lg text-brand-charcoal dark:text-white">Google Student Ambassador</h3>
+              <p class="text-xs font-semibold text-brand-accent uppercase tracking-wide">Google</p>
+              <p class="text-slate-600 dark:text-slate-300 text-sm mt-2">
+                Đại diện lan tỏa văn hóa công nghệ, kết nối cộng đồng sinh viên, tổ chức các hoạt động học tập và ứng dụng các giải pháp số của Google trong môi trường đại học.
+              </p>
+            </div>
+            <div class="hidden md:block md:w-1/2"></div>
+          </div>
+
+          <!-- Item 2: CIFA Da Nang -->
+          <div class="relative flex flex-col md:flex-row items-start group">
+            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-charcoal dark:bg-slate-700 text-white absolute left-0 md:left-1/2 transform -translate-x-1/2 z-10 shadow-soft">
+              <i class="fa-solid fa-bullhorn text-xs"></i>
+            </div>
+            <div class="hidden md:block md:w-1/2"></div>
+            <div class="ml-12 md:ml-0 md:w-1/2 md:pl-10 text-left">
+              <span class="inline-block px-3 py-1 rounded-full bg-brand-mint dark:bg-slate-800 text-brand-accentDark dark:text-brand-mint text-xs font-bold mb-2">2026 – Hiện tại</span>
+              <h3 class="font-grotesk font-bold text-lg text-brand-charcoal dark:text-white">Communications Project Member</h3>
+              <p class="text-xs font-semibold text-brand-accent uppercase tracking-wide">CIFA Da Nang</p>
+              <p class="text-slate-600 dark:text-slate-300 text-sm mt-2">
+                Phụ trách triển khai kế hoạch truyền thông cho các dự án, xây dựng nội dung tương tác, phối hợp đối ngoại và phát triển hình ảnh tổ chức đến giới trẻ.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3: Danang Venture and Angel Summit -->
+          <div class="relative flex flex-col md:flex-row items-start group">
+            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-lime text-slate-950 absolute left-0 md:left-1/2 transform -translate-x-1/2 z-10 shadow-soft font-bold">
+              <i class="fa-solid fa-handshake text-xs"></i>
+            </div>
+            <div class="ml-12 md:ml-0 md:w-1/2 md:pr-10 md:text-right">
+              <span class="inline-block px-3 py-1 rounded-full bg-brand-mint dark:bg-slate-800 text-brand-accentDark dark:text-brand-mint text-xs font-bold mb-2">2026</span>
+              <h3 class="font-grotesk font-bold text-lg text-brand-charcoal dark:text-white">Media Partner</h3>
+              <p class="text-xs font-semibold text-brand-accent uppercase tracking-wide">Danang Venture and Angel Summit (DVAS)</p>
+              <p class="text-slate-600 dark:text-slate-300 text-sm mt-2">
+                Đồng hành truyền thông sự kiện đầu tư mạo hiểm và thiên thần lớn tại Đà Nẵng, đưa tin tức kết nối startup và các quỹ đầu tư danh tiếng.
+              </p>
+            </div>
+            <div class="hidden md:block md:w-1/2"></div>
+          </div>
+
+          <!-- Item 4: Vice President - FUDA's Creative Space -->
+          <div class="relative flex flex-col md:flex-row items-start group">
+            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-accent text-white absolute left-0 md:left-1/2 transform -translate-x-1/2 z-10 shadow-soft">
+              <i class="fa-solid fa-crown text-xs"></i>
+            </div>
+            <div class="hidden md:block md:w-1/2"></div>
+            <div class="ml-12 md:ml-0 md:w-1/2 md:pl-10 text-left">
+              <span class="inline-block px-3 py-1 rounded-full bg-brand-mint dark:bg-slate-800 text-brand-accentDark dark:text-brand-mint text-xs font-bold mb-2">2025 – Hiện tại</span>
+              <h3 class="font-grotesk font-bold text-lg text-brand-charcoal dark:text-white">Phó Chủ Nhiệm (Vice President)</h3>
+              <p class="text-xs font-semibold text-brand-accent uppercase tracking-wide">FUDA's Creative Space, FPT University</p>
+              <p class="text-slate-600 dark:text-slate-300 text-sm mt-2">
+                Lãnh đạo và định hướng các ban chuyên môn, khởi xướng các sự kiện sáng tạo (FUDA Light's On), quản lý sản xuất hình ảnh, chiến lược nội dung và đào tạo thành viên kế cận.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================== PROJECTS & CASE STUDIES ==================== -->
+    <section id="projects" class="py-20 bg-white dark:bg-slate-900 border-t border-brand-sand dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div class="space-y-3">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">Dự án & Tác phẩm</span>
+            <h2 class="text-3xl sm:text-4xl font-grotesk font-bold text-brand-charcoal dark:text-white">
+              Portfolio Dự Án Tiêu Biểu
+            </h2>
+            <p class="text-slate-600 dark:text-slate-400 text-sm max-w-xl">
+              Tổng hợp các chiến dịch truyền thông, sản phẩm thiết kế sáng tạo và dự án cuộc thi đã trực tiếp hoạch định và triển khai.
+            </p>
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div class="flex flex-wrap gap-2 mt-6 md:mt-0" id="project-filters">
+            <button onclick="filterProjects('all')" class="filter-btn active px-4 py-2 rounded-full text-xs font-bold transition bg-brand-accent text-white shadow-soft" data-filter="all">Tất cả</button>
+            <button onclick="filterProjects('campaign')" class="filter-btn px-4 py-2 rounded-full text-xs font-bold transition bg-brand-sand dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-brand-mint" data-filter="campaign">Chiến dịch & Kế hoạch</button>
+            <button onclick="filterProjects('creative')" class="filter-btn px-4 py-2 rounded-full text-xs font-bold transition bg-brand-sand dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-brand-mint" data-filter="creative">Visual & Poster</button>
+            <button onclick="filterProjects('competition')" class="filter-btn px-4 py-2 rounded-full text-xs font-bold transition bg-brand-sand dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-brand-mint" data-filter="competition">Cuộc thi & Pitching</button>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+          
+          <!-- Project 1: FUDA LIGHT'S ON -->
+          <div class="project-card group rounded-3xl overflow-hidden bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 hover:border-brand-accent transition-all duration-300 hover:-translate-y-2 shadow-card" data-category="campaign creative">
+            <div class="relative h-56 bg-gradient-to-br from-emerald-600 via-teal-700 to-brand-accent flex items-center justify-center p-6 text-white overflow-hidden">
+              <!-- HƯỚNG DẪN CHÈN ẢNH BANNER DỰ ÁN: 
+                   Bạn có thể đổi nền gradient thành thẻ <img src="URL_POSTER.jpg" class="absolute inset-0 w-full h-full object-cover"> -->
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+              <div class="text-center z-10 space-y-2">
+                <span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider">Event & Identity</span>
+                <h3 class="text-2xl font-grotesk font-bold tracking-tight">FUDA LIGHT'S ON</h3>
+                <p class="text-xs text-emerald-100">FPT University Da Nang</p>
+              </div>
+              <button onclick="openModal('fuda')" class="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-white text-brand-charcoal flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-brand-accent"></i>
+              </button>
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between text-xs text-brand-muted dark:text-slate-400">
+                <span>Vai trò: Trưởng ban & Sáng tạo</span>
+                <span class="font-bold text-brand-accent">2025</span>
+              </div>
+              <h4 class="font-grotesk font-bold text-lg text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">
+                Chiến Dịch Tái Định Vị & Triển Lãm Sáng Tạo "Light's On"
+              </h4>
+              <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed line-clamp-2">
+                Dự án kích hoạt sáng tạo quy tụ sinh viên đam mê mỹ thuật và truyền thông, tăng 200% tương tác kênh CLB.
+              </p>
+              <div class="pt-2 flex flex-wrap gap-1.5">
+                <span class="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-brand-sand dark:bg-slate-800">Event Direction</span>
+                <span class="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-brand-sand dark:bg-slate-800">Key Visual</span>
+                <span class="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-brand-sand dark:bg-slate-800">Canva / Ps</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: MẬT MÃ HẢI TRÌNH -->
+          <div class="project-card group rounded-3xl overflow-hidden bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 hover:border-brand-accent transition-all duration-300 hover:-translate-y-2 shadow-card" data-category="creative campaign">
+            <div class="relative h-56 bg-gradient-to-br from-teal-700 via-emerald-800 to-slate-900 flex items-center justify-center p-6 text-white overflow-hidden">
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+              <div class="text-center z-10 space-y-2">
+                <span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider">Concept & Storytelling</span>
+                <h3 class="text-2xl font-grotesk font-bold tracking-tight">Mật Mã Hải Trình</h3>
+                <p class="text-xs text-teal-100">Cuộc Phiêu Lưu Sáng Tạo</p>
+              </div>
+              <button onclick="openModal('haitrinh')" class="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-white text-brand-charcoal flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-brand-accent"></i>
+              </button>
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between text-xs text-brand-muted dark:text-slate-400">
+                <span>Vai trò: Visual Lead & Content</span>
+                <span class="font-bold text-brand-accent">2025</span>
+              </div>
+              <h4 class="font-grotesk font-bold text-lg text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">
+                Ấn Phẩm Poster & Hành Trình Kể Chuyện "Mật Mã Hải Trình"
+              </h4>
+              <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed line-clamp-2">
+                Hệ thống poster chủ đề thám hiểm, phong cách minh họa cổ điển kết hợp công nghệ hiện đại.
+              </p>
+              <div class="pt-2 flex flex-wrap gap-1.5">
+                <span class="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-brand-sand dark:bg-slate-800">Illustration</span>
+                <span class="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-brand-sand dark:bg-slate-800">Storytelling</span>
+                <span class="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-brand-sand dark:bg-slate-800">Adobe Ai</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: CÓC YÊU THƯƠNG -->
+          <div class="project-card group rounded-3xl overflow-hidden bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 hover:border-brand-accent transition-all duration-300 hover:-translate-y-2 shadow-card" data-category="campaign">
+            <div class="relative h-56 bg-gradient-to-br from-emerald-500 via-green-600 to-teal-800 flex items-center justify-center p-6 text-white overflow-hidden">
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+              <div class="text-center z-10 space-y-2">
+                <span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider">Social Impact</span>
+                <h3 class="text-2xl font-grotesk font-bold tracking-tight">Cóc Yêu Thương</h3>
+                <p class="text-xs text-emerald-100">Dự Án Truyền Thông Cộng Đồng</p>
+              </div>
+              <button onclick="openModal('cocyu')" class="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-white text-brand-charcoal flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-brand-accent"></i>
+              </button>
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between text-xs text-brand-muted dark:text-slate-400">
+                <span>Vai trò: Campaign Planner</span>
+                <span class="font-bold text-brand-accent">2025</span>
+              </div>
+              <h4 class="font-grotesk font-bold text-lg text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">
+                Chiến Dịch Gây Quỹ & Truyền Cảm Hứng "Cóc Yêu Thương"
+              </h4>
+              <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed line-clamp-2">
+                Chiến dịch thiện nguyện lan tỏa thông điệp ấm áp của sinh viên FPTU đến những hoàn cảnh khó khăn tại miền Trung.
+              </p>
+              <div class="pt-2 flex flex-wrap gap-1.5">
+                <span class="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-brand-sand dark:bg-slate-800">CSR Campaign</span>
+                <span class="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-brand-sand dark:bg-slate-800">Copywriting</span>
+                <span class="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-brand-sand dark:bg-slate-800">Community</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: VinFast x HUB Network -->
+          <div class="project-card group rounded-3xl overflow-hidden bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 hover:border-brand-accent transition-all duration-300 hover:-translate-y-2 shadow-card" data-category="competition campaign">
+            <div class="relative h-56 bg-gradient-to-br from-cyan-700 via-emerald-800 to-slate-900 flex items-center justify-center p-6 text-white overflow-hidden">
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+              <div class="text-center z-10 space-y-2">
+                <span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider">Top 6 Toàn Quốc</span>
+                <h3 class="text-2xl font-grotesk font-bold tracking-tight">VinFast Business Challenge</h3>
+                <p class="text-xs text-cyan-200">Đội: Thị Tính Lo</p>
+              </div>
+              <button onclick="openModal('vinfast')" class="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-white text-brand-charcoal flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-brand-accent"></i>
+              </button>
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between text-xs text-brand-muted dark:text-slate-400">
+                <span>Vai trò: Marketing & Brand Strategy</span>
+                <span class="font-bold text-brand-accent">2025</span>
+              </div>
+              <h4 class="font-grotesk font-bold text-lg text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">
+                Kế Hoạch Tiếp Thị Xe Điện VinFast Cho Gen Z
+              </h4>
+              <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed line-clamp-2">
+                Nghiên cứu thị trường sâu rộng, đề xuất chiến lược tiếp cận sinh viên với giải pháp di chuyển xanh bền vững.
+              </p>
+              <div class="pt-2 flex flex-wrap gap-1.5">
+                <span class="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-brand-sand dark:bg-slate-800">Business Case</span>
+                <span class="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-brand-sand dark:bg-slate-800">Market Research</span>
+                <span class="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-brand-sand dark:bg-slate-800">Top 6 Finalist</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Res-Start 2025 -->
+          <div class="project-card group rounded-3xl overflow-hidden bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 hover:border-brand-accent transition-all duration-300 hover:-translate-y-2 shadow-card" data-category="competition">
+            <div class="relative h-56 bg-gradient-to-br from-emerald-600 via-lime-700 to-stone-800 flex items-center justify-center p-6 text-white overflow-hidden">
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+              <div class="text-center z-10 space-y-2">
+                <span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider">Giải Thuyết Trình Hay Nhất</span>
+                <h3 class="text-2xl font-grotesk font-bold tracking-tight">Res-Start Startup Idea</h3>
+                <p class="text-xs text-lime-100">Best Presentation Award</p>
+              </div>
+              <button onclick="openModal('restart')" class="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-white text-brand-charcoal flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-brand-accent"></i>
+              </button>
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between text-xs text-brand-muted dark:text-slate-400">
+                <span>Vai trò: Pitcher & Pitch Deck Lead</span>
+                <span class="font-bold text-brand-accent">2025</span>
+              </div>
+              <h4 class="font-grotesk font-bold text-lg text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">
+                Dự Án Khởi Nghiệp Res-Start: Ý Tưởng Đổi Mới Sáng Tạo
+              </h4>
+              <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed line-clamp-2">
+                Xây dựng slide thuyết trình ấn tượng, làm chủ sân khấu và bảo vệ xuất sắc ý tưởng trước hội đồng giám khảo chuyên môn.
+              </p>
+              <div class="pt-2 flex flex-wrap gap-1.5">
+                <span class="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-brand-sand dark:bg-slate-800">Pitch Deck</span>
+                <span class="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-brand-sand dark:bg-slate-800">Public Speaking</span>
+                <span class="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-brand-sand dark:bg-slate-800">Startup</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: IC Master 2025 -->
+          <div class="project-card group rounded-3xl overflow-hidden bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 hover:border-brand-accent transition-all duration-300 hover:-translate-y-2 shadow-card" data-category="competition campaign">
+            <div class="relative h-56 bg-gradient-to-br from-teal-800 via-emerald-900 to-slate-950 flex items-center justify-center p-6 text-white overflow-hidden">
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+              <div class="text-center z-10 space-y-2">
+                <span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider">Top 8 Toàn Quốc</span>
+                <h3 class="text-2xl font-grotesk font-bold tracking-tight">IC Master 2025</h3>
+                <p class="text-xs text-emerald-200">Đội: Trinity Spark</p>
+              </div>
+              <button onclick="openModal('icmaster')" class="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-white text-brand-charcoal flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-brand-accent"></i>
+              </button>
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between text-xs text-brand-muted dark:text-slate-400">
+                <span>Vai trò: Communication Strategist</span>
+                <span class="font-bold text-brand-accent">2025</span>
+              </div>
+              <h4 class="font-grotesk font-bold text-lg text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">
+                Nhà Truyền Thông Tài Ba (IC Master) - Đội Trinity Spark
+              </h4>
+              <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed line-clamp-2">
+                Xây dựng chiến dịch truyền thông tích hợp (IMC), giải bài toán thực tế của doanh nghiệp với đề án truyền thông bài bản.
+              </p>
+              <div class="pt-2 flex flex-wrap gap-1.5">
+                <span class="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-brand-sand dark:bg-slate-800">IMC Plan</span>
+                <span class="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-brand-sand dark:bg-slate-800">Media Planning</span>
+                <span class="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-brand-sand dark:bg-slate-800">Top 8 Finalist</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== AWARDS SECTION ==================== -->
+    <section id="awards" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">Danh hiệu & Giải thưởng</span>
+        <h2 class="text-3xl sm:text-4xl font-grotesk font-bold text-brand-charcoal dark:text-white">
+          Những Dấu Ấn Đạt Được
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 text-sm">Ghi nhận sự nỗ lực không ngừng nghỉ trong học tập, nghiên cứu và tranh tài tại các cuộc thi lớn</p>
+        <div class="w-12 h-1 bg-brand-accent mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Award 1 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-brand-sand dark:border-slate-800 shadow-card hover:border-brand-accent hover:shadow-hover transition duration-300 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-slate-800 text-emerald-600 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <div>
+            <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">Spring Semester 2026</span>
+            <h3 class="font-grotesk font-bold text-lg text-brand-charcoal dark:text-white mt-1">
+              Top 5 Sinh Viên Xuất Sắc Khối Ngành Kinh Tế
+            </h3>
+            <p class="text-xs text-brand-muted dark:text-slate-400 mt-1">Đại học FPT Đà Nẵng</p>
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed">
+            Chứng nhận vinh danh cho thành tích học tập vượt trội và đóng góp tích cực cho phong trào sinh viên của khối ngành.
+          </p>
+        </div>
+
+        <!-- Award 2 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-brand-sand dark:border-slate-800 shadow-card hover:border-brand-accent hover:shadow-hover transition duration-300 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-teal-100 dark:bg-slate-800 text-teal-700 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div>
+            <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">Toàn quốc 2025</span>
+            <h3 class="font-grotesk font-bold text-lg text-brand-charcoal dark:text-white mt-1">
+              Top 6 Đội Thi Xuất Sắc VinFast x HUB Network
+            </h3>
+            <p class="text-xs text-brand-muted dark:text-slate-400 mt-1">Business Challenge 2025 • Đội: Thị Tính Lo</p>
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed">
+            Vượt qua hàng trăm đội thi toàn quốc với chiến lược truyền thông và giải pháp kinh doanh sản phẩm xe điện sáng tạo.
+          </p>
+        </div>
+
+        <!-- Award 3 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-brand-sand dark:border-slate-800 shadow-card hover:border-brand-accent hover:shadow-hover transition duration-300 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-brand-mint dark:bg-slate-800 text-brand-accent flex items-center justify-center text-xl">
+            <i class="fa-solid fa-microphone-lines"></i>
+          </div>
+          <div>
+            <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">Res-Start 2025</span>
+            <h3 class="font-grotesk font-bold text-lg text-brand-charcoal dark:text-white mt-1">
+              Giải Thuyết Trình Hay Nhất (Best Presentation)
+            </h3>
+            <p class="text-xs text-brand-muted dark:text-slate-400 mt-1">Cuộc thi Khởi nghiệp Res-Start 2025</p>
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed">
+            Giải thưởng cá nhân xuất sắc về kỹ năng thuyết phục, dẫn dắt câu chuyện và trình bày trước hội đồng giám khảo đầu tư.
+          </p>
+        </div>
+
+        <!-- Award 4 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-brand-sand dark:border-slate-800 shadow-card hover:border-brand-accent hover:shadow-hover transition duration-300 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-lime-100 dark:bg-slate-800 text-lime-700 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-language"></i>
+          </div>
+          <div>
+            <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">FPT La'FEst 2026</span>
+            <h3 class="font-grotesk font-bold text-lg text-brand-charcoal dark:text-white mt-1">
+              Third Prize, Chinese Category
+            </h3>
+            <p class="text-xs text-brand-muted dark:text-slate-400 mt-1">FPT Language Festival 2026</p>
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed">
+            Giải Ba bảng tiếng Trung, thể hiện năng lực ngôn ngữ đa dạng và khả năng giao tiếp liên văn hóa tự tin.
+          </p>
+        </div>
+
+        <!-- Award 5 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-brand-sand dark:border-slate-800 shadow-card hover:border-brand-accent hover:shadow-hover transition duration-300 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-slate-800 text-emerald-700 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div>
+            <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">IC Master 2025</span>
+            <h3 class="font-grotesk font-bold text-lg text-brand-charcoal dark:text-white mt-1">
+              Top 8 Đội Thi Xuất Sắc Nhà Truyền Thông Tài Ba
+            </h3>
+            <p class="text-xs text-brand-muted dark:text-slate-400 mt-1">IC Master 2025 • Đội: Trinity Spark</p>
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed">
+            Top 8 chung kết với bản kế hoạch truyền thông tích hợp hoàn chỉnh và khả năng xử lý tình huống thực tế của nhãn hàng.
+          </p>
+        </div>
+
+        <!-- Award 6 (Summary Card) -->
+        <div class="p-6 rounded-3xl bg-gradient-to-br from-brand-accent to-emerald-700 text-white shadow-hover flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-100">Giá Trị Cốt Lõi</span>
+            <h3 class="font-grotesk font-bold text-xl leading-snug">
+              "Luôn nỗ lực biến ý tưởng thành giá trị thực tiễn."
+            </h3>
+            <p class="text-xs text-emerald-100 leading-relaxed">
+              Mỗi chứng nhận và giải thưởng là minh chứng cho tinh thần dám nghĩ, dám làm và kiên trì theo đuổi tiêu chuẩn cao nhất.
+            </p>
+          </div>
+          <div class="pt-6">
+            <a href="#contact" class="inline-flex items-center space-x-2 text-xs font-bold text-white bg-black/20 hover:bg-black/30 px-4 py-2 rounded-full transition">
+              <span>Cùng hợp tác trong dự án tới</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================== SKILLS & TOOLS SECTION ==================== -->
+    <section id="skills" class="py-20 bg-white dark:bg-slate-900 border-y border-brand-sand dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">Năng lực cốt lõi</span>
+            <h2 class="text-3xl sm:text-4xl font-grotesk font-bold text-brand-charcoal dark:text-white leading-tight">
+              Kỹ Năng & Công Cụ Làm Việc Chuyên Nghiệp
+            </h2>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Sự kết hợp giữa tư duy hoạch định chiến lược (Strategic Planning) và năng lực thực thi trực quan (Creative Production) giúp mình bao quát toàn bộ vòng đời của một dự án truyền thông.
+            </p>
+
+            <!-- Software Icons Strip -->
+            <div class="pt-2">
+              <h4 class="text-xs font-bold text-brand-muted dark:text-slate-400 uppercase tracking-wider mb-3">Phần mềm & Nền tảng thành thạo</h4>
+              <div class="flex flex-wrap gap-3">
+                <div class="flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200">
+                  <span class="w-6 h-6 rounded-md bg-blue-600 text-white flex items-center justify-center text-[11px] font-bold">Ps</span>
+                  <span>Photoshop</span>
+                </div>
+                <div class="flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200">
+                  <span class="w-6 h-6 rounded-md bg-amber-600 text-white flex items-center justify-center text-[11px] font-bold">Ai</span>
+                  <span>Illustrator</span>
+                </div>
+                <div class="flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200">
+                  <span class="w-6 h-6 rounded-md bg-purple-700 text-white flex items-center justify-center text-[11px] font-bold">Pr</span>
+                  <span>Premiere</span>
+                </div>
+                <div class="flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200">
+                  <span class="w-6 h-6 rounded-md bg-emerald-500 text-white flex items-center justify-center text-[11px] font-bold"><i class="fa-solid fa-palette"></i></span>
+                  <span>Canva Pro</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills Cards Matrix -->
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <div class="p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-2">
+              <div class="flex items-center space-x-3 text-brand-accent">
+                <i class="fa-solid fa-bullseye text-lg"></i>
+                <h4 class="font-bold text-sm text-brand-charcoal dark:text-white">Strategic Campaign Planning</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400">
+                Xây dựng lộ trình truyền thông đa kênh từ nghiên cứu bối cảnh, xác định KPI đến phân bổ ngân sách và điều phối.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-2">
+              <div class="flex items-center space-x-3 text-brand-accent">
+                <i class="fa-solid fa-magnifying-glass-chart text-lg"></i>
+                <h4 class="font-bold text-sm text-brand-charcoal dark:text-white">Market & Audience Research</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400">
+                Nghiên cứu hành vi công chúng, phân tích đối thủ cạnh tranh và bóc tách Customer Insight cho Gen Z & giới trẻ.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-2">
+              <div class="flex items-center space-x-3 text-brand-accent">
+                <i class="fa-solid fa-comments text-lg"></i>
+                <h4 class="font-bold text-sm text-brand-charcoal dark:text-white">Brand Communication</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400">
+                Định vị thông điệp thương hiệu nhất quán, quản trị hình ảnh và phát triển nội dung chạm đến cảm xúc khán giả.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-2">
+              <div class="flex items-center space-x-3 text-brand-accent">
+                <i class="fa-solid fa-pen-nib text-lg"></i>
+                <h4 class="font-bold text-sm text-brand-charcoal dark:text-white">Creative Production</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400">
+                Thiết kế Key Visual, Poster, ấn phẩm truyền thông mạng xã hội và biên tập video truyền thông ngắn.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-2">
+              <div class="flex items-center space-x-3 text-brand-accent">
+                <i class="fa-solid fa-users-gear text-lg"></i>
+                <h4 class="font-bold text-sm text-brand-charcoal dark:text-white">Project Coordination</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400">
+                Quản trị tiến độ (timeline), phân công nhân sự, quản lý rủi ro và điều phối sự kiện theo quy trình chuyên nghiệp.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-2">
+              <div class="flex items-center space-x-3 text-brand-accent">
+                <i class="fa-solid fa-person-chalkboard text-lg"></i>
+                <h4 class="font-bold text-sm text-brand-charcoal dark:text-white">Pitching & Presentation</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400">
+                Thuyết trình đề án kinh doanh, thiết kế slide thuyết phục và phản biện sắc bén trước giám khảo và ban lãnh đạo.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      
+      <div class="relative rounded-3xl bg-gradient-to-br from-brand-sand via-white to-brand-mint/50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950 border border-brand-mint/80 dark:border-slate-800 p-8 sm:p-12 lg:p-16 overflow-hidden shadow-hover">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Contact Info -->
+          <div class="lg:col-span-7 space-y-6">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-brand-accent/10 text-brand-accent text-xs font-bold uppercase tracking-wider">
+              Kết nối & Hợp tác
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-grotesk font-bold text-brand-charcoal dark:text-white leading-tight">
+              Sẵn sàng cho những dự án và thử thách mới!
+            </h2>
+            <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+              Bạn đang tìm kiếm một nhân tố nhiệt huyết, kỷ luật và sáng tạo cho các chiến dịch truyền thông, sự kiện hay dự án sắp tới? Đừng ngần ngại liên hệ với mình nhé!
+            </p>
+
+            <div class="space-y-4 pt-2">
+              
+              <!-- Direct Email Click/Copy -->
+              <div class="flex items-center space-x-3 group cursor-pointer" onclick="copyToClipboard('phuonganhmarlyn.forwork@gmail.com', 'Đã sao chép email: phuonganhmarlyn.forwork@gmail.com')">
+                <div class="w-12 h-12 rounded-2xl bg-brand-accent text-white flex items-center justify-center text-lg shadow-soft group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-brand-muted dark:text-slate-400 uppercase tracking-wider font-semibold">Email chính thức</div>
+                  <div class="text-sm sm:text-base font-bold text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors flex items-center space-x-2">
+                    <span>phuonganhmarlyn.forwork@gmail.com</span>
+                    <i class="fa-regular fa-copy text-xs text-brand-muted"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Phone / Zalo -->
+              <div class="flex items-center space-x-3 group cursor-pointer" onclick="copyToClipboard('+84915764739', 'Đã sao chép SĐT: +84 915 764 739')">
+                <div class="w-12 h-12 rounded-2xl bg-brand-lime text-slate-950 font-bold flex items-center justify-center text-lg shadow-soft group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-brand-muted dark:text-slate-400 uppercase tracking-wider font-semibold">Điện thoại / Zalo</div>
+                  <div class="text-sm sm:text-base font-bold text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors flex items-center space-x-2">
+                    <span>+84 915 764 739</span>
+                    <i class="fa-regular fa-copy text-xs text-brand-muted"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-2xl bg-slate-800 text-white flex items-center justify-center text-lg shadow-soft">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-brand-muted dark:text-slate-400 uppercase tracking-wider font-semibold">Địa bàn hoạt động</div>
+                  <div class="text-sm sm:text-base font-bold text-brand-charcoal dark:text-white">
+                    Đà Nẵng & Online toàn quốc
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Quick Message Form -->
+          <div class="lg:col-span-5 bg-white dark:bg-slate-950 p-6 sm:p-8 rounded-3xl border border-brand-sand dark:border-slate-800 shadow-card">
+            <h3 class="font-grotesk font-bold text-xl text-brand-charcoal dark:text-white mb-2">Gửi tin nhắn nhanh</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-6">Mình sẽ phản hồi lại bạn sớm nhất có thể!</p>
+            
+            <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-1.5">Họ & Tên của bạn</label>
+                <input type="text" required placeholder="Ví dụ: Nguyễn Văn A" class="w-full px-4 py-3 rounded-xl bg-brand-sand/50 dark:bg-slate-900 border border-brand-sand dark:border-slate-800 text-sm focus:outline-none focus:border-brand-accent transition text-brand-charcoal dark:text-white" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-1.5">Email liên lạc</label>
+                <input type="email" required placeholder="email@example.com" class="w-full px-4 py-3 rounded-xl bg-brand-sand/50 dark:bg-slate-900 border border-brand-sand dark:border-slate-800 text-sm focus:outline-none focus:border-brand-accent transition text-brand-charcoal dark:text-white" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-1.5">Lời nhắn / Dự án</label>
+                <textarea rows="3" required placeholder="Chia sẻ đôi chút về dự án hoặc cơ hội hợp tác..." class="w-full px-4 py-3 rounded-xl bg-brand-sand/50 dark:bg-slate-900 border border-brand-sand dark:border-slate-800 text-sm focus:outline-none focus:border-brand-accent transition text-brand-charcoal dark:text-white resize-none"></textarea>
+              </div>
+              <button type="submit" class="w-full py-3.5 rounded-xl bg-brand-accent hover:bg-brand-accentDark text-white font-semibold text-sm shadow-soft hover:shadow-hover transition duration-200">
+                Gửi lời nhắn ngay
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-10 border-t border-brand-sand dark:border-slate-800 bg-white dark:bg-slate-950 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-muted dark:text-slate-400">
+      <div class="flex items-center space-x-2">
+        <span class="font-grotesk font-bold text-brand-charcoal dark:text-white">Huỳnh Lương Phương Anh</span>
+        <span>•</span>
+        <span>Marlyn Portfolio © 2026</span>
+      </div>
+      <div>
+        <span>Multimedia Communication • Strategic Campaign Planning</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ==================== PROJECT CASE STUDY MODAL ==================== -->
+  <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="bg-white dark:bg-slate-900 w-full max-w-3xl rounded-3xl overflow-hidden shadow-2xl border border-brand-sand dark:border-slate-800 transform scale-95 transition-transform duration-300 max-h-[90vh] flex flex-col">
+      
+      <!-- Modal Header -->
+      <div class="p-6 sm:p-8 border-b border-brand-sand dark:border-slate-800 flex items-start justify-between bg-brand-cream dark:bg-slate-950">
+        <div>
+          <span id="modal-category" class="text-xs font-bold uppercase tracking-wider text-brand-accent">Chiến dịch & Thiết kế</span>
+          <h3 id="modal-title" class="text-2xl sm:text-3xl font-grotesk font-bold text-brand-charcoal dark:text-white mt-1">Tên dự án</h3>
+          <p id="modal-meta" class="text-xs text-slate-500 dark:text-slate-400 mt-1">Vai trò • Thời gian</p>
+        </div>
+        <button onclick="closeModal()" class="w-10 h-10 rounded-full bg-brand-sand dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-brand-accent flex items-center justify-center transition">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div class="p-6 sm:p-8 overflow-y-auto space-y-6 text-sm text-slate-600 dark:text-slate-300">
+        
+        <div>
+          <h4 class="font-grotesk font-bold text-lg text-brand-charcoal dark:text-white mb-2">Bối cảnh & Mục tiêu</h4>
+          <p id="modal-desc" class="leading-relaxed"></p>
+        </div>
+
+        <div>
+          <h4 class="font-grotesk font-bold text-lg text-brand-charcoal dark:text-white mb-2">Trách nhiệm & Đóng góp chính</h4>
+          <ul id="modal-responsibilities" class="list-disc list-inside space-y-1.5 leading-relaxed text-slate-700 dark:text-slate-300"></ul>
+        </div>
+
+        <div>
+          <h4 class="font-grotesk font-bold text-lg text-brand-charcoal dark:text-white mb-2">Kết quả & Dấu ấn nổi bật</h4>
+          <div id="modal-results" class="p-4 rounded-2xl bg-brand-mint/40 dark:bg-slate-800 border border-brand-mint dark:border-slate-700 text-brand-charcoal dark:text-slate-200 font-medium"></div>
+        </div>
+
+        <div>
+          <h4 class="font-grotesk font-bold text-lg text-brand-charcoal dark:text-white mb-2">Công cụ & Năng lực áp dụng</h4>
+          <div id="modal-tags" class="flex flex-wrap gap-2"></div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 sm:p-6 border-t border-brand-sand dark:border-slate-800 bg-brand-sand/30 dark:bg-slate-950 flex justify-end">
+        <button onclick="closeModal()" class="px-6 py-2.5 rounded-full bg-brand-charcoal dark:bg-slate-800 text-white text-xs font-bold hover:bg-brand-accent transition">
+          Đóng cửa sổ
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+  <script>
+    // --- Dark Mode State Management ---
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+    }
+
+    if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleDarkMode);
+    if (mobileThemeToggleBtn) mobileThemeToggleBtn.addEventListener('click', toggleDarkMode);
+
+    // --- Mobile Menu Toggle ---
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Close menu when clicking links
+      document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // --- Toast Notification & Copy Fallback ---
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMessage = document.getElementById('toast-message');
+      toastMessage.textContent = message;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3000);
+    }
+
+    function copyToClipboard(text, successMsg) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand('copy');
+        showToast(successMsg || 'Đã sao chép!');
+      } catch (err) {
+        showToast('Không thể sao chép tự động. Hãy chọn thủ công!');
+      }
+      document.body.removeChild(textarea);
+    }
+
+    // --- Category Filter ---
+    function filterProjects(category) {
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-filter') === category) {
+          btn.classList.add('bg-brand-accent', 'text-white', 'shadow-soft');
+          btn.classList.remove('bg-brand-sand', 'text-slate-700', 'dark:bg-slate-800', 'dark:text-slate-300');
+        } else {
+          btn.classList.remove('bg-brand-accent', 'text-white', 'shadow-soft');
+          btn.classList.add('bg-brand-sand', 'text-slate-700', 'dark:bg-slate-800', 'dark:text-slate-300');
+        }
+      });
+
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        const itemCategories = card.getAttribute('data-category').split(' ');
+        if (category === 'all' || itemCategories.includes(category)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // --- Modal Data & Interactivity ---
+    const projectData = {
+      fuda: {
+        title: "FUDA LIGHT'S ON - Tái Định Vị & Triển Lãm Sáng Tạo",
+        category: "Event Direction & Brand Identity",
+        meta: "Lead Planner & Creative Director • FUDA's Creative Space • 2025",
+        desc: "Sự kiện trọng điểm đánh dấu sự chuyển mình mạnh mẽ của FUDA's Creative Space tại Đại học FPT Đà Nẵng, nhằm tôn vinh những bạn trẻ đam mê thiết kế, nghệ thuật và truyền thông đa phương tiện.",
+        responsibilities: [
+          "Xây dựng Concept truyền thông tổng thể, định vị thông điệp 'Light's On' mang tinh thần thắp sáng tài năng trẻ.",
+          "Chỉ đạo sản xuất bộ Key Visual, poster, backdrop, vé mời và video teaser quảng bá.",
+          "Điều phối nhân sự ban nội dung, hậu cần và kỹ thuật sân khấu trong suốt chiến dịch.",
+          "Tương tác cùng ban quản trị trường và các đối tác sinh viên để tối đa hóa độ phủ truyền thông."
+        ],
+        results: "Thu hút hơn 500+ sinh viên tham gia trực tiếp, tăng 200% lượt theo dõi Fanpage CLB và nhận được đánh giá rất cao từ nhà trường.",
+        tags: ["Event Planning", "Key Visual Design", "Canva / Ps", "Team Leadership", "Brand Storytelling"]
+      },
+      haitrinh: {
+        title: "Mật Mã Hải Trình - Cuộc Phiêu Lưu Sáng Tạo",
+        category: "Creative Production & Visual Campaign",
+        meta: "Visual Lead & Content Strategist • 2025",
+        desc: "Một chuỗi tác phẩm truyền thông thị giác lấy cảm hứng từ đại dương bao la và hành trình khám phá tiềm năng vô hạn của sinh viên ngành Truyền thông.",
+        responsibilities: [
+          "Phác thảo ý tưởng phong cách hình ảnh mạo hiểm, kết hợp yếu tố huyền ảo và bản đồ kho báu cổ điển.",
+          "Trực tiếp thiết kế hệ thống Poster chính và các ấn phẩm phái sinh trên mạng xã hội bằng Illustrator & Photoshop.",
+          "Viết chuỗi bài truyền cảm hứng (Storytelling) đồng hành cùng từng mảnh ghép hình ảnh."
+        ],
+        results: "Đạt giải nhì trong tuần lễ bình chọn thiết kế sinh viên, lan tỏa mạnh mẽ trên các hội nhóm đồ họa trẻ.",
+        tags: ["Adobe Illustrator", "Poster Art", "Visual Metaphor", "Creative Writing"]
+      },
+      cocyu: {
+        title: "Cóc Yêu Thương - Chiến Dịch Thiện Nguyện Cộng Đồng",
+        category: "Social Impact & Community Engagement",
+        meta: "Campaign Planner & Media Coordinator • 2025",
+        desc: "Chiến dịch gây quỹ và lan tỏa tinh thần san sẻ yêu thương của cộng đồng sinh viên Đại học FPT Đà Nẵng hướng tới các trẻ em có hoàn cảnh khó khăn tại vùng sâu miền Trung.",
+        responsibilities: [
+          "Lập kế hoạch chiến dịch truyền thông 3 giai đoạn: Kích hoạt nhận thức - Kêu gọi quyên góp - Tri ân & Báo cáo minh bạch.",
+          "Xây dựng kịch bản video và chụp ảnh tài liệu thực tế tại địa bàn hỗ trợ.",
+          "Soạn thảo thông điệp cảm xúc, kết nối các câu lạc bộ tình nguyện cùng tham gia."
+        ],
+        results: "Gây quỹ thành công vượt 120% mục tiêu ban đầu và trao tặng hàng trăm phần quà ý nghĩa cho học sinh nghèo.",
+        tags: ["CSR Campaign", "Social Media Copy", "Fundraising", "Community Relations"]
+      },
+      vinfast: {
+        title: "VinFast x HUB Network Business Challenge 2025",
+        category: "Business Case & Strategic Marketing",
+        meta: "Top 6 Toàn Quốc • Đội Thị Tính Lo • 2025",
+        desc: "Cuộc thi giải quyết bài toán kinh doanh và tiếp thị thực chiến do HUB Network phối hợp cùng VinFast tổ chức, nhằm tìm kiếm giải pháp thúc đẩy xe máy điện cho đối tượng khách hàng trẻ.",
+        responsibilities: [
+          "Thực hiện Audience Research khảo sát thói quen di chuyển và rào cản mua xe máy điện của hơn 400 sinh viên tại Đà Nẵng.",
+          "Phát triển đề án Marketing 'Chuyển Động Xanh - Tự Do Điểm 10' với các điểm chạm số (Digital Touchpoints) hiện đại.",
+          "Thiết kế Pitch Deck chuyên nghiệp và đồng thuyết trình bảo vệ chiến lược trước ban giám khảo VinFast."
+        ],
+        results: "Đạt danh hiệu TOP 6 ĐỘI THI XUẤT SẮC TOÀN QUỐC trong tổng số hàng trăm đội tham gia từ các trường đại học hàng đầu cả nước.",
+        tags: ["Market Research", "Audience Insight", "VinFast Electric Vehicles", "Pitch Deck", "Top 6 Finalist"]
+      },
+      restart: {
+        title: "Cuộc Thi Khởi Nghiệp Res-Start 2025",
+        category: "Pitching & Presentation Excellence",
+        meta: "Best Presentation Award • 2025",
+        desc: "Đấu trường khởi nghiệp sinh viên hướng tới các giải pháp ứng dụng công nghệ và đổi mới sáng tạo trong đời sống hàng ngày.",
+        responsibilities: [
+          "Xây dựng cấu trúc bài thuyết trình logic theo mô hình Problem - Solution - Business Model - Go-to-Market.",
+          "Trực tiếp đại diện nhóm thực hiện phần Pitching 5 phút trước Hội đồng đầu tư và phản biện Q&A trực tiếp.",
+          "Thiết kế bộ Slide trực quan, thẩm mỹ cao và chuẩn phong cách gọi vốn."
+        ],
+        results: "Giành chiến thắng GIẢI THUYẾT TRÌNH HAY NHẤT (Best Presentation) nhờ phong thái tự tin, khả năng diễn đạt lưu loát và sức thuyết phục cao.",
+        tags: ["Best Presentation Award", "Pitch Deck", "Public Speaking", "Startup Strategy"]
+      },
+      icmaster: {
+        title: "Nhà Truyền Thông Tài Ba (IC Master 2025)",
+        category: "Integrated Marketing Communication (IMC)",
+        meta: "Top 8 Toàn Quốc • Đội Trinity Spark • 2025",
+        desc: "Sân chơi học thuật uy tín bậc nhất dành cho sinh viên ngành Quan hệ Công chúng và Truyền thông trên cả nước.",
+        responsibilities: [
+          "Phân tích đề bài thực tế của nhãn hàng, xác định Core Message và Big Idea cho chiến dịch truyền thông tích hợp.",
+          "Lên kế hoạch phân bổ kênh (Owned, Paid, Earned Media) và dự toán chi phí chi tiết theo tuần.",
+          "Phối hợp cùng đồng đội hoàn thiện hồ sơ đề án truyền thông dài 30 trang đúng thời hạn."
+        ],
+        results: "Đạt danh hiệu TOP 8 ĐỘI THI XUẤT SẮC TOÀN QUỐC (Top 8 IC Master 2025).",
+        tags: ["IMC Campaign", "Media Planning", "Big Idea", "Team Trinity Spark", "Top 8 Nationwide"]
+      }
+    };
+
+    function openModal(projectId) {
+      const data = projectData[projectId];
+      if (!data) return;
+
+      document.getElementById('modal-title').textContent = data.title;
+      document.getElementById('modal-category').textContent = data.category;
+      document.getElementById('modal-meta').textContent = data.meta;
+      document.getElementById('modal-desc').textContent = data.desc;
+      document.getElementById('modal-results').textContent = data.results;
+
+      // Responsibilities
+      const resList = document.getElementById('modal-responsibilities');
+      resList.innerHTML = '';
+      data.responsibilities.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        resList.appendChild(li);
+      });
+
+      // Tags
+      const tagsContainer = document.getElementById('modal-tags');
+      tagsContainer.innerHTML = '';
+      data.tags.forEach(tag => {
+        const span = document.createElement('span');
+        span.className = 'text-xs font-semibold px-3 py-1 rounded-full bg-brand-sand dark:bg-slate-800 text-brand-charcoal dark:text-slate-300';
+        span.textContent = tag;
+        tagsContainer.appendChild(span);
+      });
+
+      const modal = document.getElementById('project-modal');
+      const modalBox = modal.querySelector('div');
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100');
+      modalBox.classList.remove('scale-95');
+      modalBox.classList.add('scale-100');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('project-modal');
+      const modalBox = modal.querySelector('div');
+      modal.classList.remove('opacity-100');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      modalBox.classList.remove('scale-100');
+      modalBox.classList.add('scale-95');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // Close modal on click outside
+    document.getElementById('project-modal').addEventListener('click', (e) => {
+      if (e.target.id === 'project-modal') closeModal();
+    });
+
+    // Handle Contact Form Submit (Non-blocking message)
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      showToast('Cảm ơn bạn! Lời nhắn đã được ghi nhận. Phương Anh sẽ liên hệ lại sớm.');
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>
