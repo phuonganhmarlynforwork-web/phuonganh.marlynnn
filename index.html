@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Huỳnh Lương Phương Anh (Marlyn) | Portfolio</title>
+  
+  <!-- Google Fonts: Bricolage Grotesque & Be Vietnam Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#F4F9F5',      /* Light refreshing green background */
+              sand: '#E6F2EA',       /* Soft green container tint */
+              accent: '#10B981',     /* Emerald Green */
+              accentDark: '#059669', /* Hover emerald dark */
+              mint: '#D1FAE5',       /* Mint accent */
+              lime: '#84CC16',       /* Dynamic lime */
+              charcoal: '#0F172A',   /* Sharp dark text */
+              muted: '#64748B',      /* Muted text */
+            }
+          },
+          fontFamily: {
+            sans: ['"Be Vietnam Pro"', 'sans-serif'],
+            grotesk: ['"Bricolage Grotesque"', 'sans-serif'],
+          },
+          boxShadow: {
+            'soft': '0 10px 30px -10px rgba(16, 185, 129, 0.12)',
+            'card': '0 4px 20px -2px rgba(15, 23, 42, 0.05)',
+            'hover': '0 20px 35px -5px rgba(16, 185, 129, 0.2)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #E6F2EA;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #10B981;
+      border-radius: 4px;
+    }
+    .glass-nav {
+      background: rgba(244, 249, 245, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .dark .glass-nav {
+      background: rgba(15, 23, 42, 0.85);
+    }
+  </style>
+</head>
+
+<body class="bg-brand-cream text-brand-charcoal font-sans transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100 selection:bg-brand-mint selection:text-brand-accentDark">
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none bg-brand-charcoal text-white px-5 py-3 rounded-2xl shadow-xl flex items-center space-x-3 dark:bg-brand-accent">
+    <i class="fa-solid fa-circle-check text-green-400 dark:text-white text-lg"></i>
+    <span id="toast-message" class="text-sm font-medium">Copied to clipboard!</span>
+  </div>
+
+  <!-- NAVIGATION BAR (Without PA logo) -->
+  <header class="fixed top-0 left-0 w-full z-40 glass-nav border-b border-brand-sand dark:border-slate-800 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Name / Brand -->
+      <a href="#hero" class="flex items-center space-x-2 group">
+        <div class="flex flex-col">
+          <span class="font-grotesk font-bold text-lg tracking-tight group-hover:text-brand-accent transition-colors">Phương Anh</span>
+          <span class="text-[11px] font-semibold tracking-wider uppercase text-brand-muted dark:text-slate-400">Marlyn • Portfolio</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-medium">
+        <a href="#hero" class="px-3 py-2 rounded-xl text-slate-700 hover:text-brand-accent hover:bg-brand-mint/50 dark:text-slate-300 dark:hover:bg-slate-800 transition">About</a>
+        <a href="#experience" class="px-3 py-2 rounded-xl text-slate-700 hover:text-brand-accent hover:bg-brand-mint/50 dark:text-slate-300 dark:hover:bg-slate-800 transition">Experience</a>
+        <a href="#designs" class="px-3 py-2 rounded-xl text-slate-700 hover:text-brand-accent hover:bg-brand-mint/50 dark:text-slate-300 dark:hover:bg-slate-800 transition">Designs & Posters</a>
+        <a href="#awards" class="px-3 py-2 rounded-xl text-slate-700 hover:text-brand-accent hover:bg-brand-mint/50 dark:text-slate-300 dark:hover:bg-slate-800 transition">Awards</a>
+        <a href="#skills" class="px-3 py-2 rounded-xl text-slate-700 hover:text-brand-accent hover:bg-brand-mint/50 dark:text-slate-300 dark:hover:bg-slate-800 transition">Skills & Certs</a>
+      </nav>
+
+      <!-- Actions (Contact Button & Dark Mode Toggle) -->
+      <div class="hidden sm:flex items-center space-x-3">
+        <button id="theme-toggle" class="w-10 h-10 rounded-full bg-brand-sand dark:bg-slate-800 text-slate-600 dark:text-amber-400 hover:text-brand-accent flex items-center justify-center transition" title="Toggle theme">
+          <i class="fa-solid fa-moon dark:hidden text-sm"></i>
+          <i class="fa-solid fa-sun hidden dark:inline text-sm"></i>
+        </button>
+
+        <a href="#contact" class="px-5 py-2.5 rounded-full bg-brand-accent hover:bg-brand-accentDark text-white text-sm font-semibold tracking-wide shadow-soft hover:shadow-hover transition duration-200 flex items-center space-x-2">
+          <span>Get in Touch</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="flex items-center space-x-2 sm:hidden">
+        <button id="mobile-theme-toggle" class="p-2 text-slate-600 dark:text-amber-400">
+          <i class="fa-solid fa-moon dark:hidden"></i>
+          <i class="fa-solid fa-sun hidden dark:inline"></i>
+        </button>
+        <button id="mobile-menu-btn" class="p-2 text-brand-charcoal dark:text-white rounded-lg focus:outline-none" aria-label="Menu">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-brand-sand dark:border-slate-800 bg-brand-cream dark:bg-slate-950 px-6 py-4 space-y-3">
+      <a href="#hero" class="block py-2 text-base font-medium text-slate-800 dark:text-slate-200 mobile-link">About</a>
+      <a href="#experience" class="block py-2 text-base font-medium text-slate-800 dark:text-slate-200 mobile-link">Experience</a>
+      <a href="#designs" class="block py-2 text-base font-medium text-slate-800 dark:text-slate-200 mobile-link">Designs & Posters</a>
+      <a href="#awards" class="block py-2 text-base font-medium text-slate-800 dark:text-slate-200 mobile-link">Awards</a>
+      <a href="#skills" class="block py-2 text-base font-medium text-slate-800 dark:text-slate-200 mobile-link">Skills & Certs</a>
+      <a href="#contact" class="block py-2.5 text-center rounded-xl bg-brand-accent text-white font-semibold mobile-link">Get in Touch</a>
+    </div>
+  </header>
+
+  <main class="pt-24 overflow-hidden">
+    
+    <!-- ==================== HERO SECTION (Merged with Introduction & Avatar) ==================== -->
+    <section id="hero" class="relative py-16 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      
+      <!-- Background Ambient Glow -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-mint/60 dark:bg-brand-accent/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text Column -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-brand-sand dark:bg-slate-800/80 border border-brand-mint dark:border-slate-700 text-xs font-semibold text-brand-accentDark dark:text-brand-mint tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+            <span>Hi! My name is Phuong Anh (Marlyn)</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-grotesk font-bold text-brand-charcoal dark:text-white leading-[1.15] tracking-tight">
+            Elevating Brands Through Strategic & Creative <span class="text-brand-accent italic font-normal">Storytelling</span>.
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Multimedia Communication student passionate about marketing, brand communication, and campaign planning. Experienced in leading communication projects, organizing events, and supporting creative production.
+          </p>
+
+          <!-- Core Values Badges -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-2">
+            <span class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-brand-sand dark:border-slate-800 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-card flex items-center space-x-1.5">
+              <i class="fa-solid fa-shield-heart text-brand-accent"></i>
+              <span>Responsible</span>
+            </span>
+            <span class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-brand-sand dark:border-slate-800 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-card flex items-center space-x-1.5">
+              <i class="fa-solid fa-lightbulb text-amber-500"></i>
+              <span>Creative</span>
+            </span>
+            <span class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-brand-sand dark:border-slate-800 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-card flex items-center space-x-1.5">
+              <i class="fa-solid fa-bolt text-brand-lime"></i>
+              <span>Adaptable</span>
+            </span>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <a href="#designs" class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-brand-accent hover:bg-brand-accentDark text-white font-semibold text-sm tracking-wide shadow-hover transition-all text-center flex items-center justify-center space-x-2">
+              <span>View Design Gallery</span>
+              <i class="fa-solid fa-arrow-down-long text-xs"></i>
+            </a>
+
+            <button onclick="copyToClipboard('phuonganhmarlyn.forwork@gmail.com', 'Copied email: phuonganhmarlyn.forwork@gmail.com')" class="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white dark:bg-slate-900 border border-brand-sand dark:border-slate-800 hover:border-brand-accent text-brand-charcoal dark:text-white font-semibold text-sm shadow-card transition-all flex items-center justify-center space-x-2 group">
+              <i class="fa-regular fa-copy text-brand-accent group-hover:scale-110 transition-transform"></i>
+              <span>Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Quick Micro Stats -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-brand-sand dark:border-slate-800 text-center lg:text-left">
+            <div>
+              <div class="text-2xl sm:text-3xl font-grotesk font-bold text-brand-charcoal dark:text-white">Top 5</div>
+              <div class="text-xs text-brand-muted dark:text-slate-400">Outstanding Student FPTU</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-grotesk font-bold text-brand-accent">2026</div>
+              <div class="text-xs text-brand-muted dark:text-slate-400">Google Ambassador</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-grotesk font-bold text-brand-charcoal dark:text-white">16+</div>
+              <div class="text-xs text-brand-muted dark:text-slate-400">Design Works</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Card Column with updated avatar link -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-md">
+            
+            <!-- Decorative Frames -->
+            <div class="absolute -top-4 -left-4 w-full h-full rounded-3xl border-2 border-dashed border-brand-accent/40 -z-10 transform -rotate-2"></div>
+            <div class="absolute -bottom-4 -right-4 w-full h-full rounded-3xl bg-brand-mint/60 dark:bg-slate-800 -z-10 transform rotate-2"></div>
+
+            <!-- Main Profile Card -->
+            <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 shadow-hover border border-brand-sand dark:border-slate-800 space-y-6">
+              
+              <!-- Avatar Display -->
+              <div class="relative w-full aspect-square rounded-2xl overflow-hidden bg-gradient-to-tr from-brand-mint via-brand-sand to-emerald-50 dark:from-slate-800 dark:to-slate-900 flex flex-col items-center justify-center p-2 text-center border border-brand-mint/50 dark:border-slate-700 shadow-inner">
+                <img src="https://lh3.googleusercontent.com/d/1xEU6uUCbfJk3VhOdwIRFZAWe56wzFZCH" alt="Huỳnh Lương Phương Anh" class="w-full h-full object-cover rounded-xl pointer-events-none" />
+                
+                <!-- Floating Role Tag -->
+                <div class="absolute bottom-3 bg-white/95 dark:bg-slate-800/95 backdrop-blur-md px-4 py-1.5 rounded-full border border-brand-sand dark:border-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-sm flex items-center space-x-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span>Marlyn • Da Nang</span>
+                </div>
+              </div>
+
+              <!-- Quick Info List -->
+              <div class="space-y-3 text-xs sm:text-sm">
+                <div class="flex items-center justify-between py-2 border-b border-brand-sand dark:border-slate-800">
+                  <span class="text-brand-muted dark:text-slate-400"><i class="fa-solid fa-graduation-cap mr-2 text-brand-accent"></i>University:</span>
+                  <span class="font-semibold text-right">FPT University Da Nang</span>
+                </div>
+                <div class="flex items-center justify-between py-2 border-b border-brand-sand dark:border-slate-800">
+                  <span class="text-brand-muted dark:text-slate-400"><i class="fa-solid fa-bullhorn mr-2 text-brand-accent"></i>Major:</span>
+                  <span class="font-semibold text-right">Multimedia Communication</span>
+                </div>
+                <div class="flex items-center justify-between py-2 border-b border-brand-sand dark:border-slate-800">
+                  <span class="text-brand-muted dark:text-slate-400"><i class="fa-solid fa-location-dot mr-2 text-brand-accent"></i>Location:</span>
+                  <span class="font-semibold text-right">Da Nang, Vietnam</span>
+                </div>
+              </div>
+
+              <!-- Social Links Mini Bar -->
+              <div class="flex items-center justify-center space-x-4 pt-1">
+                <a href="mailto:phuonganhmarlyn.forwork@gmail.com" class="w-10 h-10 rounded-full bg-brand-sand dark:bg-slate-800 hover:bg-brand-accent hover:text-white flex items-center justify-center text-slate-700 dark:text-slate-300 transition" title="Email">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="tel:+84915764739" class="w-10 h-10 rounded-full bg-brand-sand dark:bg-slate-800 hover:bg-brand-accent hover:text-white flex items-center justify-center text-slate-700 dark:text-slate-300 transition" title="Phone">
+                  <i class="fa-solid fa-phone"></i>
+                </a>
+                <button onclick="copyToClipboard('+84915764739', 'Copied Phone: 0915 764 739')" class="w-10 h-10 rounded-full bg-brand-sand dark:bg-slate-800 hover:bg-brand-accent hover:text-white flex items-center justify-center text-slate-700 dark:text-slate-300 transition" title="Copy Phone">
+                  <i class="fa-solid fa-comment-dots"></i>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================== DETAILED EXPERIENCE SECTIONS (FULL ENGLISH - FULL WIDTH UNIFORM GRID) ==================== -->
+    <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-24">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">Experience & Leadership</span>
+        <h2 class="text-3xl sm:text-4xl font-grotesk font-bold text-brand-charcoal dark:text-white">
+          Key Projects & Roles
+        </h2>
+        <div class="w-12 h-1 bg-brand-accent mx-auto rounded-full"></div>
+      </div>
+
+      <!-- EXPERIENCE 1: FUDA'S CREATIVE SPACE -->
+      <div class="rounded-3xl bg-[#365314] text-white p-6 sm:p-10 shadow-2xl relative overflow-hidden border border-lime-800 space-y-8">
+        <!-- Background Ambient Glow -->
+        <div class="absolute -right-10 -bottom-10 w-80 h-80 bg-lime-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-lime-700/60 pb-6">
+          <div>
+            <span class="px-3.5 py-1 rounded-full bg-lime-500 text-slate-950 text-xs font-bold uppercase tracking-wider">2025 – Present • Vice President</span>
+            <h3 class="text-3xl sm:text-4xl font-grotesk font-bold mt-2 text-lime-100">FUDA's Creative Space</h3>
+            <p class="text-xs text-lime-200 mt-1">FPT University Da Nang</p>
+          </div>
+          <a href="https://www.facebook.com/fudacreativespace" target="_blank" class="px-5 py-2.5 rounded-full bg-white text-slate-900 font-semibold text-xs tracking-wide hover:bg-lime-200 transition flex items-center space-x-2">
+            <i class="fa-brands fa-facebook text-blue-600"></i>
+            <span>Facebook Fanpage</span>
+          </a>
+        </div>
+
+        <!-- Full-width structured content & grid (Non-clickable static images) -->
+        <div class="space-y-6">
+          <!-- Text Box 1 -->
+          <div class="bg-[#283e0e] p-6 rounded-2xl border border-lime-700/50 shadow-inner">
+            <p class="text-sm sm:text-base text-lime-100 leading-relaxed font-medium">
+              A student organization at FPT University that has been active for over three years, organizing a wide range of cultural, creative, and community events while providing students with opportunities to develop and showcase their ideas.
+            </p>
+          </div>
+
+          <!-- 6 Images Uniform Full Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+            <div class="bg-[#283e0e]/50 rounded-xl overflow-hidden aspect-[4/3] flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1NJoBmzMS0k-JiuOPuqqwRRzei6PZQbrL" class="w-full h-full object-cover rounded-lg pointer-events-none" alt="Fuda 1" />
+            </div>
+            <div class="bg-[#283e0e]/50 rounded-xl overflow-hidden aspect-[4/3] flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/10VrzS8dqcTDsO9bCppALfgzaFtBCJZ93" class="w-full h-full object-cover rounded-lg pointer-events-none" alt="Fuda 2" />
+            </div>
+            <div class="bg-[#283e0e]/50 rounded-xl overflow-hidden aspect-[4/3] flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1vR9_ze6B63YP55FDKUhEI4vVi99lFnah" class="w-full h-full object-cover rounded-lg pointer-events-none" alt="Fuda 3" />
+            </div>
+            <div class="bg-[#283e0e]/50 rounded-xl overflow-hidden aspect-[4/3] flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1Sishyg_2tpA-zjTquCDupZ2G0v2TpUJY" class="w-full h-full object-cover rounded-lg pointer-events-none" alt="Fuda 4" />
+            </div>
+            <div class="bg-[#283e0e]/50 rounded-xl overflow-hidden aspect-[4/3] flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1mWSa04NQEvVqMiYYlrpoaMpQdYaHDru_" class="w-full h-full object-cover rounded-lg pointer-events-none" alt="Fuda 5" />
+            </div>
+            <div class="bg-[#283e0e]/50 rounded-xl overflow-hidden aspect-[4/3] flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1FXcIwWDgT_Sqa-wgPFoWBc3mLHVZu6HJ" class="w-full h-full object-cover rounded-lg pointer-events-none" alt="Fuda 6" />
+            </div>
+          </div>
+
+          <!-- Text Box 2 -->
+          <div class="bg-[#283e0e] p-6 rounded-2xl border border-lime-700/50 shadow-inner">
+            <p class="text-sm sm:text-base text-lime-100 leading-relaxed font-medium">
+              From January to April 2026, I was responsible for managing the club's communication content on its official fanpage, ensuring a consistent brand identity and communication direction while driving strong audience engagement and interaction across campaign activities.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- EXPERIENCE 2: ĐÈN LỒNG DU KÝ -->
+      <div class="rounded-3xl bg-[#365314] text-white p-6 sm:p-10 shadow-2xl relative overflow-hidden border border-lime-800 space-y-8">
+        <!-- Background Ambient Glow -->
+        <div class="absolute -left-10 -top-10 w-80 h-80 bg-lime-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-lime-700/60 pb-6">
+          <div>
+            <span class="px-3.5 py-1 rounded-full bg-lime-500 text-slate-950 text-xs font-bold uppercase tracking-wider">December 2025 - February 2026 • Main Coordinator & Creative Concept</span>
+            <h3 class="text-3xl sm:text-4xl font-grotesk font-bold mt-2 text-lime-100">Đèn Lồng Du Ký</h3>
+            <p class="text-xs text-lime-200 mt-1">Traditional Lantern Cultural Campaign</p>
+          </div>
+          <a href="https://www.facebook.com/denlongduky.1010" target="_blank" class="px-5 py-2.5 rounded-full bg-white text-slate-900 font-semibold text-xs tracking-wide hover:bg-lime-200 transition flex items-center space-x-2">
+            <i class="fa-brands fa-facebook text-blue-600"></i>
+            <span>Facebook Fanpage</span>
+          </a>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Images Grid 4 imgs -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div class="bg-[#283e0e]/50 rounded-xl overflow-hidden aspect-[4/3] flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/17qE6wTqjzXv-Vn3BkfKSbGdn-a_HvA2B" class="w-full h-full object-cover rounded-lg pointer-events-none" alt="Lantern 1" />
+            </div>
+            <div class="bg-[#283e0e]/50 rounded-xl overflow-hidden aspect-[4/3] flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1FZ6u1UiAIsZ0nxii33yZAFJbJPw0RaHf" class="w-full h-full object-cover rounded-lg pointer-events-none" alt="Lantern 2" />
+            </div>
+            <div class="bg-[#283e0e]/50 rounded-xl overflow-hidden aspect-[4/3] flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1gP0KLafPfEyLJ-y4BjeG0pPOaf8dqhgN" class="w-full h-full object-cover rounded-lg pointer-events-none" alt="Lantern 3" />
+            </div>
+            <div class="bg-[#283e0e]/50 rounded-xl overflow-hidden aspect-[4/3] flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1WrjaPvWFey0o58z7XFSYvxciWosb0ah2" class="w-full h-full object-cover rounded-lg pointer-events-none" alt="Lantern 4" />
+            </div>
+          </div>
+
+          <!-- Description Text Box -->
+          <div class="bg-[#283e0e] p-6 rounded-2xl border border-lime-700/50 shadow-inner">
+            <p class="text-sm sm:text-base text-lime-100 leading-relaxed font-medium">
+              A student-led communication campaign, aiming to promote traditional Vietnamese lantern culture through creative storytelling and experiential activities. I developed creative concepts for the campaign's communication materials and served as the main coordinator for the <strong class="text-white">"Lung Linh Phố Hội"</strong> lantern workshop, which attracted 100+ FPT University students and received positive feedback for both its communication and event experience (December 2025 - February 2026).
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- EXPERIENCE 3: GOOGLE STUDENT AMBASSADOR -->
+      <div class="rounded-3xl bg-[#365314] text-white p-6 sm:p-10 shadow-2xl relative overflow-hidden border border-lime-800 space-y-8">
+        <!-- Background Ambient Glow -->
+        <div class="absolute right-0 top-0 w-80 h-80 bg-lime-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="border-b border-lime-700/60 pb-6">
+          <span class="px-3.5 py-1 rounded-full bg-lime-500 text-slate-950 text-xs font-bold uppercase tracking-wider">January – July 2026 • Top 200 GSA</span>
+          <h3 class="text-3xl sm:text-4xl font-grotesk font-bold mt-2 text-lime-100">Google Student Ambassador (GSA)</h3>
+          <p class="text-xs text-lime-200 mt-1">Global Student Program by Google</p>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Two Text Boxes Top -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-[#283e0e] p-5 rounded-2xl border border-lime-700/50 shadow-inner">
+              <p class="text-sm sm:text-base text-lime-100 leading-relaxed font-medium">
+                Google Student Ambassador (GSA) is a global student program by Google that empowers students to promote technology and build campus communities. I was recognized as a <strong class="text-white">Top 200 GSA</strong> for outstanding performance.
+              </p>
+            </div>
+            <div class="bg-[#283e0e] p-5 rounded-2xl border border-lime-700/50 shadow-inner">
+              <p class="text-sm sm:text-base text-lime-100 leading-relaxed font-medium">
+                Spearheaded marketing campaigns for AI workshops that grew the fanpage to 200+ followers and successfully organized an AI workshop using <strong class="text-white">Google Gemini and NotebookLM</strong>, attended by 80+ students.
+              </p>
+            </div>
+          </div>
+
+          <!-- Three Images Bottom Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="bg-[#283e0e]/50 rounded-2xl overflow-hidden aspect-[4/3] flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/14q2bbplkDJqMD9_7dAYdsezWwvBuG08J" class="w-full h-full object-cover rounded-xl pointer-events-none" alt="GSA 1" />
+            </div>
+            <div class="bg-[#283e0e]/50 rounded-2xl overflow-hidden aspect-[4/3] flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1sbv4j7ZSep-Qhlk9g55SJosBFjegcLE9" class="w-full h-full object-cover rounded-xl pointer-events-none" alt="GSA 2" />
+            </div>
+            <div class="bg-[#283e0e]/50 rounded-2xl overflow-hidden aspect-[4/3] flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1L2Cc8XBSYcKtZBUQIYaWnEpIZO4XWSJG" class="w-full h-full object-cover rounded-xl pointer-events-none" alt="GSA 3" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================== DESIGNS & POSTERS GALLERY (CHRONOLOGICAL ORDER: NEWEST FIRST) ==================== -->
+    <section id="designs" class="py-20 bg-white dark:bg-slate-900 border-t border-brand-sand dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">Creative & Visual Production</span>
+          <h2 class="text-3xl sm:text-4xl font-grotesk font-bold text-brand-charcoal dark:text-white">
+            Designs & Posters Gallery
+          </h2>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">16 media assets, event posters, and campaign visuals personally designed and produced (Newest first).</p>
+          <div class="w-12 h-1 bg-brand-accent mx-auto rounded-full"></div>
+        </div>
+
+        <!-- Designs Grid (Chronological Order: Newest First) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- 1. Cóc Phiêu Lưu 3 (2026) -->
+          <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col">
+            <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1H0U5bDt7fHq2Bg9RTaAcWhv5Wx7Kychn" alt="Cóc Phiêu Lưu 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2026</span>
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">Cóc Phiêu Lưu 3</h4>
+              <p class="text-[11px] text-slate-500 mt-1">Key Visual & Campaign Poster</p>
+            </div>
+          </div>
+
+          <!-- 2. Lễ hội Việt Nhật CIFA 2026 -->
+          <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col">
+            <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1XPbUTHnyr-sqeGAJoSnuITvdoUgI85IP" alt="Lễ hội Việt Nhật CIFA 2026" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2026</span>
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">CIFA Vietnam - Japan Festival</h4>
+              <p class="text-[11px] text-slate-500 mt-1">Line-up Artist Poster</p>
+            </div>
+          </div>
+
+          <!-- 3. Poster khuyến mãi CYA Boardgame (2026) -->
+          <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col">
+            <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1olWl2R473_RO67nuJiK5xn6eim2Ip7-Z" alt="CYA Boardgame" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2026</span>
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">CYA Boardgame Promotion</h4>
+              <p class="text-[11px] text-slate-500 mt-1">Promotional Poster</p>
+            </div>
+          </div>
+
+          <!-- 4. DYMUN MUN Camp 2025 -->
+          <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col">
+            <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1kucdQxX0-sK5-oCVneVz4ql8JPdWZRnF" alt="DYMUN MUN Camp 2025" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">DYMUN MUN Camp</h4>
+              <p class="text-[11px] text-slate-500 mt-1">Event Visual Design</p>
+            </div>
+          </div>
+
+          <!-- 5. Seminar Luật Sở hữu trí tuệ (2025) -->
+          <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col">
+            <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1q6J9EhrEPXT6FVCQrDp8A0jG7DC7RxJT" alt="Seminar Luật SHTT" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">IP Law in AI Era Seminar</h4>
+              <p class="text-[11px] text-slate-500 mt-1">Academic Poster</p>
+            </div>
+          </div>
+
+          <!-- 6. Workshop thư pháp Nét mực giao hòa (2025) -->
+          <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col">
+            <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1lnEjVYIZmOqfWvIg5nC1x8zgjFrLVsFz" alt="Nét mực giao hòa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">Calligraphy Workshop</h4>
+              <p class="text-[11px] text-slate-500 mt-1">Cultural Workshop Poster</p>
+            </div>
+          </div>
+
+          <!-- 7. Cóc yêu thương (2025) -->
+          <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col">
+            <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1AaZyVTZJy1FssXzdA6d0ugM4PXv8_Nnk" alt="Cóc yêu thương" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">Cóc Yêu Thương</h4>
+              <p class="text-[11px] text-slate-500 mt-1">Charity Campaign Key Visual</p>
+            </div>
+          </div>
+
+          <!-- 8. CLB Truyền thông FUM tuyển thành viên kỳ Fall 2025 -->
+          <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col">
+            <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1bjAtRsthFjZAtk1SRVZmsCBstxXxGjGV" alt="FUM Tuyển thành viên" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">FUM Club Recruitment</h4>
+              <p class="text-[11px] text-slate-500 mt-1">Fall 2025 Recruitment Poster</p>
+            </div>
+          </div>
+
+          <!-- 9. CLB Sáng tạo FCS tuyển thành viên kỳ Fall 2025 -->
+          <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col">
+            <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1xjNjXV7tUD-kt1Si9p7zPe5S8lXBcy78" alt="FCS Tuyển thành viên" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">FCS Creative Club Recruitment</h4>
+              <p class="text-[11px] text-slate-500 mt-1">Recruitment Poster</p>
+            </div>
+          </div>
+
+          <!-- 10. Poster FUDA Light's on (2025) -->
+          <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col">
+            <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1e5EZqMO-3sVX2YNTb1n9bxfJIubdRYLs" alt="FUDA Light's on" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">FUDA Light's On</h4>
+              <p class="text-[11px] text-slate-500 mt-1">Exhibition Key Visual</p>
+            </div>
+          </div>
+
+          <!-- 11. Sự kiện Khóa đồng tâm (2025) -->
+          <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col">
+            <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/10VLpnp3PVdkx1RZ088Vgv0jvD4VYXSec" alt="Khóa đồng tâm" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">Khoa Dong Tam Workshop</h4>
+              <p class="text-[11px] text-slate-500 mt-1">Special Workshop Poster</p>
+            </div>
+          </div>
+
+          <!-- 12. DYMUN 2025 Tuyển ban tổ chức -->
+          <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col">
+            <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1IpTwtCGu_vpfz_Bh_4TlCU400aGt6OjO" alt="DYMUN BTC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">DYMUN Organizing Team Recruitment</h4>
+              <p class="text-[11px] text-slate-500 mt-1">Recruitment Poster</p>
+            </div>
+          </div>
+
+          <!-- 13. Triển lãm Sắc màu hy vọng (2025) -->
+          <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col">
+            <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/14GtuCZ36SOOfYRrlFpCnZt7-fmtQlzc0" alt="Sắc màu hy vọng" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">Colors of Hope Exhibition</h4>
+              <p class="text-[11px] text-slate-500 mt-1">Community Exhibition Poster</p>
+            </div>
+          </div>
+
+          <!-- 14. Poster tuyển dụng nhà hàng chay Shanti (2025) -->
+          <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col">
+            <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1gbMujg65bZ4DgcY2maze8vXuioS5OUW5" alt="Nhà hàng Shanti" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">Shanti Restaurant Recruitment</h4>
+              <p class="text-[11px] text-slate-500 mt-1">Staff Recruitment Poster</p>
+            </div>
+          </div>
+
+          <!-- 15. Sự kiện trải nghiệm chụp ảnh Việt phục (2025) -->
+          <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col">
+            <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1FKprFldGWNbVN17W3koorq_s7pkm-jtd" alt="Chụp ảnh Việt phục" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">Traditional Vietnamese Costume Experience</h4>
+              <p class="text-[11px] text-slate-500 mt-1">Cultural Event Poster</p>
+            </div>
+          </div>
+
+          <!-- 16. Poster Thời báo FUM mờ (2025) -->
+          <div class="group bg-brand-cream dark:bg-slate-950 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col">
+            <div class="relative aspect-[3/4] bg-slate-100 dark:bg-slate-900 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1CrjVcAk6VxtlAO9UHrg1dSzc1NxFsQ4e" alt="Thời báo FUM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+            </div>
+            <div class="p-4 flex flex-col justify-between flex-grow">
+              <h4 class="font-grotesk font-bold text-sm text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors">FUM Times Publication</h4>
+              <p class="text-[11px] text-slate-500 mt-1">Periodic Newsletter Design</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== AWARDS SECTION WITH EMBEDDED IMAGES (Chronological & Ranked Order) ==================== -->
+    <section id="awards" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">Honors & Awards</span>
+        <h2 class="text-3xl sm:text-4xl font-grotesk font-bold text-brand-charcoal dark:text-white">
+          Milestones & Recognition
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 text-sm">Recognizing dedication and excellence in academic studies, research, and competitive challenges (Sorted by chronology & prestige)</p>
+        <div class="w-12 h-1 bg-brand-accent mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- 1. Top 5 Outstanding Student (Spring 2026) -->
+        <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="relative aspect-[4/3] bg-slate-100 dark:bg-slate-950 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/15iwZ-rpnKNQlmdby6IZsovYev8Xsr4MR" alt="Top 5 Outstanding Student" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">Spring 2026</span>
+            </div>
+            <div class="p-5 space-y-2">
+              <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">Academic Excellence</span>
+              <h3 class="font-grotesk font-bold text-base text-brand-charcoal dark:text-white">
+                Top 5 Outstanding Students in Economics
+              </h3>
+              <p class="text-xs text-brand-muted dark:text-slate-400">FPT University Da Nang • GPA 9.7/10 (4.0/4.0)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Da Nang Startup Award (2026) -->
+        <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="relative aspect-[4/3] bg-slate-100 dark:bg-slate-950 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1zDVXj5W2WPCChIp4d86nmisJRUeuW7V4" alt="Da Nang Startup Award 2026" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2026</span>
+            </div>
+            <div class="p-5 space-y-2">
+              <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">Da Nang Startup</span>
+              <h3 class="font-grotesk font-bold text-base text-brand-charcoal dark:text-white">
+                Third Prize, Da Nang Innovation & Startup Competition
+              </h3>
+              <p class="text-xs text-brand-muted dark:text-slate-400">Da Nang Startup Competition 2026 • Student Division</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. ResConnect 2026 -->
+        <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="relative aspect-[4/3] bg-slate-100 dark:bg-slate-950 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1hdJ8sjDh1IH-7TSdrTndA8tCnXLIK2od" alt="ResConnect 2026" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2026</span>
+            </div>
+            <div class="p-5 space-y-2">
+              <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">ResConnect 2026</span>
+              <h3 class="font-grotesk font-bold text-base text-brand-charcoal dark:text-white">
+                Third Prize, Multimedia Communication Sub-Committee
+              </h3>
+              <p class="text-xs text-brand-muted dark:text-slate-400">Science Research Competition • Potential Award</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. VinFast Challenge (2025) -->
+        <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="relative aspect-[4/3] bg-slate-100 dark:bg-slate-950 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1U4hNsGCW9Q2uQNh8KjBRAElxKjtHnoFK" alt="VinFast x HubNetwork" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+            </div>
+            <div class="p-5 space-y-2">
+              <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">VinFast Challenge</span>
+              <h3 class="font-grotesk font-bold text-base text-brand-charcoal dark:text-white">
+                Top 6 Best Teams in Business Challenge
+              </h3>
+              <p class="text-xs text-brand-muted dark:text-slate-400">VinFast x HubNetwork • Team Tinh Lo</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Res-Start 2025 -->
+        <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="relative aspect-[4/3] bg-slate-100 dark:bg-slate-950 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/14W9upubk1WDn7EGK_UHNUeyjFXzOeex_" alt="Res-Start 2025" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+            </div>
+            <div class="p-5 space-y-2">
+              <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">Res-Start 2025</span>
+              <h3 class="font-grotesk font-bold text-base text-brand-charcoal dark:text-white">
+                Best Presentation Award
+              </h3>
+              <p class="text-xs text-brand-muted dark:text-slate-400">Res-Start Startup Idea Competition • Pitching Excellence</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. IC Master 2025 -->
+        <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="relative aspect-[4/3] bg-slate-100 dark:bg-slate-950 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1f_fHZcBtp8KcuX-bYKTj7pqQNIk6q9xu" alt="IC Master 2025" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+            </div>
+            <div class="p-5 space-y-2">
+              <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">IC Master 2025</span>
+              <h3 class="font-grotesk font-bold text-base text-brand-charcoal dark:text-white">
+                Top 8 Outstanding Communicator Teams
+              </h3>
+              <p class="text-xs text-brand-muted dark:text-slate-400">IC Master Contest • Team Trinity Spark</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. NEO-UP 2025 -->
+        <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="relative aspect-[4/3] bg-slate-100 dark:bg-slate-950 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1N74EuT2cKfmC7t_FidfhX4WcIDL0Z_qe" alt="NEO-UP 2025" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+            </div>
+            <div class="p-5 space-y-2">
+              <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">NEO-UP 2025</span>
+              <h3 class="font-grotesk font-bold text-base text-brand-charcoal dark:text-white">
+                Top 6 Excellent Teams in NEO-UP
+              </h3>
+              <p class="text-xs text-brand-muted dark:text-slate-400">Startup Idea Competition • Team Tu Tru Core</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. FPT La'FEst 2025 -->
+        <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-brand-sand dark:border-slate-800 hover:border-brand-accent shadow-card transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="relative aspect-[4/3] bg-slate-100 dark:bg-slate-950 overflow-hidden flex items-center justify-center">
+              <img src="https://lh3.googleusercontent.com/d/1CyAlbqmmSSDWNDLn0_KRCZBeuJ2ExbSc" alt="FPT La'FEst" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white">2025</span>
+            </div>
+            <div class="p-5 space-y-2">
+              <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">FPT La'FEst</span>
+              <h3 class="font-grotesk font-bold text-base text-brand-charcoal dark:text-white">
+                Third Prize, Chinese Category
+              </h3>
+              <p class="text-xs text-brand-muted dark:text-slate-400">FPT Language Festival • Chinese Speech & Culture</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================== SKILLS & PROFESSIONAL CERTIFICATIONS SECTION ==================== -->
+    <section id="skills" class="py-20 bg-white dark:bg-slate-900 border-y border-brand-sand dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">Core Competency</span>
+            <h2 class="text-3xl sm:text-4xl font-grotesk font-bold text-brand-charcoal dark:text-white leading-tight">
+              Skills & Professional Tools
+            </h2>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Combining strategic campaign planning with visual execution enables me to oversee the entire lifecycle of a communication project.
+            </p>
+
+            <!-- Software & Platforms Grid (With accurate Google icons & Adobe logos) -->
+            <div class="pt-2">
+              <h4 class="text-xs font-bold text-brand-muted dark:text-slate-400 uppercase tracking-wider mb-3">Proficient Software & Platforms</h4>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <!-- 1. Google Calendar -->
+                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-7 h-7 rounded-lg bg-[#4285F4] text-white flex items-center justify-center font-bold text-xs shadow">31</div>
+                  <span>Calendar</span>
+                </div>
+                <!-- 2. Google Drive -->
+                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-7 h-7 rounded-lg bg-white flex items-center justify-center text-xs shadow p-1">
+                    <svg viewBox="0 0 87.3 78" class="w-full h-full"><path fill="#0066da" d="M6.6 66.85l3.85 6.65c.8 1.4 1.95 2.5 3.35 3.3L31.5 47H1.5c0 1.55.4 3.1 1.2 4.5l3.9 15.35z"/><path fill="#00ac47" d="M43.65 25L28.5 50.35 13.35 76.8c1.4 1.4 3.15 2.35 5.15 2.35h60.3c2 0 3.75-.95 5.15-2.35L43.65 25z"/><path fill="#ea4335" d="M73.5 25H43.65L28.5 50.35l30.15 25.3c1.4-.8 2.55-1.9 3.35-3.3l14.5-25.1c.8-1.4 1.2-2.95 1.2-4.5 0-1.55-.4-3.1-1.2-4.5l-2.9-5.15z"/><path fill="#ffba00" d="M43.65 25L13.5 50.35c-.8 1.4-1.2 2.95-1.2 4.5 0 1.55.4 3.1 1.2 4.5l30.15-34.35z"/></svg>
+                  </div>
+                  <span>Drive</span>
+                </div>
+                <!-- 3. Google Docs -->
+                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-7 h-7 rounded-lg bg-[#4285F4] text-white flex items-center justify-center text-xs shadow">
+                    <i class="fa-solid fa-file-lines text-xs"></i>
+                  </div>
+                  <span>Docs</span>
+                </div>
+                <!-- 4. Google Sheets -->
+                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-7 h-7 rounded-lg bg-[#0F9D58] text-white flex items-center justify-center text-xs shadow font-bold">📊</div>
+                  <span>Sheets</span>
+                </div>
+                <!-- 5. NotebookLM -->
+                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-7 h-7 rounded-lg bg-[#0F766E] text-white flex items-center justify-center text-xs shadow">
+                    <i class="fa-solid fa-book-open text-xs"></i>
+                  </div>
+                  <span>NotebookLM</span>
+                </div>
+                <!-- 6. Canva -->
+                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-7 h-7 rounded-lg bg-cyan-500 text-white flex items-center justify-center text-xs font-serif italic shadow">C</div>
+                  <span>Canva</span>
+                </div>
+                <!-- 7. Photoshop -->
+                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-7 h-7 rounded-lg bg-[#001E36] text-[#31A8FF] flex items-center justify-center font-bold text-xs shadow">Ps</div>
+                  <span>Photoshop</span>
+                </div>
+                <!-- 8. Illustrator -->
+                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-7 h-7 rounded-lg bg-[#330000] text-[#FF9A00] flex items-center justify-center font-bold text-xs shadow">Ai</div>
+                  <span>Illustrator</span>
+                </div>
+                <!-- 9. Premiere Pro -->
+                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-7 h-7 rounded-lg bg-[#00005B] text-[#9999FF] flex items-center justify-center font-bold text-xs shadow">Pr</div>
+                  <span>Premiere</span>
+                </div>
+                <!-- 10. CapCut -->
+                <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-brand-sand dark:bg-slate-800 border border-brand-mint/60 dark:border-slate-700 text-xs font-bold text-brand-charcoal dark:text-slate-200 shadow-sm">
+                  <div class="w-7 h-7 rounded-lg bg-slate-900 text-white flex items-center justify-center text-xs shadow">
+                    <i class="fa-solid fa-film text-xs"></i>
+                  </div>
+                  <span>CapCut</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Professional Certifications from Harvard CV -->
+            <div class="pt-6">
+              <h4 class="text-xs font-bold text-brand-muted dark:text-slate-400 uppercase tracking-wider mb-3">Professional Certifications</h4>
+              <ul class="space-y-2 text-xs text-slate-700 dark:text-slate-300">
+                <li class="flex items-start space-x-2">
+                  <i class="fa-solid fa-certificate text-brand-accent mt-0.5"></i>
+                  <span><strong>AI & Data:</strong> Introduction to Generative AI for Data Analysis (Microsoft); Prompt Engineering Generative AI for Marketing & Advertising; ChatGPT Advanced Data Analysis.</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <i class="fa-solid fa-certificate text-brand-accent mt-0.5"></i>
+                  <span><strong>Strategy & Management:</strong> Foundations of Project Management (Google); Design Thinking Specialization (UVA); Generative AI: Impact & Ethical Issues.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Skills Cards Matrix -->
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <div class="p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-2">
+              <div class="flex items-center space-x-3 text-brand-accent">
+                <i class="fa-solid fa-bullseye text-lg"></i>
+                <h4 class="font-bold text-sm text-brand-charcoal dark:text-white">Strategic Campaign Planning</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400">
+                Designing multi-channel communication roadmaps from context research, KPI setting to budget allocation and coordination.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-2">
+              <div class="flex items-center space-x-3 text-brand-accent">
+                <i class="fa-solid fa-magnifying-glass-chart text-lg"></i>
+                <h4 class="font-bold text-sm text-brand-charcoal dark:text-white">Market & Audience Research</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400">
+                Analyzing public behavior, competitor benchmarks, and extracting customer insights for Gen Z and youth demographics.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-2">
+              <div class="flex items-center space-x-3 text-brand-accent">
+                <i class="fa-solid fa-comments text-lg"></i>
+                <h4 class="font-bold text-sm text-brand-charcoal dark:text-white">Brand Communication</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400">
+                Building consistent brand messaging, image management, and developing content that resonates with audiences.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-2">
+              <div class="flex items-center space-x-3 text-brand-accent">
+                <i class="fa-solid fa-pen-nib text-lg"></i>
+                <h4 class="font-bold text-sm text-brand-charcoal dark:text-white">Creative Production</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400">
+                Designing Key Visuals, Posters, social media publication materials, and short-form video editing.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-2">
+              <div class="flex items-center space-x-3 text-brand-accent">
+                <i class="fa-solid fa-users-gear text-lg"></i>
+                <h4 class="font-bold text-sm text-brand-charcoal dark:text-white">Project Coordination</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400">
+                Managing timelines, personnel allocation, risk management, and event coordination under professional workflows.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-brand-cream dark:bg-slate-950 border border-brand-sand dark:border-slate-800 space-y-2">
+              <div class="flex items-center space-x-3 text-brand-accent">
+                <i class="fa-solid fa-person-chalkboard text-lg"></i>
+                <h4 class="font-bold text-sm text-brand-charcoal dark:text-white">Pitching & Presentation</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400">
+                Pitching business proposals, designing persuasive slide decks, and defending projects before panels and judges.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      
+      <div class="relative rounded-3xl bg-gradient-to-br from-brand-sand via-white to-brand-mint/50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950 border border-brand-mint/80 dark:border-slate-800 p-8 sm:p-12 lg:p-16 overflow-hidden shadow-hover">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Contact Info -->
+          <div class="lg:col-span-7 space-y-6">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-brand-accent/10 text-brand-accent text-xs font-bold uppercase tracking-wider">
+              Connect & Collaborate
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-grotesk font-bold text-brand-charcoal dark:text-white leading-tight">
+              Ready for new projects & challenges!
+            </h2>
+            <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+              Looking for a passionate, disciplined, and creative contributor for upcoming communication campaigns, events, or projects? Feel free to reach out!
+            </p>
+
+            <div class="space-y-4 pt-2">
+              
+              <!-- Direct Email Click/Copy -->
+              <div class="flex items-center space-x-3 group cursor-pointer" onclick="copyToClipboard('phuonganhmarlyn.forwork@gmail.com', 'Copied email: phuonganhmarlyn.forwork@gmail.com')">
+                <div class="w-12 h-12 rounded-2xl bg-brand-accent text-white flex items-center justify-center text-lg shadow-soft group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-brand-muted dark:text-slate-400 uppercase tracking-wider font-semibold">Official Email</div>
+                  <div class="text-sm sm:text-base font-bold text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors flex items-center space-x-2">
+                    <span>phuonganhmarlyn.forwork@gmail.com</span>
+                    <i class="fa-regular fa-copy text-xs text-brand-muted"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Phone / Zalo -->
+              <div class="flex items-center space-x-3 group cursor-pointer" onclick="copyToClipboard('+84915764739', 'Copied phone: +84 915 764 739')">
+                <div class="w-12 h-12 rounded-2xl bg-brand-lime text-slate-950 font-bold flex items-center justify-center text-lg shadow-soft group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-brand-muted dark:text-slate-400 uppercase tracking-wider font-semibold">Phone / Zalo</div>
+                  <div class="text-sm sm:text-base font-bold text-brand-charcoal dark:text-white group-hover:text-brand-accent transition-colors flex items-center space-x-2">
+                    <span>+84 915 764 739</span>
+                    <i class="fa-regular fa-copy text-xs text-brand-muted"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-2xl bg-slate-800 text-white flex items-center justify-center text-lg shadow-soft">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-brand-muted dark:text-slate-400 uppercase tracking-wider font-semibold">Location</div>
+                  <div class="text-sm sm:text-base font-bold text-brand-charcoal dark:text-white">
+                    Da Nang & Remote nationwide
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Quick Message Form -->
+          <div class="lg:col-span-5 bg-white dark:bg-slate-950 p-6 sm:p-8 rounded-3xl border border-brand-sand dark:border-slate-800 shadow-card">
+            <h3 class="font-grotesk font-bold text-xl text-brand-charcoal dark:text-white mb-2">Send a Quick Message</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-6">I will get back to you as soon as possible!</p>
+            
+            <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-1.5">Your Name</label>
+                <input type="text" required placeholder="e.g. John Doe" class="w-full px-4 py-3 rounded-xl bg-brand-sand/50 dark:bg-slate-900 border border-brand-sand dark:border-slate-800 text-sm focus:outline-none focus:border-brand-accent transition text-brand-charcoal dark:text-white" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-1.5">Email Address</label>
+                <input type="email" required placeholder="email@example.com" class="w-full px-4 py-3 rounded-xl bg-brand-sand/50 dark:bg-slate-900 border border-brand-sand dark:border-slate-800 text-sm focus:outline-none focus:border-brand-accent transition text-brand-charcoal dark:text-white" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-1.5">Message / Project</label>
+                <textarea rows="3" required placeholder="Share details about your project or collaboration opportunity..." class="w-full px-4 py-3 rounded-xl bg-brand-sand/50 dark:bg-slate-900 border border-brand-sand dark:border-slate-800 text-sm focus:outline-none focus:border-brand-accent transition text-brand-charcoal dark:text-white resize-none"></textarea>
+              </div>
+              <button type="submit" class="w-full py-3.5 rounded-xl bg-brand-accent hover:bg-brand-accentDark text-white font-semibold text-sm shadow-soft hover:shadow-hover transition duration-200">
+                Send Message
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-10 border-t border-brand-sand dark:border-slate-800 bg-white dark:bg-slate-950 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-muted dark:text-slate-400">
+      <div class="flex items-center space-x-2">
+        <span class="font-grotesk font-bold text-brand-charcoal dark:text-white">Huỳnh Lương Phương Anh</span>
+        <span>•</span>
+        <span>Marlyn Portfolio © 2026</span>
+      </div>
+      <div>
+        <span>Multimedia Communication • Strategic Campaign Planning</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+  <script>
+    // --- Dark Mode State Management ---
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+    }
+
+    if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleDarkMode);
+    if (mobileThemeToggleBtn) mobileThemeToggleBtn.addEventListener('click', toggleDarkMode);
+
+    // --- Mobile Menu Toggle ---
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // --- Toast Notification & Copy Fallback ---
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMessage = document.getElementById('toast-message');
+      toastMessage.textContent = message;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3000);
+    }
+
+    function copyToClipboard(text, successMsg) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand('copy');
+        showToast(successMsg || 'Copied!');
+      } catch (err) {
+        showToast('Unable to copy automatically!');
+      }
+      document.body.removeChild(textarea);
+    }
+
+    // --- Handle Contact Form Submit ---
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      showToast('Thank you! Your message has been sent. Phuong Anh will reply soon.');
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>
